@@ -1,0 +1,1223 @@
+#+TITLE:
+Research on Reversal Breakouts
+#+description: document to work through what I can find out about when reversal breakouts happen
+#+startup: hideblocks
+
+* Index
+Here is a small little index of what the codes in the system are.
+** Fields and what they correspond to
+| Field No. | What is contained                                                                |
+|-----------+----------------------------------------------------------------------------------|
+|         1 | What Timeframe is this move on?                                                  |
+|         2 | Time of move                                                                     |
+|         3 | Higher Timeframe move this move is in                                            |
+|         4 | Direction in Relation to Higher Timeframe move                                   |
+|         5 | Previous move on this Timeframe                                                  |
+|         6 | Did the previous move undershoot or overshoot?                                   |
+|         7 | Line the previous move on this Timeframe started from                            |
+|         8 | What is this move?                                                               |
+|         9 | What line did it start from?                                                     |
+|        10 | Did this move undershoot or overshoot?                                           |
+|        11 | How did the beginning of this move reverse from the Lower Timeframe Perspective? |
+|        12 | Any notes?                                                                       |
+** Shortcodes
+So through out the tables and probably when witing I am gonna refer to stuff in short code like HTF and LTF. This means stuff and it just allows me to write less and conserve space on the screen. Here is a little cheat sheet for that.
+| Shortcode      | Long Version                                                                                     |
+|----------------+--------------------------------------------------------------------------------------------------|
+| TF             | Time Frame                                                                                       |
+| TTF            | Trading Timeframe                                                                                |
+| HTF            | Higher Timeframe                                                                                 |
+| LTF            | Lower Timeframe                                                                                  |
+| F(38, 50, 61)% | Fibonnaci Level (with associated percentage)                                                     |
+| R              | Reversal move                                                                                    |
+| RB             | Reversal Breakout Move                                                                           |
+| OM             | Opposite Move                                                                                    |
+| WM             | With Move, direction of TTF move in relation to HTF move                                         |
+| WM-FM          | With Move - First Move, same as above but is the first move in the new HTF move                  |
+| S/R            | Support or Resistance                                                                            |
+| SS             | Support - Said without any Timeframe prefix means it is on Trading Timeframe                     |
+| RR             | Resistance  - Said without any Timeframe prefix means it is on Trading Timeframe                 |
+| OS             | One Swing                                                                                        |
+| DT             | Double Top                                                                                       |
+| HDT            | Half Double Top - when the second top is a fib move                                              |
+| QDT            | Quarter Double Top - when the first top leads to a reversal and the second top is a fib          |
+| DB             | Double Bottom                                                                                    |
+| HDB            | Half Double Bottom - when the second Bottom is a fib move                                        |
+| QDB            | Quarter Double Bottom - when the first Bottom leads to a reversal and the second Bottom is a fib |
+** Conclusion Format
+When thinking of a format in which to collect the puzzle pieces, one sort of format that I think might help is this:
+1. Summarize what it is that you have found
+2. How, if it does at all, fit in with what i'm looking for?
+3. If it does not fit into what I am looking for, where do I think it can fit into?
+4. Further possible "puzzle pieces" that I can look into after knowing this one
+
+* Introduction
+This is the Document for trying to figure out when and why a reversal breakout move occurs. This is a move in which the new move breaks past the point of where the previous move started from on the chart. It is the move that is the strongest and if you are in the correct direction and riding the move, this move is the most profitable also.
+I am not sure exactly how I will tackle this at the minute but I guess I will go along for the ride and see innit.
+
+One thing however that as I was working through the document I thought up, what you are trying to do at the minute is a basically try and put together a puzzle piece almost of what can and cant go into certain places logically speaking.
+When you are comparing stuff and analysing stuff one thing you need to keep in your head is that everything is basically binary in the sense that it either is the reason why stuff happens or it isn't. Or it does corelate to this thing you are trying to work our or it doesn't. Not having found the piece of the puzzle that fits into the piece you want it to is fine. You have still uncovered a piece of the puzzle that you probably didnt know was there in the first place and that piece is probably good for fitting in somewhere else, so keep it.
+
+Basically binary. Does it help? Does it not? kl. If it does help for this particular thing you are looking for, not even directly mind you. It could fit into something that is correlated to the thing that you are looking for, for a rubbish example, in this document you are looking for RB moves and why and when you can know they happen however one thing you know is that RB only happen WM. Therefore if you have a puzzle piece that allows you to know something about WM or WM-FM then that in turn wil help you know about RB.
+
+What I will be doing essentially then when I think about it is be collecting puzzle pieces to this "game". When I am looking for a particular thing a puzzle piece either will fit, directly that is, or wont. However that puzzle piece will probably fit into another puzzle piece or thing I am looking for, I have not ruled out that any puzzle piece I find will actually fit into something. I think some may not fit into anything. It is really input therefore to have a good catalogue of puzzle pieces. I am gonna try and put them under the conclusion section in anything I am doing so that I can easily distinguish them from general thinking in writing.
+There is a small guide in the index.
+
+
+Also just to know. I do not think it will be possible to know for every single move if it will be a RB or not but what I am hoping to practically achieve is to know when these moves are more liekly to occur, in what conditions, in both hindsight as well as foresight, in order to help me have a better chance of gettin it right. Basically stack the odds in my favour innit. But who knows where this journey will take me or how good I can be. Just need to put in time and correct actions and I may be pleasnatly surprised.
+
+* Edit Notes
+- As I was looking through the database on the day of 08-10-2020 I realized that I had made a mistake in some fields when I was doing HTF moves. When I wrote down wat line they started from I accidently added them as "HTF SS" or "HTF RR" instead of Just SS or RR. This mistake may mean that this day would not always be as accurate a representaion to the way I am defining stuff as It seems as the S/R it started from was actually a HHTF one. This would need to be manually changed by lookingat the chart and editing the database accordingly however that takes up time. I do not want to do that right now so just a heads up.
+- I think I may need to add another category to my database for future reference. Basically knowing how the beginning of the move reversed is not only useful for the TTF but also for the HTF and I could also possibly at it for the HHTF also. It would be an interesting look at how it happened easily.
+* Rough Ideas
+So I know that RB moves hapen only when It is with the HTF move and when the HTF is moving to a point taht is past the TTF S/R that is closer than the HTF S/R point. It is only basically when the HTF move is basically progressing past the point it has previously.
+    Here is an output of the RB moves I have in the database so far.
+#+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
+BEGIN {
+     FS=","
+     print "Move No\tTF of move\tThis move\tHTF move this move is in\tRelation to HTF move\tLine this move started from\t\n"
+}
+$8 ~ "RB" {print NR"\t"$1"\t"$8"\t"$3"\t"$4"\t"$9}
+#+END_SRC
+#+RESULTS:
+| Move No | TF of move | This move | HTF move this move is in | Relation to HTF move | Line this move started from        |
+|         |            |           |                          |                      |                                    |
+|       2 | HHTF       | RB        | F61%                     | WM                   | HTF SS                             |
+|       3 | HTF        | RB        | RB                       | WM                   | HTF SS/HHTF F38%                   |
+|       4 | TTF        | RB        | RB                       | WM                   | SS                                 |
+|      14 | TTF        | RB        | F61%                     | WM                   | RR                                 |
+|      24 | HTF        | RB        | RB                       | WM-FM                | F61%                               |
+|      25 | TTF        | RB        | RB                       | WM-FM                | HTF F61%/RR                        |
+|      33 | TTF        | RB        | RB                       | WM                   | F61%                               |
+|      35 | TTF        | RB        | RB                       | WM                   | F50%                               |
+|      41 | TTF        | RB        | R                        | WM                   | HTF F50%/F50% - synonymous moves   |
+|      44 | HTF        | RB        | RB                       | WM                   | RR/HHTF F23%                       |
+|      45 | TTF        | RB        | RB                       | WM-FM                | RR                                 |
+|      47 | TTF        | RB        | RB                       | WM                   | F61%                               |
+|      52 | TTF        | RB        | F61%                     | OM                   | F38%                               |
+|      53 | TTF        | RB        | F61%                     | WM                   | HTF F50%                           |
+|      59 | TTF        | RB        | F50%                     | WM-FM                | RR/HTF RR/HTF F61%                 |
+|      64 | HTF        | RB/R      | RB                       | WM                   | HTF F61%/HTF RR                    |
+|      65 | TTF        | RB        | RB/R                     | WM-FM                | F61%                               |
+|      69 | TTF        | RB        | RB/R                     | WM                   | RR                                 |
+|      71 | HTF        | RB        | HHTF R                   | WM-FM                | HTF SS                             |
+|      72 | TTF        | RB        | RB                       | WM-FM                | HTF SS                             |
+|      82 | TTF        | RB        | F61%                     | WM-FM                | F61%                               |
+|      88 | TTF        | RB        | R                        | WM                   | F61%                               |
+|      94 | TTF        | RB        | RB                       | WM                   | SS/HTF F50%                        |
+|      98 | TTF        | RB        | R                        | WM-FM                | RR                                 |
+|     101 | HTF        | RB        | HHHTF R                  | WM                   | HTF SS                             |
+|     102 | TTF        | RB        | RB                       | WM-FM                | F61%                               |
+|     109 | TTF        | R/RB      | F50%                     | WM-FM                | SS/HTF SS                          |
+|     112 | HTF        | RB        | HHHTF R                  | OM                   | F50%                               |
+|     113 | TTF        | RB        | RB                       | WM-FM                | HTF F50%                           |
+|     115 | TTF        | RB        | RB                       | WM                   | F50%                               |
+|     116 | HTF        | R/RB      | HHHTF R                  | WM                   | HHTF F61%/HTF SS                   |
+|     117 | TTF        | RB        | R/RB                     | WM-FM                | SS within HTF SS area at HHTF F61% |
+|     121 | TTF        | RB        | F61%                     | WM-FM                | HTF RR                             |
+|     122 | HTF        | RB        | HHHTF R                  | WM                   | F61%                               |
+|     125 | TTF        | RB        | RB                       | WM                   | F50%                               |
+So basically this is all the Reversal Breakout moves I have at the minute in this days database. Just to be clear this is the moves just from one days worth of movements. So not a lot but hopefully I can still get good enough data out of this.
+What I know is that RB moves only really happen when the HTF move is breaking into a new low or high than it has done before on its current HTF move. Thats basiaclly it. So what I know is that this means that the RB move is intrinsically a WM in relation to the HTF move. THis is the case as You can see from the Table at the top.
+
+Thats basically what I know for sure at the minute. Which is good only if I knew when that would happen. What will I do with figuring out when this move happens though? Well currently I have a days database of moves categorized into 12 fields. Thats what I have to work with. Some of the fields are categorizing price but not in a way that I think is helpful in figuring out when this move happens, such as the Time of move or any notes I have. That efectively leaves me with 10 fields basically. I guess what I basically have is at least one fixed variable, which is the RB move, and then have variable variables that can change. The whole point is trying to figure out what situation(s), there is probably more than one, would equal a RB move. It is not just me needing to know that a RB happens when this is the case that I need to find out but also I need to know when a RB "will" happen ,pre-emptively. Meaning I need to know that when these conditions are the case the next move will most likely be a RB move not just a RB move happens, past tense, when these things are the case.
+
+I think a good first thing then is to do a simple comparison of my fixed variable of a RB move and every other variable I have in the table. See if there are any correlations and try and figure out if then I need to move on to more complex mixture of factors, such as a commonality between two variables. This can get quite complex especially when you look at all the different possibilities of mixtures that can happen with the current variables themselves let alone derving more complex variables. These complex variables will probably be needed when I am trying to find a preemptive cause for a RB move. Complex variables would be looking at past moves from the current move as well as looking at how those past moves mixed in terms of how many swings and what structure they made and in what context they made it in.
+* Simple Comparisons
+This section is going to have all of the simple comparisons of a RB move with the contents of all the other relevant fields. I wont have any other factors in this sections graphs apart from "this move" being a RB move as well and just showing all the data in another relevant field. Hopefully this section will help spot some helpful correlations, if any.
+** HTF move this move is in
+Having a RB happen on all the different types of HTF moves makes sense becasue when a new HTF move is made that means the trend on the TTF has to be reversed as a new HTF move will mean a new trend on the TTF most likely. And a trend is nothing more than a general movement in one direction with a series of higher highs and higher lows or lower highs and lower lows. Obviously this means that RB will occur as a given. What does tend to happen though when you look at the splits is that when the HTF move is in a RB itself or some sort of larger TF move, it gives teh TTF more opportunityto be able to make RB moves as the HTF is just a bigger move hence the TTF is a bigger trend with more RB moves. It would also make sense, I think, that When the HTF move is a RB move, the TTF moves will be larger in stature as they may have less of a close target or S/R to reach.
+
+*Conclusion*
+:Conclusion:
+1. Gonna break down the conclusion
+
+   - RB moves will happen in any HTF move type but more frequently in a RB HTF move it seems, or basically when the HHTF move is taking effect and the HTF move is synonymous with it
+   - Basically a bigger HTF move means more of a trend for the TTF and therefore, possibly, more RB moves.
+
+2. I know that when the HTF is only having a RB or a HHTF move then that would mean that there is more opportunity to have a RB trade on the TTF also.
+
+3. At the minute I have just said that a RB move on the HTF chart will lead to RB moves on the TTF chart without knowing what causes an RB move and when to expect it except when an RB move happens. Thats some inception timey wimey stuff right there bruv!
+
+4. I think one thing that I can look into after thinking about this is what lines the RB move started from and what about the lines of the TF above it as well. Moves are classified basically because of what lines they abide by so another way to look at it is im trying to find out which lines will stop a move so it seems right to see which lines actually do. Especially in the conetxt of the HTF.
+:END:
+
+#+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
+BEGIN {
+    FS=","
+    print "Move No\tThis move\tHTF move this move is in"
+}
+$8 ~ "RB" {print NR"\t"$8"\t"$3}
+#+END_SRC
+#+RESULTS:
+| Move No | This move | HTF move this move is in |
+|       2 | RB        | F61%                     |
+|       3 | RB        | RB                       |
+|       4 | RB        | RB                       |
+|      14 | RB        | F61%                     |
+|      24 | RB        | RB                       |
+|      25 | RB        | RB                       |
+|      33 | RB        | RB                       |
+|      35 | RB        | RB                       |
+|      41 | RB        | R                        |
+|      44 | RB        | RB                       |
+|      45 | RB        | RB                       |
+|      47 | RB        | RB                       |
+|      52 | RB        | F61%                     |
+|      53 | RB        | F61%                     |
+|      59 | RB        | F50%                     |
+|      64 | RB/R      | RB                       |
+|      65 | RB        | RB/R                     |
+|      69 | RB        | RB/R                     |
+|      71 | RB        | HHTF R                   |
+|      72 | RB        | RB                       |
+|      82 | RB        | F61%                     |
+|      88 | RB        | R                        |
+|      94 | RB        | RB                       |
+|      98 | RB        | R                        |
+|     101 | RB        | HHHTF R                  |
+|     102 | RB        | RB                       |
+|     109 | R/RB      | F50%                     |
+|     112 | RB        | HHHTF R                  |
+|     113 | RB        | RB                       |
+|     115 | RB        | RB                       |
+|     116 | R/RB      | HHHTF R                  |
+|     117 | RB        | R/RB                     |
+|     121 | RB        | F61%                     |
+|     122 | RB        | HHHTF R                  |
+|     125 | RB        | RB                       |
+*** Splits
+**** Reversal Breakouts
+#+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
+BEGIN {
+    FS=","
+    print "Move No\tThis move\tHTF move this move is in"
+}
+$8 ~ "RB" && $3 ~ "RB" {print NR"\t"$8"\t"$3}
+#+END_SRC
+#+RESULTS:
+| Move No | This move | HTF move this move is in |
+|       3 | RB        | RB                       |
+|       4 | RB        | RB                       |
+|      24 | RB        | RB                       |
+|      25 | RB        | RB                       |
+|      33 | RB        | RB                       |
+|      35 | RB        | RB                       |
+|      44 | RB        | RB                       |
+|      45 | RB        | RB                       |
+|      47 | RB        | RB                       |
+|      64 | RB/R      | RB                       |
+|      65 | RB        | RB/R                     |
+|      69 | RB        | RB/R                     |
+|      72 | RB        | RB                       |
+|      94 | RB        | RB                       |
+|     102 | RB        | RB                       |
+|     113 | RB        | RB                       |
+|     115 | RB        | RB                       |
+|     117 | RB        | R/RB                     |
+|     125 | RB        | RB                       |
+**** Reversals
+#+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
+BEGIN {
+    FS=","
+    print "Move No\tThis move\tHTF move this move is in"
+}
+$8 ~ "RB" && $3 ~ /\/R|R$|\w R|R\// {print NR"\t"$8"\t"$3}
+#+END_SRC
+#+RESULTS:
+| Move No | This move | HTF move this move is in |
+|      41 | RB        | R                        |
+|      65 | RB        | RB/R                     |
+|      69 | RB        | RB/R                     |
+|      71 | RB        | HHTF R                   |
+|      88 | RB        | R                        |
+|      98 | RB        | R                        |
+|     101 | RB        | HHHTF R                  |
+|     112 | RB        | HHHTF R                  |
+|     116 | R/RB      | HHHTF R                  |
+|     117 | RB        | R/RB                     |
+|     122 | RB        | HHHTF R                  |
+**** Fibs
+#+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
+BEGIN {
+    FS=","
+    print "Move No\tThis move\tHTF move this move is in"
+}
+$8 ~ "RB" && $3 ~ "F[0-9]" {print NR"\t"$8"\t"$3}
+#+END_SRC
+#+RESULTS:
+| Move No | This move | HTF move this move is in |
+|       2 | RB        | F61%                     |
+|      14 | RB        | F61%                     |
+|      52 | RB        | F61%                     |
+|      53 | RB        | F61%                     |
+|      59 | RB        | F50%                     |
+|      82 | RB        | F61%                     |
+|     109 | R/RB      | F50%                     |
+|     121 | RB        | F61%                     |
+
+** Direction in relation to HTF move
+So this would be the case as I thought, RB only really happen at times when the TTF move is with the HTF move's direction. This is obvious I think innit because RB moves only really happen when the HTF move is going to a point that is past the TTF S/R lines. Therefore It has to be WM just in terms of logic.
+
+What is interesting though is the distinction with a WM and a WM-FM. A WM-FM means that this move, when looked at in retrospective, was the first move on the TTF that was part of a new HTF move. Sometimes the way this can play out is by the TTF move looking at first as if it is going to be a move in the opposite direction to the current HTF move at the time but what ends up happening is it actually becomes the new HTF move and had a RB. That is the same effectively as saying the LTF reversed the TTF move by a OS-RB, if you use the current TTF as the LTF and the current HTF as the TTF. It is all relative you see. A WM-FM could also happen by a DB on the TTF leading to a TTF move that creates a new move on the HTF. /This would be an intersting thing to look at as to what moves became a WM-FM./
+
+A WM RB means that the move was preceded by a RB in the same trend already or the HTF move has at least been shown to be a new move in a certain direction even though it hasn't caused a RB to happen on the TTF. This could happen obviously if the TTF and HTF moves were synonymous to a point and the TTF move took long enough to the point where the HTF candle got printed on the chart.
+
+*Conclusion*
+:Conclusion:
+1. In general, RB moves only happen when they are WM relative to the HTF move.
+2. This is the highest correlating factor that I think will be found in this study. Basically, a RB can only happen when it is following the HTF move. Not sure if this is always the case but this could mean that entering a move that is with current HTF move direction will probably result in a chance for a bigger move in general.
+3.
+4. I seemed to talk a lot about knowing what the context was in terms of how the previous few moves were when the RB happened, in particular in regards to a WM-FM. It would be good to know the structure of how they reversed the HTF move basically.
+
+I would also like to know what the HTF move was that it was in possibly as well for the
+:END:
+
+#+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
+BEGIN {
+    FS=","
+    print "Move No\tThis move\tRelation to HTF move"
+}
+$8 ~ "RB" {print NR"\t"$8"\t"$4}
+#+END_SRC
+#+RESULTS:
+| Move No | This move | Relation to HTF move |
+|       2 | RB        | WM                   |
+|       3 | RB        | WM                   |
+|       4 | RB        | WM                   |
+|      14 | RB        | WM                   |
+|      24 | RB        | WM-FM                |
+|      25 | RB        | WM-FM                |
+|      33 | RB        | WM                   |
+|      35 | RB        | WM                   |
+|      41 | RB        | WM                   |
+|      44 | RB        | WM                   |
+|      45 | RB        | WM-FM                |
+|      47 | RB        | WM                   |
+|      52 | RB        | OM                   |
+|      53 | RB        | WM                   |
+|      59 | RB        | WM-FM                |
+|      64 | RB/R      | WM                   |
+|      65 | RB        | WM-FM                |
+|      69 | RB        | WM                   |
+|      71 | RB        | WM-FM                |
+|      72 | RB        | WM-FM                |
+|      82 | RB        | WM-FM                |
+|      88 | RB        | WM                   |
+|      94 | RB        | WM                   |
+|      98 | RB        | WM-FM                |
+|     101 | RB        | WM                   |
+|     102 | RB        | WM-FM                |
+|     109 | R/RB      | WM-FM                |
+|     112 | RB        | OM                   |
+|     113 | RB        | WM-FM                |
+|     115 | RB        | WM                   |
+|     116 | R/RB      | WM                   |
+|     117 | RB        | WM-FM                |
+|     121 | RB        | WM-FM                |
+|     122 | RB        | WM                   |
+|     125 | RB        | WM                   |
+*** Splits
+**** With Move - First Move
+#+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
+BEGIN {
+    FS=","
+    print "Move No\tThis move\tRelation to HTF move"
+}
+$8 ~ "RB" && $4 == "WM-FM" {print NR"\t"$8"\t"$4}
+#+END_SRC
+#+RESULTS:
+| Move No | This move | Relation to HTF move |
+|      24 | RB        | WM-FM                |
+|      25 | RB        | WM-FM                |
+|      45 | RB        | WM-FM                |
+|      59 | RB        | WM-FM                |
+|      65 | RB        | WM-FM                |
+|      71 | RB        | WM-FM                |
+|      72 | RB        | WM-FM                |
+|      82 | RB        | WM-FM                |
+|      98 | RB        | WM-FM                |
+|     102 | RB        | WM-FM                |
+|     109 | R/RB      | WM-FM                |
+|     113 | RB        | WM-FM                |
+|     117 | RB        | WM-FM                |
+|     121 | RB        | WM-FM                |
+
+**** With Move
+#+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
+BEGIN {
+    FS=","
+    print "Move No\tThis move\tRelation to HTF move"
+}
+$8 ~ "RB" && $4 == "WM" {print NR"\t"$8"\t"$4}
+#+END_SRC
+#+RESULTS:
+| Move No | This move | Relation to HTF move |
+|       2 | RB        | WM                   |
+|       3 | RB        | WM                   |
+|       4 | RB        | WM                   |
+|      14 | RB        | WM                   |
+|      33 | RB        | WM                   |
+|      35 | RB        | WM                   |
+|      41 | RB        | WM                   |
+|      44 | RB        | WM                   |
+|      47 | RB        | WM                   |
+|      53 | RB        | WM                   |
+|      64 | RB/R      | WM                   |
+|      69 | RB        | WM                   |
+|      88 | RB        | WM                   |
+|      94 | RB        | WM                   |
+|     101 | RB        | WM                   |
+|     115 | RB        | WM                   |
+|     116 | R/RB      | WM                   |
+|     122 | RB        | WM                   |
+|     125 | RB        | WM                   |
+
+**** Opposite Move
+#+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
+BEGIN {
+    FS=","
+    print "Move No\tThis move\tRelation to HTF move"
+}
+$8 ~ "RB" && $4 == "OM" {print NR"\t"$8"\t"$4}
+#+END_SRC
+#+RESULTS:
+| Move No | This move | Relation to HTF move |
+|      52 | RB        | OM                   |
+|     112 | RB        | OM                   |
+
+** Previous move on this TF
+Looking at the tables that I have. RB moves generally happened the most when the previous moves where either R or F in about an even split between both. One thing that just popped to my head was which one of these moves would have been a WM-FM? It would be intersting to see if there is any correlation to that. Again though the context of all of this is incredibly important. Moves are sometimes hard to classify and sometimes they are rangey where you can have multiple moves within a range and that plays a part in understanding what moves is going to happen next. Thats why I am a bit wary in trusting this section too much as it is too black or white or too small a context for my liking.
+However even for what I was saying about the context and ranges and multiple moves. The analyses is the same, when does ranges happen and different contexts then. It just becomes another piece of the puzzle to figure out.
+
+One thing I cannot deny though is the clear seperation that is found between when this type of move happens. Basically it rarely follows anything apart from R and F moves.
+I think that it is normal for RB to not follow RB moves because thats a two extreme directions basically opposing eachother straight away with no build up.
+
+Having the moves occur at after a R makes me think that it is almost looking like a classic DB or DT pattern because that is what happens. It would also be not very surprising to me if the move prior to the R in this case is generally a fib. /Something to find out I guess./
+Another thing to check out is when there is a F, I think some of that is because it is already an established trend and that was a trend leg and I also think that is also because of HDB and QDB. It will be good to see that as well.
+
+The HTF moves that happened as well are all either very close to a R move or an R move in themselves as well as a continuation of a HTF move of whatever it was. It looks like those are massive moves but they are not. I would like to know at what scenario though the RB was followed by a RB, that would be intersting.
+
+Also one thing that has evaded me until I was telling mum about it is that ye, RB moves only really happen after a R or a F move but that also means that they never happen after a RB or a HTF move in general. This means that when you do have a RB move happen, the new move will most likely be a F or a R and brings you one step closer to figuring out when they happen and what would be a safe trade to make at that point.
+A thing that I would like to know though is to look into this a little bit. When does a R or a F follow on from a RB. Also I would like to know why a RB follows on from a R and a F almost equally. How can I know in what situation the precursor R and F produces a RB.
+
+*Conclusion*
+:Conclusion:
+1. Things that I have found:
+   - The precursor to RB moves are normally only R and F moves.
+   - Only rarely is a RB followed by an RB
+2. How it fits with what im looking for:
+   - Expect a with current HTF move new TTF move to posibbly be a RB if the precursor is a F or a R
+   - When an RB move occurs then the move after that, you know, will most likely be a F or a R
+3. :
+   - I dont know exactly how to describe this but basically this thing is a bit too simplistic to be able to just have a previous move, possibly at least in my opinion. The few moves prior in terms of how it looks and moves I think needs to be taken into context too.
+   - After a RB there is generally either a F or R move. That might be something that you can use for reasearching when those move happen.
+4. Further points of study:
+   - If I added a FM-WM filter and printed a few more fields to this query what would return? This will help also with knowing why the RB moves followed the RB moves as they would all show up in that query.
+   - RB moves that occured after a R and F remind me of the second leg of a DT or HDT structure. Is this true?
+:END:
+
+#+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
+BEGIN {
+    FS=","
+    print "Move No\tThis move\tPrevious move"
+}
+$8 ~ "RB" {print NR"\t"$8"\t"$5}
+#+END_SRC
+#+RESULTS:
+| Move No | This move | Previous move    |
+|       2 | RB        | R                |
+|       3 | RB        | R/HHTF F38%      |
+|       4 | RB        | R                |
+|      14 | RB        | R                |
+|      24 | RB        | F61%             |
+|      25 | RB        | R/HTF F61%       |
+|      33 | RB        | F61%             |
+|      35 | RB        | F50%             |
+|      41 | RB        | R                |
+|      44 | RB        | R                |
+|      45 | RB        | R                |
+|      47 | RB        | F61%             |
+|      52 | RB        | F38%             |
+|      53 | RB        | RB               |
+|      59 | RB        | revesal breakout |
+|      64 | RB/R      | R                |
+|      65 | RB        | F61%             |
+|      69 | RB        | R                |
+|      71 | RB        | RB/R             |
+|      72 | RB        | RB               |
+|      82 | RB        | F61%             |
+|      88 | RB        | F61%             |
+|      94 | RB        | R                |
+|      98 | RB        | R                |
+|     101 | RB        | R                |
+|     102 | RB        | F61%             |
+|     109 | R/RB      | R                |
+|     112 | RB        | F50%             |
+|     113 | RB        | R                |
+|     115 | RB        | F50%             |
+|     116 | R/RB      | RB               |
+|     117 | RB        | RB               |
+|     121 | RB        | HTF R            |
+|     122 | RB        | F61%             |
+|     125 | RB        | F50%             |
+*** Splits
+**** Reversal Breakout
+#+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
+BEGIN {
+    FS=","
+    print "Move No\tThis move\tPrevious move"
+}
+$8 ~ "RB" && $5 ~ "RB" {print NR"\t"$8"\t"$5}
+#+END_SRC
+#+RESULTS:
+| Move No | This move | Previous move |
+|      53 | RB        | RB            |
+|      71 | RB        | RB/R          |
+|      72 | RB        | RB            |
+|     116 | R/RB      | RB            |
+|     117 | RB        | RB            |
+**** Reversal
+#+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
+BEGIN {
+    FS=","
+    print "Move No\tThis move\tPrevious move"
+}
+$8 ~ "RB" && $5 ~ /\/R|R$|\w R|R\// {print NR"\t"$8"\t"$5}
+#+END_SRC
+#+RESULTS:
+| Move No | This move | Previous move |
+|       2 | RB        | R             |
+|       3 | RB        | R/HHTF F38%   |
+|       4 | RB        | R             |
+|      14 | RB        | R             |
+|      25 | RB        | R/HTF F61%    |
+|      41 | RB        | R             |
+|      44 | RB        | R             |
+|      45 | RB        | R             |
+|      64 | RB/R      | R             |
+|      69 | RB        | R             |
+|      71 | RB        | RB/R          |
+|      94 | RB        | R             |
+|      98 | RB        | R             |
+|     101 | RB        | R             |
+|     109 | R/RB      | R             |
+|     113 | RB        | R             |
+|     121 | RB        | HTF R         |
+**** HTF Moves
+#+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
+BEGIN {
+    FS=","
+    print "Move No\tThis move\tPrevious move"
+}
+$8 ~ "RB" && $5 ~ "H" {print NR"\t"$8"\t"$5}
+#+END_SRC
+#+RESULTS:
+| Move No | This move | Previous move |
+|       3 | RB        | R/HHTF F38%   |
+|      25 | RB        | R/HTF F61%    |
+|     121 | RB        | HTF R         |
+**** Fibs
+#+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
+BEGIN {
+    FS=","
+    print "Move No\tThis move\tPrevious move"
+}
+$8 ~ "RB" && $5 ~ "F[0-9]" {print NR"\t"$8"\t"$5}
+#+END_SRC
+#+RESULTS:
+| Move No | This move | Previous move |
+|       3 | RB        | R/HHTF F38%   |
+|      24 | RB        | F61%          |
+|      25 | RB        | R/HTF F61%    |
+|      33 | RB        | F61%          |
+|      35 | RB        | F50%          |
+|      47 | RB        | F61%          |
+|      52 | RB        | F38%          |
+|      65 | RB        | F61%          |
+|      82 | RB        | F61%          |
+|      88 | RB        | F61%          |
+|     102 | RB        | F61%          |
+|     112 | RB        | F50%          |
+|     115 | RB        | F50%          |
+|     122 | RB        | F61%          |
+|     125 | RB        | F50%          |
+** Line the previous move started from
+#+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
+BEGIN {
+    FS=","
+    print "Move No\tMove TF\tThis move\tLine previous move began from"
+}
+$8 ~ "RB" {print NR"\t"$1"\t"$8"\t"$6}
+#+END_SRC
+#+RESULTS:
+| Move No | Move TF | This move | Line previous move began from |
+|       2 | HHTF    | RB        | HTF SS                        |
+|       3 | HTF     | RB        | HHHHTF RR/HHTF RR/HTF RR      |
+|       4 | TTF     | RB        | F38%                          |
+|      14 | TTF     | RB        | SS/HTF F38%                   |
+|      24 | HTF     | RB        | HHTF F38%/HTF F61%            |
+|      25 | TTF     | RB        | F50%                          |
+|      33 | TTF     | RB        | F61%                          |
+|      35 | TTF     | RB        | SS                            |
+|      41 | TTF     | RB        | HTF SS/HHTF SS/HHHTF F50%     |
+|      44 | HTF     | RB        | HTF SS                        |
+|      45 | TTF     | RB        | SS                            |
+|      47 | TTF     | RB        | SS/HTF SS                     |
+|      52 | TTF     | RB        | F38%/HTF F38%                 |
+|      53 | TTF     | RB        | F38%                          |
+|      59 | TTF     | RB        | RR                            |
+|      64 | HTF     | RB/R      | F50%                          |
+|      65 | TTF     | RB        | F61%/HTF SS                   |
+|      69 | TTF     | RB        | SS/HTF SS                     |
+|      71 | HTF     | RB        | HTF F61%/HTF RR               |
+|      72 | TTF     | RB        | RR                            |
+|      82 | TTF     | RB        | F38%                          |
+|      88 | TTF     | RB        | F50/%HTF F38%                 |
+|      94 | TTF     | RB        | RR                            |
+|      98 | TTF     | RB        | F50%                          |
+|     101 | HTF     | RB        | HTF RR at HHTF F38%           |
+|     102 | TTF     | RB        | HTF RR                        |
+|     109 | TTF     | R/RB      | F50%                          |
+|     112 | HTF     | RB        | F61%                          |
+|     113 | TTF     | RB        | HTF SS/SS                     |
+|     115 | TTF     | RB        | SS undershooting HTF SS       |
+|     116 | HTF     | R/RB      | F50%                          |
+|     117 | TTF     | RB        | F50%                          |
+|     121 | TTF     | RB        | F50%/HTF F50%                 |
+|     122 | HTF     | RB        | HTF RR                        |
+|     125 | TTF     | RB        | RR at HTF F61%                |
+*** Splits
+**** TTF S/R
+#+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
+BEGIN {
+    FS=","
+    print "Move No\tMove TF\tThis move\tLine previous move began from"
+}
+{if ($1 ~ /H\w*/ && $8 ~ "RB" && $6 ~ /H\w* [SS|RR]/) {print NR"\t"$1"\t"$8"\t"$6}
+    else if ($1 == "TTF" && $8 ~ "RB" && $6 ~ /^[SS|RR]|[SS|RR] /) {print NR"\t"$1"\t"$8"\t"$6}
+    }
+#+END_SRC
+#+RESULTS:
+| Move No | Move TF | This move | Line previous move began from |
+|       2 | HHTF    | RB        | HTF SS                        |
+|       3 | HTF     | RB        | HHHHTF RR/HHTF RR/HTF RR      |
+|      14 | TTF     | RB        | SS/HTF F38%                   |
+|      35 | TTF     | RB        | SS                            |
+|      44 | HTF     | RB        | HTF SS                        |
+|      45 | TTF     | RB        | SS                            |
+|      47 | TTF     | RB        | SS/HTF SS                     |
+|      59 | TTF     | RB        | RR                            |
+|      69 | TTF     | RB        | SS/HTF SS                     |
+|      71 | HTF     | RB        | HTF F61%/HTF RR               |
+|      72 | TTF     | RB        | RR                            |
+|      94 | TTF     | RB        | RR                            |
+|     101 | HTF     | RB        | HTF RR at HHTF F38%           |
+|     115 | TTF     | RB        | SS undershooting HTF SS       |
+|     122 | HTF     | RB        | HTF RR                        |
+|     125 | TTF     | RB        | RR at HTF F61%                |
+
+**** TTF Fibs
+#+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
+BEGIN {
+    FS=","
+    print "Move No\tMove TF\tThis move\tLine previous move began from"
+}
+{if ($1 ~ /H\w*/ && $8 ~ "RB" && $6 ~ /F[0-9]/) {print NR"\t"$1"\t"$8"\t"$6}
+    else if ($1 == "TTF" && $8 ~ "RB" && $6 ~ /^F[0-9].%/) {print NR"\t"$1"\t"$8"\t"$6}
+    }
+#+END_SRC
+#+RESULTS:
+| Move No | Move TF | This move | Line previous move began from |
+|       4 | TTF     | RB        | F38%                          |
+|      24 | HTF     | RB        | HHTF F38%/HTF F61%            |
+|      25 | TTF     | RB        | F50%                          |
+|      33 | TTF     | RB        | F61%                          |
+|      52 | TTF     | RB        | F38%/HTF F38%                 |
+|      53 | TTF     | RB        | F38%                          |
+|      64 | HTF     | RB/R      | F50%                          |
+|      65 | TTF     | RB        | F61%/HTF SS                   |
+|      71 | HTF     | RB        | HTF F61%/HTF RR               |
+|      82 | TTF     | RB        | F38%                          |
+|      98 | TTF     | RB        | F50%                          |
+|     101 | HTF     | RB        | HTF RR at HHTF F38%           |
+|     109 | TTF     | R/RB      | F50%                          |
+|     112 | HTF     | RB        | F61%                          |
+|     116 | HTF     | R/RB      | F50%                          |
+|     117 | TTF     | RB        | F50%                          |
+|     121 | TTF     | RB        | F50%/HTF F50%                 |
+
+**** H(n)TF S/R
+#+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
+BEGIN {
+    FS=","
+    print "Move No\tMove TF\tThis move\tLine previous move began from"
+}
+{if ($1 ~ /H\w*/ && $8 ~ "RB" && $6 ~ /HH\w* [SS|RR]/) {print NR"\t"$1"\t"$8"\t"$6}
+    else if ($1 == "TTF" && $8 ~ "RB" && $6 ~ /H\w* [SS|RR]/) {print NR"\t"$1"\t"$8"\t"$6}
+    }
+#+END_SRC
+#+RESULTS:
+| Move No | Move TF | This move | Line previous move began from |
+|       3 | HTF     | RB        | HHHHTF RR/HHTF RR/HTF RR      |
+|      41 | TTF     | RB        | HTF SS/HHTF SS/HHHTF F50%     |
+|      47 | TTF     | RB        | SS/HTF SS                     |
+|      65 | TTF     | RB        | F61%/HTF SS                   |
+|      69 | TTF     | RB        | SS/HTF SS                     |
+|     102 | TTF     | RB        | HTF RR                        |
+|     113 | TTF     | RB        | HTF SS/SS                     |
+|     115 | TTF     | RB        | SS undershooting HTF SS       |
+
+**** H(n)TF Fibs
+#+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
+BEGIN {
+    FS=","
+    print "Move No\tMove TF\tThis move\tLine previous move began from"
+}
+{if ($1 ~ /H\w*/ && $8 ~ "RB" && $6 ~ /HH\w* F[0-9]/) {print NR"\t"$1"\t"$8"\t"$6}
+    else if ($1 == "TTF" && $8 ~ "RB" && $6 ~ /F F[0-9].%/) {print NR"\t"$1"\t"$8"\t"$9}
+    }
+#+END_SRC
+
+#+RESULTS:
+| Move No | Move TF | This move | Line previous move began from    |
+|      14 | TTF     | RB        | RR                               |
+|      24 | HTF     | RB        | HHTF F38%/HTF F61%               |
+|      41 | TTF     | RB        | HTF F50%/F50% - synonymous moves |
+|      52 | TTF     | RB        | F38%                             |
+|      88 | TTF     | RB        | F61%                             |
+|     101 | HTF     | RB        | HTF RR at HHTF F38%              |
+|     121 | TTF     | RB        | HTF RR                           |
+|     125 | TTF     | RB        | F50%                             |
+
+** Did previous move overshoot or undershoot
+#+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
+BEGIN {
+    FS=","
+    print "Move No\tThis move\tPrevious move over/undershoot"
+}
+$8 ~ "RB" {print NR"\t"$8"\t"$7}
+#+END_SRC
+#+RESULTS:
+| Move No | This move | Previous move over/undershoot                                                                             |
+|       2 | RB        | no                                                                                                        |
+|       3 | RB        | yes - it slightly overshot the HTF RR furthest line and the HHTF and HHHHTF closest lines                 |
+|       4 | RB        | no                                                                                                        |
+|      14 | RB        | no                                                                                                        |
+|      24 | RB        | no/yes - it slightly overshot the HTF F by a little bit but the HHTF F it was pretty much spot on         |
+|      25 | RB        | yes - slighlty overshot                                                                                   |
+|      33 | RB        | yes - slightly overshot                                                                                   |
+|      35 | RB        | no                                                                                                        |
+|      41 | RB        | no/yes - overshot the HHTF SS closest line by a bit but overall was not overshooting the HTF by very much |
+|      44 | RB        | no                                                                                                        |
+|      45 | RB        | no                                                                                                        |
+|      47 | RB        | no                                                                                                        |
+|      52 | RB        | no                                                                                                        |
+|      53 | RB        | no                                                                                                        |
+|      59 | RB        | no                                                                                                        |
+|      64 | RB/R      | yes - slighlty undershot                                                                                  |
+|      65 | RB        | yes - overshot bothe the F line and the closest HTF SS line                                               |
+|      69 | RB        | no                                                                                                        |
+|      71 | RB        | yes - overshot                                                                                            |
+|      72 | RB        | yes - slightly overshot the farthest line and went into the F61% level                                    |
+|      82 | RB        | no                                                                                                        |
+|      88 | RB        | yes - overshot                                                                                            |
+|      94 | RB        | no                                                                                                        |
+|      98 | RB        | no                                                                                                        |
+|     101 | RB        | no/yes - overshot the HHTF F38% by a bit and was in the middle of the HTF RR area                         |
+|     102 | RB        | yes - undershot                                                                                           |
+|     109 | R/RB      | no                                                                                                        |
+|     112 | RB        | no                                                                                                        |
+|     113 | RB        | no                                                                                                        |
+|     115 | RB        | no/yes - undershot slighlty the HTF SS closest line                                                       |
+|     116 | R/RB      | no                                                                                                        |
+|     117 | RB        | no                                                                                                        |
+|     121 | RB        | yes - slightly overshot                                                                                   |
+|     122 | RB        | no/yes - it overshot the first HTF resisatnce area but not the second                                     |
+|     125 | RB        | no/yes - slighlty overshot the HTF F61%                                                                   |
+*** Splits
+**** No
+#+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
+BEGIN {
+    FS=","
+    print "Move No\tThis move\tPrevious move over/undershoot"
+}
+$8 ~ "RB" && $7 ~ /^no$|^no -/ {print NR"\t"$8"\t"$7}
+#+END_SRC
+#+RESULTS:
+| Move No | This move | Previous move over/undershoot |
+|       2 | RB        | no                            |
+|       4 | RB        | no                            |
+|      14 | RB        | no                            |
+|      35 | RB        | no                            |
+|      44 | RB        | no                            |
+|      45 | RB        | no                            |
+|      47 | RB        | no                            |
+|      52 | RB        | no                            |
+|      53 | RB        | no                            |
+|      59 | RB        | no                            |
+|      69 | RB        | no                            |
+|      82 | RB        | no                            |
+|      94 | RB        | no                            |
+|      98 | RB        | no                            |
+|     109 | R/RB      | no                            |
+|     112 | RB        | no                            |
+|     113 | RB        | no                            |
+|     116 | R/RB      | no                            |
+|     117 | RB        | no                            |
+
+**** Yes
+#+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
+BEGIN {
+    FS=","
+    print "Move No\tThis move\tPrevious move over/undershoot"
+}
+$8 ~ "RB" && $7 ~ /^yes$|^yes -/ {print NR"\t"$8"\t"$7}
+#+END_SRC
+#+RESULTS:
+| Move No | This move | Previous move over/undershoot                                                             |
+|       3 | RB        | yes - it slightly overshot the HTF RR furthest line and the HHTF and HHHHTF closest lines |
+|      25 | RB        | yes - slighlty overshot                                                                   |
+|      33 | RB        | yes - slightly overshot                                                                   |
+|      64 | RB/R      | yes - slighlty undershot                                                                  |
+|      65 | RB        | yes - overshot bothe the F line and the closest HTF SS line                               |
+|      71 | RB        | yes - overshot                                                                            |
+|      72 | RB        | yes - slightly overshot the farthest line and went into the F61% level                    |
+|      88 | RB        | yes - overshot                                                                            |
+|     102 | RB        | yes - undershot                                                                           |
+|     121 | RB        | yes - slightly overshot                                                                   |
+
+**** No/Yes
+#+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
+BEGIN {
+    FS=","
+    print "Move No\tThis move\tPrevious move over/undershoot"
+}
+$8 ~ "RB" && $7 ~ /^no\/yes/ {print NR"\t"$8"\t"$7}
+#+END_SRC
+#+RESULTS:
+| Move No | This move | Previous move over/undershoot                                                                             |
+|      24 | RB        | no/yes - it slightly overshot the HTF F by a little bit but the HHTF F it was pretty much spot on         |
+|      41 | RB        | no/yes - overshot the HHTF SS closest line by a bit but overall was not overshooting the HTF by very much |
+|     101 | RB        | no/yes - overshot the HHTF F38% by a bit and was in the middle of the HTF RR area                         |
+|     115 | RB        | no/yes - undershot slighlty the HTF SS closest line                                                       |
+|     122 | RB        | no/yes - it overshot the first HTF resisatnce area but not the second                                     |
+|     125 | RB        | no/yes - slighlty overshot the HTF F61%                                                                   |
+
+** What line did this move start from
+#+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
+BEGIN {
+    FS=","
+    print "Move No\tMove TF\tThis move\tLine this move started from"
+}
+$8 ~ "RB" {print NR"\t"$1"\t"$8"\t"$9}
+#+END_SRC
+#+RESULTS:
+| Move No | Move TF | This move | Line this move started from        |
+|       2 | HHTF    | RB        | HTF SS                             |
+|       3 | HTF     | RB        | HTF SS/HHTF F38%                   |
+|       4 | TTF     | RB        | SS                                 |
+|      14 | TTF     | RB        | RR                                 |
+|      24 | HTF     | RB        | F61%                               |
+|      25 | TTF     | RB        | HTF F61%/RR                        |
+|      33 | TTF     | RB        | F61%                               |
+|      35 | TTF     | RB        | F50%                               |
+|      41 | TTF     | RB        | HTF F50%/F50% - synonymous moves   |
+|      44 | HTF     | RB        | RR/HHTF F23%                       |
+|      45 | TTF     | RB        | RR                                 |
+|      47 | TTF     | RB        | F61%                               |
+|      52 | TTF     | RB        | F38%                               |
+|      53 | TTF     | RB        | HTF F50%                           |
+|      59 | TTF     | RB        | RR/HTF RR/HTF F61%                 |
+|      64 | HTF     | RB/R      | HTF F61%/HTF RR                    |
+|      65 | TTF     | RB        | F61%                               |
+|      69 | TTF     | RB        | RR                                 |
+|      71 | HTF     | RB        | HTF SS                             |
+|      72 | TTF     | RB        | HTF SS                             |
+|      82 | TTF     | RB        | F61%                               |
+|      88 | TTF     | RB        | F61%                               |
+|      94 | TTF     | RB        | SS/HTF F50%                        |
+|      98 | TTF     | RB        | RR                                 |
+|     101 | HTF     | RB        | HTF SS                             |
+|     102 | TTF     | RB        | F61%                               |
+|     109 | TTF     | R/RB      | SS/HTF SS                          |
+|     112 | HTF     | RB        | F50%                               |
+|     113 | TTF     | RB        | HTF F50%                           |
+|     115 | TTF     | RB        | F50%                               |
+|     116 | HTF     | R/RB      | HHTF F61%/HTF SS                   |
+|     117 | TTF     | RB        | SS within HTF SS area at HHTF F61% |
+|     121 | TTF     | RB        | HTF RR                             |
+|     122 | HTF     | RB        | F61%                               |
+|     125 | TTF     | RB        | F50%                               |
+*** Splits
+**** TTF S/R
+#+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
+BEGIN {
+    FS=","
+    print "Move No\tMove TF\tThis move\tLine this move started from"
+}
+{if ($1 ~ /H\w*/ && $8 ~ "RB" && $9 ~ /H\w* [SS|RR]/) {print NR"\t"$1"\t"$8"\t"$9}
+    else if ($1 == "TTF" && $8 ~ "RB" && $9 ~ /^[SS|RR]|[SS|RR] /) {print NR"\t"$1"\t"$8"\t"$9}
+    }
+#+END_SRC
+#+RESULTS:
+| Move No | Move TF | This move | Line this move started from        |
+|       2 | HHTF    | RB        | HTF SS                             |
+|       3 | HTF     | RB        | HTF SS/HHTF F38%                   |
+|       4 | TTF     | RB        | SS                                 |
+|      14 | TTF     | RB        | RR                                 |
+|      45 | TTF     | RB        | RR                                 |
+|      59 | TTF     | RB        | RR/HTF RR/HTF F61%                 |
+|      64 | HTF     | RB/R      | HTF F61%/HTF RR                    |
+|      69 | TTF     | RB        | RR                                 |
+|      71 | HTF     | RB        | HTF SS                             |
+|      94 | TTF     | RB        | SS/HTF F50%                        |
+|      98 | TTF     | RB        | RR                                 |
+|     101 | HTF     | RB        | HTF SS                             |
+|     109 | TTF     | R/RB      | SS/HTF SS                          |
+|     116 | HTF     | R/RB      | HHTF F61%/HTF SS                   |
+|     117 | TTF     | RB        | SS within HTF SS area at HHTF F61% |
+
+**** TTF Fibs
+#+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
+BEGIN {
+    FS=","
+    print "Move No\tMove TF\tThis move\tLine this move started from"
+}
+{if ($1 ~ /H\w*/ && $8 ~ "RB" && $9 ~ /F[0-9]/) {print NR"\t"$1"\t"$8"\t"$9}
+    else if ($1 == "TTF" && $8 ~ "RB" && $9 ~ /^F[0-9].%/) {print NR"\t"$1"\t"$8"\t"$9}
+    }
+#+END_SRC
+#+RESULTS:
+| Move No | Move TF | This move | Line this move started from |
+|       3 | HTF     | RB        | HTF SS/HHTF F38%            |
+|      24 | HTF     | RB        | F61%                        |
+|      33 | TTF     | RB        | F61%                        |
+|      35 | TTF     | RB        | F50%                        |
+|      44 | HTF     | RB        | RR/HHTF F23%                |
+|      47 | TTF     | RB        | F61%                        |
+|      52 | TTF     | RB        | F38%                        |
+|      64 | HTF     | RB/R      | HTF F61%/HTF RR             |
+|      65 | TTF     | RB        | F61%                        |
+|      82 | TTF     | RB        | F61%                        |
+|      88 | TTF     | RB        | F61%                        |
+|     102 | TTF     | RB        | F61%                        |
+|     112 | HTF     | RB        | F50%                        |
+|     115 | TTF     | RB        | F50%                        |
+|     116 | HTF     | R/RB      | HHTF F61%/HTF SS            |
+|     122 | HTF     | RB        | F61%                        |
+|     125 | TTF     | RB        | F50%                        |
+
+**** H(n)TF S/R
+#+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
+BEGIN {
+    FS=","
+    print "Move No\tMove TF\tThis move\tLine this move started from"
+}
+{if ($1 ~ /H\w*/ && $8 ~ "RB" && $9 ~ /HH\w* [SS|RR]/) {print NR"\t"$1"\t"$8"\t"$9}
+    else if ($1 == "TTF" && $8 ~ "RB" && $9 ~ /H\w* [SS|RR]/) {print NR"\t"$1"\t"$8"\t"$9}
+    }
+#+END_SRC
+#+RESULTS:
+| Move No | Move TF | This move | Line this move started from        |
+|      59 | TTF     | RB        | RR/HTF RR/HTF F61%                 |
+|      72 | TTF     | RB        | HTF SS                             |
+|     109 | TTF     | R/RB      | SS/HTF SS                          |
+|     117 | TTF     | RB        | SS within HTF SS area at HHTF F61% |
+|     121 | TTF     | RB        | HTF RR                             |
+
+**** H(n)TF Fibs
+#+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
+BEGIN {
+    FS=","
+    print "Move No\tMove TF\tThis move\tLine this move started from"
+}
+{if ($1 ~ /H\w*/ && $8 ~ "RB" && $9 ~ /HH\w* F[0-9]/) {print NR"\t"$1"\t"$8"\t"$9}
+    else if ($1 == "TTF" && $8 ~ "RB" && $9 ~ /F F[0-9].%/) {print NR"\t"$1"\t"$8"\t"$9}
+    }
+#+END_SRC
+#+RESULTS:
+| Move No | Move TF | This move | Line this move started from        |
+|       3 | HTF     | RB        | HTF SS/HHTF F38%                   |
+|      25 | TTF     | RB        | HTF F61%/RR                        |
+|      41 | TTF     | RB        | HTF F50%/F50% - synonymous moves   |
+|      44 | HTF     | RB        | RR/HHTF F23%                       |
+|      53 | TTF     | RB        | HTF F50%                           |
+|      59 | TTF     | RB        | RR/HTF RR/HTF F61%                 |
+|      94 | TTF     | RB        | SS/HTF F50%                        |
+|     113 | TTF     | RB        | HTF F50%                           |
+|     116 | HTF     | R/RB      | HHTF F61%/HTF SS                   |
+|     117 | TTF     | RB        | SS within HTF SS area at HHTF F61% |
+
+** Did the start of this move overshoot or undershoot
+#+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
+BEGIN {
+    FS=","
+    print "Move No\tThis move\tThis move over/undershoot?"
+}
+$8 ~ "RB" {print NR"\t"$8"\t"$10}
+#+END_SRC
+#+RESULTS:
+| Move No | This move | This move over/undershoot?                                              |
+|       2 | RB        | yes - slighlty overshot                                                 |
+|       3 | RB        | yes - overshot the HTF SS by a bit as well as the HTF F by a little too |
+|       4 | RB        | no                                                                      |
+|      14 | RB        | no                                                                      |
+|      24 | RB        | no                                                                      |
+|      25 | RB        | no                                                                      |
+|      33 | RB        | no                                                                      |
+|      35 | RB        | no                                                                      |
+|      41 | RB        | no                                                                      |
+|      44 | RB        | no/yes - it did not overshoot the RR but it did overshoot the HHTF F    |
+|      45 | RB        | no                                                                      |
+|      47 | RB        | no                                                                      |
+|      52 | RB        | no                                                                      |
+|      53 | RB        | yes - overshot the F50% by quite a bit                                  |
+|      59 | RB        | no/yes - did not over or undershoot anything except the HTF F61%        |
+|      64 | RB/R      | yes - overshot                                                          |
+|      65 | RB        | no                                                                      |
+|      69 | RB        | yes - slightly overshot the farthest line and went into the F61% level  |
+|      71 | RB        | no                                                                      |
+|      72 | RB        | no                                                                      |
+|      82 | RB        | no                                                                      |
+|      88 | RB        | yes - overshot                                                          |
+|      94 | RB        | no/yes - slighlty undershot the HTF F50%                                |
+|      98 | RB        | no                                                                      |
+|     101 | RB        | no                                                                      |
+|     102 | RB        | yes - slightly overshot                                                 |
+|     109 | R/RB      | no                                                                      |
+|     112 | RB        | no                                                                      |
+|     113 | RB        | no                                                                      |
+|     115 | RB        | no                                                                      |
+|     116 | R/RB      | no                                                                      |
+|     117 | RB        | no                                                                      |
+|     121 | RB        | no                                                                      |
+|     122 | RB        | yes - slightly undershot                                                |
+|     125 | RB        | no                                                                      |
+
+*** Splits
+**** No
+#+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
+BEGIN {
+    FS=","
+    print "Move No\tThis move\tDid this move over/undershoot"
+}
+$8 ~ "RB" && $10 ~ /^no$|^no -/ {print NR"\t"$8"\t"$10}
+#+END_SRC
+#+RESULTS:
+| Move No | This move | Did this move over/undershoot |
+|       4 | RB        | no                            |
+|      14 | RB        | no                            |
+|      24 | RB        | no                            |
+|      25 | RB        | no                            |
+|      33 | RB        | no                            |
+|      35 | RB        | no                            |
+|      41 | RB        | no                            |
+|      45 | RB        | no                            |
+|      47 | RB        | no                            |
+|      52 | RB        | no                            |
+|      65 | RB        | no                            |
+|      71 | RB        | no                            |
+|      72 | RB        | no                            |
+|      82 | RB        | no                            |
+|      98 | RB        | no                            |
+|     101 | RB        | no                            |
+|     109 | R/RB      | no                            |
+|     112 | RB        | no                            |
+|     113 | RB        | no                            |
+|     115 | RB        | no                            |
+|     116 | R/RB      | no                            |
+|     117 | RB        | no                            |
+|     121 | RB        | no                            |
+|     125 | RB        | no                            |
+
+**** Yes
+#+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
+BEGIN {
+    FS=","
+    print "Move No\tThis move\tDid this move over/undershoot"
+}
+$8 ~ "RB" && $10 ~ /^yes$|^yes -/ {print NR"\t"$8"\t"$10}
+#+END_SRC
+#+RESULTS:
+| Move No | This move | Did this move over/undershoot                                           |
+|       2 | RB        | yes - slighlty overshot                                                 |
+|       3 | RB        | yes - overshot the HTF SS by a bit as well as the HTF F by a little too |
+|      53 | RB        | yes - overshot the F50% by quite a bit                                  |
+|      64 | RB/R      | yes - overshot                                                          |
+|      69 | RB        | yes - slightly overshot the farthest line and went into the F61% level  |
+|      88 | RB        | yes - overshot                                                          |
+|     102 | RB        | yes - slightly overshot                                                 |
+|     122 | RB        | yes - slightly undershot                                                |
+
+**** No/Yes
+#+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
+BEGIN {
+    FS=","
+    print "Move No\tThis move\tDid this move over/undershoot"
+}
+$8 ~ "RB" && $10 ~ /^no\/yes/ {print NR"\t"$8"\t"$10}
+#+END_SRC
+#+RESULTS:
+| Move No | This move | Did this move over/undershoot                                        |
+|      44 | RB        | no/yes - it did not overshoot the RR but it did overshoot the HHTF F |
+|      59 | RB        | no/yes - did not over or undershoot anything except the HTF F61%     |
+|      94 | RB        | no/yes - slighlty undershot the HTF F50%                             |
+
+** How did the start of this move reverse on the LTF
+#+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
+BEGIN {
+    FS=","
+    print "Move No\tThis move\tHow did the start of this move reverse?"
+}
+$8 ~ "RB" {print NR"\t"$8"\t"$11}
+#+END_SRC
+#+RESULTS:
+| Move No | This move | How did the start of this move reverse?                               |
+|       2 | RB        | HDB                                                                   |
+|       3 | RB        | DB                                                                    |
+|       4 | RB        | DB - the second down leg made a RB move                               |
+|      14 | RB        | HDT - first move was a R followed by F then RB                        |
+|      24 | RB        | DT - multiple swings                                                  |
+|      25 | RB        | HDT                                                                   |
+|      33 | RB        | OS - RB                                                               |
+|      35 | RB        | DT - slow swing and very small swings as well                         |
+|      41 | RB        | HDB - multiple swings                                                 |
+|      44 | RB        | DT                                                                    |
+|      45 | RB        | DT                                                                    |
+|      47 | RB        | HDT                                                                   |
+|      52 | RB        | OS - RB                                                               |
+|      53 | RB        | OS - RB                                                               |
+|      59 | RB        | QDT                                                                   |
+|      64 | RB/R      | HDT                                                                   |
+|      65 | RB        | HDT                                                                   |
+|      69 | RB        | DT                                                                    |
+|      71 | RB        | OS - had a little mini move on the TTF but it was basically a RB move |
+|      72 | RB        | HDB                                                                   |
+|      82 | RB        | OS - RB                                                               |
+|      88 | RB        | DT                                                                    |
+|      94 | RB        | DB                                                                    |
+|      98 | RB        | QDT                                                                   |
+|     101 | RB        | HDB                                                                   |
+|     102 | RB        | OS - R                                                                |
+|     109 | R/RB      | OS - R                                                                |
+|     112 | RB        | DT                                                                    |
+|     113 | RB        | DT                                                                    |
+|     115 | RB        | DT                                                                    |
+|     116 | R/RB      | OS - R                                                                |
+|     117 | RB        | OS - RB                                                               |
+|     121 | RB        | HDT                                                                   |
+|     122 | RB        | QDB                                                                   |
+|     125 | RB        | OS - RB                                                               |
+*** Splits
+**** One Swing
+#+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
+BEGIN {
+    FS=","
+    print "Move No\tThis move\tHow did the start of this move reverse?"
+}
+$8 ~ "RB" && $11 ~ /^OS/ {print NR"\t"$8"\t"$11}
+#+END_SRC
+#+RESULTS:
+| Move No | This move | How did the start of this move reverse?                               |
+|      33 | RB        | OS - RB                                                               |
+|      52 | RB        | OS - RB                                                               |
+|      53 | RB        | OS - RB                                                               |
+|      71 | RB        | OS - had a little mini move on the TTF but it was basically a RB move |
+|      82 | RB        | OS - RB                                                               |
+|     102 | RB        | OS - R                                                                |
+|     109 | R/RB      | OS - R                                                                |
+|     116 | R/RB      | OS - R                                                                |
+|     117 | RB        | OS - RB                                                               |
+|     125 | RB        | OS - RB                                                               |
+
+**** Double Top
+#+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
+BEGIN {
+    FS=","
+    print "Move No\tThis move\tHow did the start of this move reverse?"
+}
+$8 ~ "RB" && $11 ~ /^DT/ {print NR"\t"$8"\t"$11}
+#+END_SRC
+#+RESULTS:
+| Move No | This move | How did the start of this move reverse?       |
+|      24 | RB        | DT - multiple swings                          |
+|      35 | RB        | DT - slow swing and very small swings as well |
+|      44 | RB        | DT                                            |
+|      45 | RB        | DT                                            |
+|      69 | RB        | DT                                            |
+|      88 | RB        | DT                                            |
+|     112 | RB        | DT                                            |
+|     113 | RB        | DT                                            |
+|     115 | RB        | DT                                            |
+
+***** Half Double Top
+#+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
+BEGIN {
+    FS=","
+    print "Move No\tThis move\tHow did the start of this move reverse?"
+}
+$8 ~ "RB" && $11 ~ /^HDT/ {print NR"\t"$8"\t"$11}
+#+END_SRC
+#+RESULTS:
+| Move No | This move | How did the start of this move reverse?        |
+|      14 | RB        | HDT - first move was a R followed by F then RB |
+|      25 | RB        | HDT                                            |
+|      47 | RB        | HDT                                            |
+|      64 | RB/R      | HDT                                            |
+|      65 | RB        | HDT                                            |
+|     121 | RB        | HDT                                            |
+
+***** Quarter Double Top
+#+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
+BEGIN {
+    FS=","
+    print "Move No\tThis move\tHow did the start of this move reverse?"
+}
+$8 ~ "RB" && $11 ~ /^QDT/ {print NR"\t"$8"\t"$11}
+#+END_SRC
+#+RESULTS:
+| Move No | This move | How did the start of this move reverse? |
+|      59 | RB        | QDT                                     |
+|      98 | RB        | QDT                                     |
+
+**** Double Bottom
+#+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
+BEGIN {
+    FS=","
+    print "Move No\tThis move\tHow did the start of this move reverse?"
+}
+$8 ~ "RB" && $11 ~ /^DB/ {print NR"\t"$8"\t"$11}
+#+END_SRC
+#+RESULTS:
+| Move No | This move | How did the start of this move reverse? |
+|       3 | RB        | DB                                      |
+|       4 | RB        | DB - the second down leg made a RB move |
+|      94 | RB        | DB                                      |
+
+***** Half Double Bottom
+#+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
+BEGIN {
+    FS=","
+    print "Move No\tThis move\tHow did the start of this move reverse?"
+}
+$8 ~ "RB" && $11 ~ /^HDB/ {print NR"\t"$8"\t"$11}
+#+END_SRC
+#+RESULTS:
+| Move No | This move | How did the start of this move reverse? |
+|       2 | RB        | HDB                                     |
+|      41 | RB        | HDB - multiple swings                   |
+|      72 | RB        | HDB                                     |
+|     101 | RB        | HDB                                     |
+
+***** Quarter Double Bottom
+#+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
+BEGIN {
+    FS=","
+    print "Move No\tThis move\tHow did the start of this move reverse?"
+}
+$8 ~ "RB" && $11 ~ /^QDB/ {print NR"\t"$8"\t"$11}
+#+END_SRC
+#+RESULTS:
+| Move No | This move | How did the start of this move reverse? |
+|     122 | RB        | QDB                                     |

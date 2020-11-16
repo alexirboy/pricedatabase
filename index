@@ -1,0 +1,12 @@
+1 Move TF,
+2 Time of move,
+3 HTF move this move is in,
+4 Direction in relation to HTF move,
+5 Previous move on this TF,
+6 Line the previous move started from,
+7 Did it overshoot or undershoot,
+8 What is this move,
+9 What line Did it start from,
+10 Did it overshoot or undershoot,
+11 How did the beginning of this move reverse from the LTF perspective,
+12 Any notes
