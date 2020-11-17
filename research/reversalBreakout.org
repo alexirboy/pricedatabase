@@ -415,6 +415,7 @@ A thing that I would like to know though is to look into this a little bit. When
 4. Further points of study:
    - If I added a FM-WM filter and printed a few more fields to this query what would return? This will help also with knowing why the RB moves followed the RB moves as they would all show up in that query.
    - RB moves that occured after a R and F remind me of the second leg of a DT or HDT structure. Is this true?
+   - There are really only F and R moves that follow on from the RB move but equally so. When does each of these meoves happen? when can you expect it?
 :END:
 
 #+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
@@ -543,6 +544,8 @@ $8 ~ "RB" && $5 ~ "F[0-9]" {print NR"\t"$8"\t"$5}
 |     122 | RB        | F61%          |
 |     125 | RB        | F50%          |
 ** Line the previous move started from
+Do from what I can see there is not a whole bunch of correlation between what the previous move started from and a current RB move. To be honest I thought there might be more initially. So ye this wasnt a very correlative thing. So the previous move is almost always a OM in relation to the HTF move. and This is showing what line that opposite move started from. The previous move was almost always a F or R move as well. So what this is saying is that the previous S or R move started from a certain line. This is the stats of where that line was started from. The only thing that I think I can think at the moment is to check where F or R moves previous lines started from basically.
+
 #+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
 BEGIN {
     FS=","
@@ -678,7 +681,6 @@ BEGIN {
     else if ($1 == "TTF" && $8 ~ "RB" && $6 ~ /F F[0-9].%/) {print NR"\t"$1"\t"$8"\t"$9}
     }
 #+END_SRC
-
 #+RESULTS:
 | Move No | Move TF | This move | Line previous move began from    |
 |      14 | TTF     | RB        | RR                               |
