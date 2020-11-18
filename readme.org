@@ -1,0 +1,3 @@
+This is a tset to see wether or not this allowes me to see this on the homepage in my github.
+
+This is a pretty kl little version control system here. I have no idea what I am doing but I am learning to build with the tools I have available to me. Lets see what happends
