@@ -547,9 +547,22 @@ $8 ~ "RB" && $5 ~ "F[0-9]" {print NR"\t"$8"\t"$5}
 ** Line the previous move started from
 Do from what I can see there is not a whole bunch of correlation between what the previous move started from and a current RB move. To be honest I thought there might be more initially. So ye this wasnt a very correlative thing. So the previous move is almost always a OM in relation to the HTF move. and This is showing what line that opposite move started from. The previous move was almost always a F or R move as well. So what this is saying is that the previous R or F move started from a certain line. This is the stats of where that line was started from. The only thing that I think I can think at the moment is to check where F or R moves previous lines started from basically. This also means that these lines also caused a R or F move because that is the move that basically is a precursor to a RB move. One thing that I am thinking would be an interesting thing to look at as well is what line the RB moves end at as well. That would be intersting.
 /*post edit*/
+<<<<<<< HEAD
+So now that I have actually changed about the database so that the RR and SS is shown actually in the proper context and not minimalist and indepenedent. I see something interesting still. Almost no move starts from just its own TTF S/R alone! Thats nuts The previous move starting points where always at points of S/R on the TTF, but only when coenciding wit HTF S/R of some sort at least. There was also no other time when a previous move started from just a HTF SS or RR as well. It was always coeinciding with a TTF SS or RR also.
+This is actually a bit mad for me because I never knew that was the case at all. I thought SS or RR actually played a bigger role in stopping moves. And what this was saying was alsod that the previous moves where mostly either F or R moves, because the previous move of a RB move is usually only these types. This means that they are the type of moves that do not stop at SS or RR on its own TTF solely at all really.
+One thing I would like to know is what line does a RB move end at? I have a feeling that it will have a better time at ending at HTF SS or RR only a lot wasier than any otrher move.
+
+TTF Fibs on the other ahnd are able to be a starting point for new moves a lot easier. It is the stasrting point for all the types of moves. I every RB that preceeded a RB started at a Fib level basiccally. Even a Fib level on its own TTF. I know that these previous moves were all against the HTF move direction, when looked at in hindsight. One thing I noticed as well is, I think that every time the Previous move started at a TTF only Fib level and the move after was a RB, that means it is a variation on a DT OR DB that is shown in the chart. I need to check this by possibly looking at if the RB that comes after that previous move is a WM-FM or not, that might be a good check. Then in order to see pre emptively when it might happen, I might need to check at what line that RB move started at also? See if there are any similarities with at what times, effectively DB or DT variations happen at. I also am now starting to think, because I was looking at the chart, that any time where the previous move started from a Fib level and followed by a RB is a new move on the HTF.
+
+Could find out when the scenarios that mix the HTF and TTF reistance levels maen in terms of what that type od structure looks like a little.
+Would love to see where the RB moves start from and finish at as well. That wopuld be interseting.
+
+One thing that I notice also with the SS and RR lines is that price almost never reverses from a TTF S/R solely. However does price even have sole S/R like that basically? I think that there is almost always a overlap between HTF and TTF S/R anyways.
+=======
 So no that I have actually changed about the database so that the RR and SS is shown actually in the proper context and not minimalist and indepenedent. I see something interesting still. Almost no move starts from just its own TTF S/R alone! Thats nuts The previous move starting points where always at points of S/R on the TTF, but only when coenciding wit HTF S/R of some sort at least. There was also no other time when a previous move started from just a HTF SS or RR as well. It was always coeinciding with a TTF SS or RR also.
 This is actually a bit mad for me because I never knew that was the case at all. I thought SS or RR actually played a bigger role in stopping moves. And what this was saying was alsod that the previous moves where mostly either F or R moves, because the previous move of a RB move is usually only these types. This means that they are the type of moves that do not stop at SS or RR on its own TTF solely at all really.
 One thing I would like to know is what line does a RB move end at? I have a feeling that it will have a better time at ending at HTF SS or RR only a lot wasier than any otrher move.
+>>>>>>> 75e4549... worked on database and section on previous move start
 
 TTF Fibs on the other ahnd are able to be a starting point for new moves a lot easier. It is the stasrting point for all the types of moves. I every RB that preceeded a RB started at a Fib level basiccally. Even a Fib level on its own TTF. I know that these previous moves were all against the HTF move direction, when looked at in hindsight. One thing I noticed as well is, I think that every time the Previous move started at a TTF only Fib level and the move after was a RB, that means it is a variation on a DT OR DB that is shown in the chart. I need to check this by possibly looking at if the RB that comes after that previous move is a WM-FM or not, that might be a good check. Then in order to see pre emptively when it might happen, I might need to check at what line that RB move started at also? See if there are any similarities with at what times, effectively DB or DT variations happen at. I also am now starting to think, because I was looking at the chart, that any time where the previous move started from a Fib level and followed by a RB is a new move on the HTF.
 
@@ -818,7 +831,10 @@ $8 ~ "RB" && $6 ~ /^F[0-9].*H\w* F/ {print NR"\t"$1"\t"$5"\t"$6}
 |      65 | TTF     | F61%          | F61% at HTF F38% within HTF SS      |
 |     117 | TTF     | RB            | F50% at HTF F50% - synonymous moves |
 |     121 | TTF     | HTF R         | F50% at HTF F50% - synonymous moves |
+<<<<<<< HEAD
+=======
 
+>>>>>>> 75e4549... worked on database and section on previous move start
 
 ** Did previous move overshoot or undershoot
 So going on from the lsat section, I am not convinced that looking at how the previous move started is of that much help at this point in time for me. Unless maybe if I took a deep dive into each one of the splits and seen if there are any correlations there perhaps. Again this is a thing where there are not htat many correlations between the splits. There are more no tha nany others however I am thinking if that is because I was a bit lazy to write stuff down in exactly what caused stuff or if I just categorized more stuff as no because it was easier. It could also be my sample size was not very big and there just happened to be more no's in the previous moves of a RB that day. However I will still make not of that fact but I do not think it is very important.
@@ -830,7 +846,6 @@ So going on from the lsat section, I am not convinced that looking at how the pr
 3. I might be able to know how this might affect the moves that come after a start that does or does not overshoot a certain line. Also I can make a new study as to figuring out when a move does or does not overshoot. This may become useful then.
 4.
 :END:
-
 
 #+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
 BEGIN {
@@ -915,18 +930,6 @@ BEGIN {
 }
 $8 ~ "RB" && $7 ~ /^yes$|^yes -/ {print NR"\t"$8"\t"$7}
 #+END_SRC
-#+RESULTS:
-| Move No | This move | Previous move over/undershoot                                                             |
-|       3 | RB        | yes - it slightly overshot the HTF RR furthest line and the HHTF and HHHHTF closest lines |
-|      25 | RB        | yes - slighlty overshot                                                                   |
-|      33 | RB        | yes - slightly overshot                                                                   |
-|      64 | RB/R      | yes - slighlty undershot                                                                  |
-|      65 | RB        | yes - overshot bothe the F line and the closest HTF SS line                               |
-|      71 | RB        | yes - overshot                                                                            |
-|      72 | RB        | yes - slightly overshot the farthest line and went into the F61% level                    |
-|      88 | RB        | yes - overshot                                                                            |
-|     102 | RB        | yes - undershot                                                                           |
-|     121 | RB        | yes - slightly overshot                                                                   |
 
 **** No/Yes
 #+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
@@ -951,6 +954,44 @@ So one thing I would like to say as a precursor to this is that I think when I w
 /*Quick note -* will probably go through the RB list on when this move stasrted and replace it with the correct cateegory of movements. Just know the writing above was done before any edits were made to the database./
 
 So I have edited the database and updated the query results on this chart as well. Time for some new analyses.
+There is absolutely no time when the move started at solely a TTF S/R alone. It was always mixed with a HTF S/R. Contrary with that the RB moves happened when there was a F line to start from on the TTF alone. Also when the moves werre synonimous it started frim there as well.
+
+The HTF SS or RR was also enough on its own to stasrt a RB move. there was no time though when the HTF F reversed the TTF move into a RB move on its own. It was always with a TTF S/R as well.
+one thing that I qwould find interesting is to see the structure a bit of the previous moves. here is just what lines started this move and thats fair but tahts it. I guess actually if there are two options I could narrow them down into when do these options even happen but until then I will just be here init. I just aint on good form this week for this. Just to know.
+
+RB moves almost never happened solely because of a HTF S/R as well. it was basically mixed with TTF S/R levels. This is also where a RB move started from but my thinking at the minute is that this is the case ebcause RB moves basically never happen after RB moves and I think RB moves stop at soley HTF SS/RR at times. Therefore that means that other RB moves will not start solely from that point but moves that come after RB moves, F or R, will start solely from a HTF S/R level. And if they do then that normally means that it followed a RB move.
+
+Also a quick little thought about something that I saw on the charts. I am sure DT or DB and structure like that has an affect in the way moves happen. Just because DB and DT actaully do happen. Therefore theyt are also a factor of and a cause to different price moveemnets.
+
+A RB move can happen when the HTF and TTF moves are the same also. This is basically a synonymous move. Just thinking off the top of my head, when the HTF and TTF moves are synonimous that geenrally means the TTF move is a RB. If not at least a R. When that moves stops though then I guess the normal rules apply and then the next move that happens is a F move. That move just happens to be on the HTF as well as the TTF.
+One thing that I woud like to see though is when the move is started from or stopping at a F23% level. When and why. I think it is only because the move was a large RB move only but apart from that it is a guessing game for me. So that would be good to see.
+
+Also if you want to identify the way that you can see when DT/DB or the variations of them happen. you can sort of figure it out a bit from looking at what line the RB move occured from. Atleast initially that is what I am thinking. Here is a quick thing that I have noticed.
+
+| This Move | Line this move started from   | Reversal structure this equals                                                                                  |
+|-----------+-------------------------------+-----------------------------------------------------------------------------------------------------------------|
+| RB        | SS/RR at HTF F                | DT/DB                                                                                                           |
+| RB        | F at HTF F - Synonymous moves | continuation swing in HTF direction                                                                             |
+| RB        | SS/RR at HTF SS/RR            | normally DT/DB unless SS/RR is not the one made by the previous two moves. Then the move could be any structure |
+| RB        | F at HTF SS/RR                | might be HDT or DB depending                                                                                    |
+
+What I have noticed when making this chart above is that RB moves basically never start fom a F at a HTF F if the move would not be synonymous. Which makes sense because how would that even happen.
+
+*Conclusion*
+:Conclusion:
+1. :
+   - RB moves almost never started from solely a TTF SS/RR
+   - RB moves started from TTF F lines alone however
+   - RB moves would start from F levels that were synonymous with the HTF
+   - HTF SS/RR would can casuse a RB move on its own
+   - HTF SS/RR rarely caused a RB move on its own though
+   - HTF F never caused a RB move on its own
+2. :
+   - Knowing RB almost never started solely from a HTF SS/RR means that I know when not to expect them from.
+   - Knowing that a HTF F level never caused a RB by itself is helpful. It was either synonymous with the TTF move or from a SS/RR on the TTF also
+3. 
+4. 
+:END:
 
 #+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
 BEGIN {
@@ -1271,6 +1312,9 @@ $8 ~ "RB" && $10 ~ /^no\/yes/ {print NR"\t"$8"\t"$10}
 |      94 | RB        | no/yes - slighlty undershot the HTF F50%                             |
 
 ** How did the start of this move reverse on the LTF
+*Need to edit the format of this stuff. Seperation of DB and DT is not important because the structure between them is the same, both have two swings of the same style.
+Format it instead as OS, DB/DT, HDT/HDB, QDB/QDT instead.*
+
 #+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
 BEGIN {
     FS=","
@@ -1279,42 +1323,41 @@ BEGIN {
 $8 ~ "RB" {print NR"\t"$8"\t"$11}
 #+END_SRC
 #+RESULTS:
-| Move No | This move | How did the start of this move reverse?                               |
-|       2 | RB        | HDB                                                                   |
-|       3 | RB        | DB                                                                    |
-|       4 | RB        | DB - the second down leg made a RB move                               |
-|      14 | RB        | HDT - first move was a R followed by F then RB                        |
-|      24 | RB        | DT - multiple swings                                                  |
-|      25 | RB        | HDT                                                                   |
-|      33 | RB        | OS - RB                                                               |
-|      35 | RB        | DT - slow swing and very small swings as well                         |
-|      41 | RB        | HDB - multiple swings                                                 |
-|      44 | RB        | DT                                                                    |
-|      45 | RB        | DT                                                                    |
-|      47 | RB        | HDT                                                                   |
-|      52 | RB        | OS - RB                                                               |
-|      53 | RB        | OS - RB                                                               |
-|      59 | RB        | QDT                                                                   |
-|      64 | RB/R      | HDT                                                                   |
-|      65 | RB        | HDT                                                                   |
-|      69 | RB        | DT                                                                    |
-|      71 | RB        | OS - had a little mini move on the TTF but it was basically a RB move |
-|      72 | RB        | HDB                                                                   |
-|      82 | RB        | OS - RB                                                               |
-|      88 | RB        | DT                                                                    |
-|      94 | RB        | DB                                                                    |
-|      98 | RB        | QDT                                                                   |
-|     101 | RB        | HDB                                                                   |
-|     102 | RB        | OS - R                                                                |
-|     109 | R/RB      | OS - R                                                                |
-|     112 | RB        | DT                                                                    |
-|     113 | RB        | DT                                                                    |
-|     115 | RB        | DT                                                                    |
-|     116 | R/RB      | OS - R                                                                |
-|     117 | RB        | OS - RB                                                               |
-|     121 | RB        | HDT                                                                   |
-|     122 | RB        | QDB                                                                   |
-|     125 | RB        | OS - RB                                                               |
+| Move No | This move | How did the start of this move reverse?        |
+|       2 | RB        | HDB                                            |
+|       3 | RB        | DB                                             |
+|       4 | RB        | DB - the second down leg made a RB move        |
+|      14 | RB        | HDT - first move was a R followed by F then RB |
+|      24 | RB        | DT - multiple swings                           |
+|      25 | RB        | HDT                                            |
+|      35 | RB        | DT - slow swing and very small swings as well  |
+|      44 | RB        | DT                                             |
+|      45 | RB        | DT                                             |
+|      47 | RB        | HDT                                            |
+|      52 | RB        | OS - RB                                        |
+|      53 | RB        | OS - RB                                        |
+|      57 | RB        | OS - RB                                        |
+|      59 | RB        | QDT                                            |
+|      64 | RB/R      | HDT                                            |
+|      65 | RB        | HDT                                            |
+|      69 | RB        | DT                                             |
+|      71 | RB        | OS - RB                                        |
+|      72 | RB        | HDB                                            |
+|      82 | RB        | OS - RB                                        |
+|      89 | RB        | HDT                                            |
+|      94 | RB        | DB                                             |
+|      98 | RB        | QDT                                            |
+|     101 | RB        | HDB                                            |
+|     102 | RB        | OS - R                                         |
+|     109 | R/RB      | OS - R                                         |
+|     112 | RB        | DT                                             |
+|     113 | RB        | DT                                             |
+|     115 | RB        | DT                                             |
+|     116 | R/RB      | OS - R                                         |
+|     117 | RB        | OS - RB                                        |
+|     121 | RB        | HDT                                            |
+|     122 | RB        | QDB                                            |
+|     125 | RB        | OS - RB                                        |
 *** Splits
 **** One Swing
 #+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results
@@ -1325,17 +1368,17 @@ BEGIN {
 $8 ~ "RB" && $11 ~ /^OS/ {print NR"\t"$8"\t"$11}
 #+END_SRC
 #+RESULTS:
-| Move No | This move | How did the start of this move reverse?                               |
-|      33 | RB        | OS - RB                                                               |
-|      52 | RB        | OS - RB                                                               |
-|      53 | RB        | OS - RB                                                               |
-|      71 | RB        | OS - had a little mini move on the TTF but it was basically a RB move |
-|      82 | RB        | OS - RB                                                               |
-|     102 | RB        | OS - R                                                                |
-|     109 | R/RB      | OS - R                                                                |
-|     116 | R/RB      | OS - R                                                                |
-|     117 | RB        | OS - RB                                                               |
-|     125 | RB        | OS - RB                                                               |
+| Move No | This move | How did the start of this move reverse? |
+|      52 | RB        | OS - RB                                 |
+|      53 | RB        | OS - RB                                 |
+|      57 | RB        | OS - RB                                 |
+|      71 | RB        | OS - RB                                 |
+|      82 | RB        | OS - RB                                 |
+|     102 | RB        | OS - R                                  |
+|     109 | R/RB      | OS - R                                  |
+|     116 | R/RB      | OS - R                                  |
+|     117 | RB        | OS - RB                                 |
+|     125 | RB        | OS - RB                                 |
 
 **** Double Top
 #+BEGIN_SRC awk :in-file ../08_10_2020.csv :exports results

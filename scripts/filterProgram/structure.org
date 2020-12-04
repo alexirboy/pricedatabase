@@ -1,0 +1,129 @@
+I want to create a flipping program that allows me to quickly filter the price
+databse i hvae. interactive is best. I would like it to ask me for what I want
+to filter. Give me the options available for each field and then have me.
+
+Something like
+*The query stage*
+precursor - which csv database to read
+
+1- pick a field - Fields
+2- what operator would you like to do in this field e.g. match, do not match,
+3- What thing inside of that field to look for? - a menu with available options
+for each field should be shown
+4- repeat process 1 till 3 until satisfied
+
+*The printing stage*
+1- Fields picked to match automatically selcted
+2- interactively select and deselct fields to print
+
+So new thing I thing I will try make the program an ncurses progra with the
+dialog utility. I am a bit annoyed becuse this means I need to learn a whole
+otherthing but I think the speed I can quickly check this query out if I canget
+the thing done the way I would liike is quite anice.
+
+So what do you want. Forget what you think you acn do because thats you at the
+moment. Targeting yourself onto something you want will make you get better and
+hopeully at least bring you coser if not complete thte thing you watn.
+so What is is taht you want the program to do?
+
+I want to be able to quickly go back and forth and change the query stuff taht I
+have done. I think first screen what would be good is these sections.
+
+1- query section showing each of of the different fields and search queseries
+within them. 1 Roww each of the different query lines.
+The fields would have to be added when needed by the person. they are not there initially.
+2- what field is printed with the query lines checked of by default. But this
+needs to be a checkered option
+3- option to save the current config of queries for the program somehow into a
+file that is readable and repliactable by the program.
+4- two output options, 1 in a file and one in a temporray table that when quit
+out of can revert back to the ncurses menu
+
+* Algorithm
+So here is a thing that I would like to try, make an algorithm for the program and sort of map it out. I know taht When it boild down to it I need to bring stuff down to their fundamental factors and then just make steps for it to happen so I am going to try that.
+
+** Output
+so the output from this program is suppsoed to be a filtered table that shows the results from a csv file that I have given it and from the quereis that I have given it also along with what fields to print.s This can either be saved in a sepereate file to be reviewd later on or can just be a quick look in a pop up screen in the program itself that allows you to quickly make another query.
+** How it functions - Landing Page
+Just initial thoughts as I am thinking out loud is tha the landing screen should be a menu on the dialog command. This means it will have two ineractive features which will be:
+1) Menu items - These are for selecting through the main filtering of the program
+2) Bottom Row options - Allow the advancement or side options on the program, such as ok function, exit function or clear queries.
+**** Menu Items
+On the landing page the menu items that are needed should be
+***** First Query
+A first query item that when clicked will leald to another dialog box of showing the possible fields that can be selected to be queried. This should also show the seleceted field and query of that item, once picked, in a line underneath the current writing.
+****** Field Selector Menu Page
+This box will lead to show the fields that can be searched through in the query. Each of these menu items will correspond to a field from the databse that should make sense to be searchable. When these are cclicked they should each bring you onto a seperate page for their own individual query criteria. I think that a variable should be set here depending on what the option was that was picked in order to be able to be inputted into the awk statement at teh end in order to print the table.
+Maybe this variable should only be set when the query criteria from the individual pages is actually picked as that would allow less complexity and more exploring without worrying about setting the print status. That would also make sense. At least the variable that the awk statement will use to print the table.
+******* Individual Query Pages
+This menu box will contain the items that pertain to queries that can be made for each of the fields in the database that can be queried. I have used a case statement so far that should take the output option of the field picked, from the previous page higher, and give a case statement for each of the query options for the page itself.
+Clicking on one of these options will set the query and field criteria for the awk statemnt. This basically adds a piece of code per criteria to the awk statement that woud be printed out in the table. I think this is going to be a variable that equals a piece of code. three varaibles actually.
+- One for the header of the table :: The tab spaces should be the first thing in the variable apart from the first query which should have none
+- one for the query statement :: Every query, apart from the first one, should start with a &&
+- one for the print statement :: All begin with a tab spacing as NR field will alreaady be set in the table
+
+******** Bottom Row Options
+- Ok :: clicking this will set the variables on the menu item under the cursor and bring the user back to the landing page. It should also make a new landing page menu item available that would allow another query to be eneterd
+
+- Back - option that should return the page one stage back
+
+****** Bottom Row Options
+- Ok - option to advance onto the menu item the cursor is on
+
+- Back - option that should return the page one stage back
+
+***** Another Query (Showing up recursively after filled previous item) 
+Another query menu item that should pop up once the first query menu item sub items have been picked. This allows you to do the exact same as the First menu item and should be a recursive menu item. Basically once this new menu iteem and its submenu items have been filled then a new menu item identical to this empty one should emerge on the landing page.
+****** Field Selector Menu Page
+This box will lead to show the fields that can be searched through in the query. Each of these menu items will correspond to a field from the databse that should make sense to be searchable. When these are cclicked they should each bring you onto a seperate page for their own individual query criteria. I think that a variable should be set here depending on what the option was that was picked in order to be able to be inputted into the awk statement at teh end in order to print the table.
+Maybe this variable should only be set when the query criteria from the individual pages is actually picked as that would allow less complexity and more exploring without worrying about setting the print status. That would also make sense. At least the variable that the awk statement will use to print the table.
+******* Individual Query Pages
+This menu box will contain the items that pertain to queries that can be made for each of the fields in the database that can be queried. I have used a case statement so far that should take the output option of the field picked, from the previous page higher, and give a case statement for each of the query options for the page itself.
+Clicking on one of these options will set the query and field criteria for the awk statemnt. This basically adds a piece of code per criteria to the awk statement that woud be printed out in the table. I think this is going to be a variable that equals a piece of code. three varaibles actually.
+- One for the header of the table :: The tab spaces should be the first thing in the variable apart from the first query which should have none
+- one for the query statement :: Every query, apart from the first one, should start with a &&
+- one for the print statement :: All begin with a tab spacing as NR field will alreaady be set in the table
+
+******** Bottom Row Options
+- Ok :: clicking this will set the variables on the menu item under the cursor and bring the user back to the landing page. It should also make a new landing page menu item available that would allow another query to be eneterd
+
+- Back - option that should return the page one stage back
+
+****** Bottom Row Options
+- Ok - option to advance onto the menu item the cursor is on
+
+- Back - option that should return the page one stage back
+
+***** Print
+Print menu item which leads on to a checklist box that allows you to select the fielids that you would like to print. The NR will be printed regardless so that is not an option and fields in which queries where picked in the options earlier should be set to print as default but toggable.
+
+****** Print Checklist
+
+This page has all the togglable print criteria in the database. The default ones set will be the fields with which their is a criteria at the moment but they can be untoggled.
+
+******* Bottom Row Options
+
+- Ok - option to toggle the menu item the cursor is on
+
+- Back - option that should return the page one stage back. All togglable settings should be perserved
+
+***** View
+View menu Item that allows a quick view of the table that was set. This should be in another dialog box if possible or in a format that is easy to quit out from. This should just be an info box.
+****** Bottom Row Options
+- Exit - go back to the landing page
+
+- Save - save the table and the configuration that was used for the table in a file
+  
+**** Bottom Row Options
+The Bottom Row options on the landing page should be:
+
+- Ok - option to advance onto the menu item the cursor is on
+
+- Exit - option that should exit the program 
+
+- Clear - Clear all the configurations currently set by the user.
+
+- Save - Save the current Config to a file and if I have selected options that would suffice in showing a table, save the output of that Table in the same file.
+
+- Load - Load a previous config that was saved into the current session so the settings are used for the same one again
+

@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-12-03 Thu 16:06 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="John Doe" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orge2e4df8">1. Algorithm</a>
+<ul>
+<li><a href="#orgdb5a196">1.1. Output</a></li>
+<li><a href="#orge299ee4">1.2. How it functions - Landing Page</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<p>
+I want to create a flipping program that allows me to quickly filter the price
+databse i hvae. interactive is best. I would like it to ask me for what I want
+to filter. Give me the options available for each field and then have me.
+</p>
+
+<p>
+Something like
+<b>The query stage</b>
+precursor - which csv database to read
+</p>
+
+<p>
+1- pick a field - Fields
+2- what operator would you like to do in this field e.g. match, do not match,
+3- What thing inside of that field to look for? - a menu with available options
+for each field should be shown
+4- repeat process 1 till 3 until satisfied
+</p>
+
+<p>
+<b>The printing stage</b>
+1- Fields picked to match automatically selcted
+2- interactively select and deselct fields to print
+</p>
+
+<p>
+So new thing I thing I will try make the program an ncurses progra with the
+dialog utility. I am a bit annoyed becuse this means I need to learn a whole
+otherthing but I think the speed I can quickly check this query out if I canget
+the thing done the way I would liike is quite anice.
+</p>
+
+<p>
+So what do you want. Forget what you think you acn do because thats you at the
+moment. Targeting yourself onto something you want will make you get better and
+hopeully at least bring you coser if not complete thte thing you watn.
+so What is is taht you want the program to do?
+</p>
+
+<p>
+I want to be able to quickly go back and forth and change the query stuff taht I
+have done. I think first screen what would be good is these sections.
+</p>
+
+<p>
+1- query section showing each of of the different fields and search queseries
+within them. 1 Roww each of the different query lines.
+The fields would have to be added when needed by the person. they are not there initially.
+2- what field is printed with the query lines checked of by default. But this
+needs to be a checkered option
+3- option to save the current config of queries for the program somehow into a
+file that is readable and repliactable by the program.
+4- two output options, 1 in a file and one in a temporray table that when quit
+out of can revert back to the ncurses menu
+</p>
+
+<div id="outline-container-orge2e4df8" class="outline-2">
+<h2 id="orge2e4df8"><span class="section-number-2">1</span> Algorithm</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+So here is a thing that I would like to try, make an algorithm for the program and sort of map it out. I know taht When it boild down to it I need to bring stuff down to their fundamental factors and then just make steps for it to happen so I am going to try that.
+</p>
+</div>
+
+<div id="outline-container-orgdb5a196" class="outline-3">
+<h3 id="orgdb5a196"><span class="section-number-3">1.1</span> Output</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+so the output from this program is suppsoed to be a filtered table that shows the results from a csv file that I have given it and from the quereis that I have given it also along with what fields to print.s This can either be saved in a sepereate file to be reviewd later on or can just be a quick look in a pop up screen in the program itself that allows you to quickly make another query.
+</p>
+</div>
+</div>
+<div id="outline-container-orge299ee4" class="outline-3">
+<h3 id="orge299ee4"><span class="section-number-3">1.2</span> How it functions - Landing Page</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Just initial thoughts as I am thinking out loud is tha the landing screen should be a menu on the dialog command. This means it will have two ineractive features which will be:
+</p>
+<ol class="org-ol">
+<li>Menu items - These are for selecting through the main filtering of the program</li>
+<li>Bottom Row options - Allow the advancement or side options on the program, such as ok function, exit function or clear queries.</li>
+</ol>
+</div>
+<ol class="org-ol">
+<li><a id="org518bd85"></a>Menu Items<br />
+<div class="outline-text-5" id="text-1-2-0-1">
+<p>
+On the landing page the menu items that are needed should be
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="orgfb81dbe"></a>First Query<br />
+<div class="outline-text-6" id="text-1-2-0-1-1">
+<p>
+A first query item that when clicked will leald to another dialog box of showing the possible fields that can be selected to be queried. This should also show the seleceted field and query of that item, once picked, in a line underneath the current writing.
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="orge659475"></a>Field Selector Menu Page<br />
+<div class="outline-text-7" id="text-1-2-0-1-1-1">
+<p>
+This box will lead to show the fields that can be searched through in the query. Each of these menu items will correspond to a field from the databse that should make sense to be searchable. When these are cclicked they should each bring you onto a seperate page for their own individual query criteria. I think that a variable should be set here depending on what the option was that was picked in order to be able to be inputted into the awk statement at teh end in order to print the table.
+Maybe this variable should only be set when the query criteria from the individual pages is actually picked as that would allow less complexity and more exploring without worrying about setting the print status. That would also make sense. At least the variable that the awk statement will use to print the table.
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="orgb4bc31c"></a>Individual Query Pages<br />
+<div class="outline-text-8" id="text-1-2-0-1-1-1-1">
+<p>
+This menu box will contain the items that pertain to queries that can be made for each of the fields in the database that can be queried. I have used a case statement so far that should take the output option of the field picked, from the previous page higher, and give a case statement for each of the query options for the page itself.
+Clicking on one of these options will set the query and field criteria for the awk statemnt. This basically adds a piece of code per criteria to the awk statement that woud be printed out in the table. I think this is going to be a variable that equals a piece of code. three varaibles actually.
+</p>
+<dl class="org-dl">
+<dt>One for the header of the table</dt><dd>The tab spaces should be the first thing in the variable apart from the first query which should have none</dd>
+<dt>one for the query statement</dt><dd>Every query, apart from the first one, should start with a &amp;&amp;</dd>
+<dt>one for the print statement</dt><dd>All begin with a tab spacing as NR field will alreaady be set in the table</dd>
+</dl>
+</div>
+
+<ol class="org-ol">
+<li><a id="orgcd4a508"></a>Bottom Row Options<br />
+<div class="outline-text-9" id="text-1-2-0-1-1-1-1-1">
+<dl class="org-dl">
+<dt>Ok</dt><dd>clicking this will set the variables on the menu item under the cursor and bring the user back to the landing page. It should also make a new landing page menu item available that would allow another query to be eneterd</dd>
+
+<dt>(no term)</dt><dd>Back - option that should return the page one stage back</dd>
+</dl>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+
+<li><a id="org0113af4"></a>Bottom Row Options<br />
+<div class="outline-text-7" id="text-1-2-0-1-1-2">
+<ul class="org-ul">
+<li>Ok - option to advance onto the menu item the cursor is on</li>
+
+<li>Back - option that should return the page one stage back</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+
+<li><a id="orga002c0b"></a>Another Query (Showing up recursively after filled previous item)<br />
+<div class="outline-text-6" id="text-1-2-0-1-2">
+<p>
+Another query menu item that should pop up once the first query menu item sub items have been picked. This allows you to do the exact same as the First menu item and should be a recursive menu item. Basically once this new menu iteem and its submenu items have been filled then a new menu item identical to this empty one should emerge on the landing page.
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="org3d5e3b8"></a>Field Selector Menu Page<br />
+<div class="outline-text-7" id="text-1-2-0-1-2-1">
+<p>
+This box will lead to show the fields that can be searched through in the query. Each of these menu items will correspond to a field from the databse that should make sense to be searchable. When these are cclicked they should each bring you onto a seperate page for their own individual query criteria. I think that a variable should be set here depending on what the option was that was picked in order to be able to be inputted into the awk statement at teh end in order to print the table.
+Maybe this variable should only be set when the query criteria from the individual pages is actually picked as that would allow less complexity and more exploring without worrying about setting the print status. That would also make sense. At least the variable that the awk statement will use to print the table.
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="orgb61ae3d"></a>Individual Query Pages<br />
+<div class="outline-text-8" id="text-1-2-0-1-2-1-1">
+<p>
+This menu box will contain the items that pertain to queries that can be made for each of the fields in the database that can be queried. I have used a case statement so far that should take the output option of the field picked, from the previous page higher, and give a case statement for each of the query options for the page itself.
+Clicking on one of these options will set the query and field criteria for the awk statemnt. This basically adds a piece of code per criteria to the awk statement that woud be printed out in the table. I think this is going to be a variable that equals a piece of code. three varaibles actually.
+</p>
+<dl class="org-dl">
+<dt>One for the header of the table</dt><dd>The tab spaces should be the first thing in the variable apart from the first query which should have none</dd>
+<dt>one for the query statement</dt><dd>Every query, apart from the first one, should start with a &amp;&amp;</dd>
+<dt>one for the print statement</dt><dd>All begin with a tab spacing as NR field will alreaady be set in the table</dd>
+</dl>
+</div>
+
+<ol class="org-ol">
+<li><a id="org518a997"></a>Bottom Row Options<br />
+<div class="outline-text-9" id="text-1-2-0-1-2-1-1-1">
+<dl class="org-dl">
+<dt>Ok</dt><dd>clicking this will set the variables on the menu item under the cursor and bring the user back to the landing page. It should also make a new landing page menu item available that would allow another query to be eneterd</dd>
+
+<dt>(no term)</dt><dd>Back - option that should return the page one stage back</dd>
+</dl>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+
+<li><a id="orgf395084"></a>Bottom Row Options<br />
+<div class="outline-text-7" id="text-1-2-0-1-2-2">
+<ul class="org-ul">
+<li>Ok - option to advance onto the menu item the cursor is on</li>
+
+<li>Back - option that should return the page one stage back</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+
+<li><a id="orge9c336e"></a>Print<br />
+<div class="outline-text-6" id="text-1-2-0-1-3">
+<p>
+Print menu item which leads on to a checklist box that allows you to select the fielids that you would like to print. The NR will be printed regardless so that is not an option and fields in which queries where picked in the options earlier should be set to print as default but toggable.
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="org18243eb"></a>Print Checklist<br />
+<div class="outline-text-7" id="text-1-2-0-1-3-1">
+<p>
+This page has all the togglable print criteria in the database. The default ones set will be the fields with which their is a criteria at the moment but they can be untoggled.
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="orgbe4cdbf"></a>Bottom Row Options<br />
+<div class="outline-text-8" id="text-1-2-0-1-3-1-1">
+<ul class="org-ul">
+<li>Ok - option to toggle the menu item the cursor is on</li>
+
+<li>Back - option that should return the page one stage back. All togglable settings should be perserved</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+
+<li><a id="orgd8d0236"></a>View<br />
+<div class="outline-text-6" id="text-1-2-0-1-4">
+<p>
+View menu Item that allows a quick view of the table that was set. This should be in another dialog box if possible or in a format that is easy to quit out from. This should just be an info box.
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="org8b3e3f3"></a>Bottom Row Options<br />
+<div class="outline-text-7" id="text-1-2-0-1-4-1">
+<ul class="org-ul">
+<li>Exit - go back to the landing page</li>
+
+<li>Save - save the table and the configuration that was used for the table in a file</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+
+<li><a id="org436a53b"></a>Bottom Row Options<br />
+<div class="outline-text-5" id="text-1-2-0-2">
+<p>
+The Bottom Row options on the landing page should be:
+</p>
+
+<ul class="org-ul">
+<li>Ok - option to advance onto the menu item the cursor is on</li>
+
+<li>Exit - option that should exit the program</li>
+
+<li>Clear - Clear all the configurations currently set by the user.</li>
+
+<li>Save - Save the current Config to a file and if I have selected options that would suffice in showing a table, save the output of that Table in the same file.</li>
+
+<li>Load - Load a previous config that was saved into the current session so the settings are used for the same one again</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: John Doe</p>
+<p class="date">Created: 2020-12-03 Thu 16:06</p>
+</div>
+</body>
+</html>
