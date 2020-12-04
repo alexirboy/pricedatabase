@@ -13,6 +13,7 @@ another little thing I am doing. you can stag hunks which if a am not mistaken i
 
 what about when i have not saved the actual file yet? Turns out you cant!
 
+<<<<<<< HEAD
 did a little edit and it so happened to go on the other brachj form here
 fair enoug this is kl though this version control stuff. I am doing stuff I couldlnt have imageinda and am very happy wiyth that,
 one thing that I am notucug though is that withh git it is basically a way to have snapshots
@@ -21,3 +22,6 @@ themselves have different versions of themselves on there too. Thats pretty good
 How though do I become able to replace the latest save file of one branch with a previous commit of the file on the same branch?
 ahve that one a recent. Also How do I have a commit in another branch become the recent commit in the master bracnh or something like that?
 Basically able to be revertig as easily as I would liek?
+=======
+Sooo I have learnt quite a bit of stuff about all of this stuff and it is kl
+>>>>>>> 0adb97e... test to see what happens with hunks and branches
