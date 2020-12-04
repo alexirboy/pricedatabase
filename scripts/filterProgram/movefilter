@@ -197,7 +197,7 @@ query_field() {
 
 
 # Below line makes me input a csv file to read the data
-read -e -p "Hello, Please input the CSV file to be read: " csv
+#read -e -p "Hello, Please input the CSV file to be read: " csv
 
 # main page of program
 while true; do
