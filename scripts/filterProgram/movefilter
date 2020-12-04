@@ -1,5 +1,5 @@
 #!/bin/env bash
-
+#quick test to see what happens in git
 dialog_cancel=1
 dialog_esc=255
 csv='~/Documents/price_database/08_10_2020.csv'
