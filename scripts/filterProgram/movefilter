@@ -1,1 +1,251 @@
-/home/alex/bin/movefilter
+#!/bin/env bash
+
+dialog_cancel=1
+dialog_esc=255
+csv='~/Documents/price_database/08_10_2020.csv'
+title="Price Filter"
+
+display_result() {
+  dialog --title "$1" \
+    --no-collapse \
+    --msgbox "$result" 0 0
+}
+fieldt() {
+  case $fields in
+    1)
+      field_title="What HTF move is this move in?"
+      ;;
+    2)
+      field_title="What is this moves direction in realtion to the HTF move?"
+      ;;
+    3)
+      field_title="What is the previous move on this TF"
+      ;;
+    4)
+      field_title="What line did the Previous move son this TF start from?"
+      ;;
+    5)
+      field_title="Did the start of the previous move over/undershoot?"
+      ;;
+    6)
+      field_title="What move is this move?"
+      ;;
+    7)
+      field_title="What line did this move start from?"
+      ;;
+    8)
+      field_title="Did the start of this move over/undershoot?"
+      ;;
+    9)
+      field_title="How did the beginning of this move reverse on the LTF?"
+  esac
+}
+query_field() {
+    case $fields in
+  1)
+    fieldt
+  queries=$(dialog \
+    --title "$field_title" \
+    --backtitle "$title" \
+    --cancel-label "Back" \
+    --menu "$field_title" 0 0 9 \
+      1 "Fib Retracement" \
+      2 'H(n)TF move - Before Reversal' \
+      3 'Reversal' \
+      4 'Reversal Breakout' \
+      2>&1 1>&3)
+  print1=1
+  # This is for the default print checklist. If the number is 1 the checklist should
+  # have it selected as default to print. This could be done with a for loop saying for every
+  # print*-This is a regular expression in the name of the parameter. Check its corresponding
+  # field and set it to default.
+  1query=$queries
+
+  # This is for setting the actual awk query statement for the particular query made.
+  # if 1queries is a number then that value will correspond to a piece of awk code
+  # that will then get appended onto the final awk code.
+      ;;
+  2)
+    fieldt
+  queries=$(dialog \
+    --title "$field_title" \
+    --backtitle "$title" \
+    --cancel-label "Back" \
+    --menu "$field_title" 0 0 9 \
+      1 'With Move' \
+      2 'With Move - First Move' \
+      3 'Opposite Move' \
+      2>&1 1>&3)
+      ;;
+  3)
+    fieldt
+  queries=$(dialog \
+    --title "$field_title" \
+    --backtitle "$title" \
+    --cancel-label "Back" \
+    --menu "$field_title" 0 0 9 \
+      1 "Fib Retracement" \
+      2 "Fib Retracement - Exclusively" \
+      3 'H(n)TF move before Reversal' \
+      4 'H(n)TF move before Reversal - Exclusively' \
+      5 'Reversal' \
+      6 'Reversal - Exclusively' \
+      7 'Reversal Breakout' \
+      8 'Reversal Breakout - Exclusively' \
+      2>&1 1>&3)
+      ;;
+  4)
+    fieldt
+  queries=$(dialog \
+    --title "$field_title" \
+    --backtitle "$title" \
+    --cancel-label "Back" \
+    --menu "$field_title" 0 0 9 \
+      1 'TTF Fib' \
+      2 'TTF Fib - Exclusively' \
+      3 'TTF Support/Resistance' \
+      4 'TTF Support/Resistance - Exclusively' \
+      5 'H(n)TF Fib' \
+      6 'H(n)TF Fib - Exclusively' \
+      7 'H(n)TF Support/Resistance' \
+      8 'H(n)TF Support/Resistance - Exclusively' \
+      2>&1 1>&3)
+      ;;
+  5)
+    fieldt
+  queries=$(dialog \
+    --title "$field_title" \
+    --backtitle "$title" \
+    --cancel-label "Back" \
+    --menu "$field_title" 0 0 9 \
+      1 'No' \
+      2 'Yes' \
+      3 'Yes - Overshot' \
+      4 'Yes - Undershot' \
+      5 'No/Yes' \
+      2>&1 1>&3)
+      ;;
+  6)
+    fieldt
+  queries=$(dialog \
+    --title "$field_title" \
+    --backtitle "$title" \
+    --cancel-label "Back" \
+    --menu "$field_title" 0 0 9 \
+      1 "Fib Retracement" \
+      2 "Fib Retracement - Exclusively" \
+      3 'H(n)TF move before Reversal' \
+      4 'H(n)TF move before Reversal - Exclusively' \
+      5 'Reversal' \
+      6 'Reversal - Exclusively' \
+      7 'Reversal Breakout' \
+      8 'Reversal Breakout - Exclusively' \
+      2>&1 1>&3)
+      ;;
+  7)
+    fieldt
+  queries=$(dialog \
+    --title "$field_title" \
+    --backtitle "$title" \
+    --cancel-label "Back" \
+    --menu "$field_title" 0 0 9 \
+      1 'TTF Fib' \
+      2 'TTF Fib - Exclusively' \
+      3 'TTF Support/Resistance' \
+      4 'TTF Support/Resistance - Exclusively' \
+      5 'H(n)TF Fib' \
+      6 'H(n)TF Fib - Exclusively' \
+      7 'H(n)TF Support/Resistance' \
+      8 'H(n)TF Support/Resistance - Exclusively' \
+      2>&1 1>&3)
+      ;;
+  8)
+    fieldt
+  queries=$(dialog \
+    --title "$field_title" \
+    --backtitle "$title" \
+    --cancel-label "Back" \
+    --menu "$field_title" 0 0 9 \
+      1 'No' \
+      2 'Yes' \
+      3 'Yes - Overshot' \
+      4 'Yes - Undershot' \
+      5 'No/Yes' \
+      2>&1 1>&3)
+      ;;
+  9)
+    fieldt
+  queries=$(dialog \
+    --title "$field_title" \
+    --backtitle "$title" \
+    --cancel-label "Back" \
+    --menu "$field_title" 0 0 9 \
+      1 'One Swing - Reversal' \
+      2 'One Swing - Reversal Breakout' \
+      3 'Double Bottom/Top' \
+      4 'Half Double Bottom/Top' \
+      5 'Quarter Double Bottom/Top' \
+      2>&1 1>&3)
+      ;;
+    esac
+}
+
+
+# ---------- Above section is varaibles and funvtions------------------------------
+
+
+
+
+# Below line makes me input a csv file to read the data
+#read -e -p "Hello, Please input the CSV file to be read: " csv
+
+# main page of program
+while true; do
+  exec 3>&1
+  mainp=$(dialog \
+    --backtitle "$title" \
+    --title "Menu" \
+    --cancel-label "Exit" \
+    --menu "Please select:" 0 0 9 \
+    1 "First Query" \
+    2 "Print Fields" \
+    3 "View" \
+    2>&1 1>&3)
+  # exit statements below 
+  case $? in
+    1)
+      clear
+      echo "Hope it was helpful Alex, Till next time I guess :)"
+      exit
+      ;;
+    255)
+      clear
+      echo "aaaahhh it was helpful Alex, Till next time I guess :)"
+      exit
+      ;;
+  esac
+  case $mainp in
+    1)
+      fields=$(dialog \
+        --backtitle "$title" \
+        --title "Query Fields" \
+        --cancel-label "Exit" \
+        --menu "Please select:" 0 0 9 \
+        1 'HTF move this move is in' \
+        2 'Direction in relation to HTF move' \
+        3 'Previous move on this TF' \
+        4 'Line the previous move started from' \
+        5 'Did it overshoot or undershoot' \
+        6 'What is this move' \
+        7 'What line Did it start from' \
+        8 'Did it overshoot or undershoot' \
+        9 'How did the beginning of this move reverse from the LTF perspective' \
+        2>&1 1>&3)
+      query_field
+      ;;
+    2)
+      result=$(df -h)
+      display_result "Disk Space"
+      ;;
+  esac
+done
