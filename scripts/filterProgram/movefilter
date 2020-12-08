@@ -244,8 +244,20 @@ while true; do
       query_field
       ;;
     2)
-      result=$(df -h)
-      display_result "Disk Space"
+      prints=$(dialog \
+        --title "$title" \
+        --cancel-label "Back" \
+        --checklist "Please select:" 0 0 9 \
+        1 'HTF Move this move is in' \
+        2 'Direction in relation to HTF move' \
+        3 'Previous move on this TF' \
+        4 'Line the previous move started from' \
+        5 'Did it overshoot or undershoot' \
+        6 'What is this move' \
+        7 'What line Did it start from' \
+        8 'Did it overshoot or undershoot' \
+        9 'How did the beginning of this move reverse from the LTF perspective' \
+        2>&1 1>&3)
       ;;
   esac
 done
