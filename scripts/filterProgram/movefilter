@@ -148,17 +148,17 @@ what_selected() {
     1)
       unset mainprint1
       main1="$fields $queries"
-      mainprint1=($fields)
+      mainprint1=$fields
       ;;
     2)
       unset mainprint2
       main2="$fields $queries"
-      mainprint2=($fields)
+      mainprint2=$fields
       ;;
     3)
       unset mainprint3
       main3="$fields $queries"
-      mainprint3=($fields)
+      mainprint3=$fields
       ;;
   esac 
 }
