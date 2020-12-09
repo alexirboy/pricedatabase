@@ -146,17 +146,14 @@ print_default(){
 what_selected() {
   case $main in
     1)
-      unset mainprint1
       main1="$fields $queries"
       mainprint1=$fields
       ;;
     2)
-      unset mainprint2
       main2="$fields $queries"
       mainprint2=$fields
       ;;
     3)
-      unset mainprint3
       main3="$fields $queries"
       mainprint3=$fields
       ;;
@@ -168,6 +165,7 @@ query_field() {
     fieldt
   queries=$(dialog \
     --title "$field_title" \
+    --no-tags \
     --backtitle "$title" \
     --cancel-label "Back" \
     --menu "$field_title" 0 0 9 \
@@ -182,6 +180,7 @@ query_field() {
     fieldt
   queries=$(dialog \
     --title "$field_title" \
+    --no-tags \
     --backtitle "$title" \
     --cancel-label "Back" \
     --menu "$field_title" 0 0 9 \
@@ -195,6 +194,7 @@ query_field() {
     fieldt
   queries=$(dialog \
     --title "$field_title" \
+    --no-tags \
     --backtitle "$title" \
     --cancel-label "Back" \
     --menu "$field_title" 0 0 9 \
@@ -213,6 +213,7 @@ query_field() {
     fieldt
   queries=$(dialog \
     --title "$field_title" \
+    --no-tags \
     --backtitle "$title" \
     --cancel-label "Back" \
     --menu "$field_title" 0 0 9 \
@@ -231,6 +232,7 @@ query_field() {
     fieldt
   queries=$(dialog \
     --title "$field_title" \
+    --no-tags \
     --backtitle "$title" \
     --cancel-label "Back" \
     --menu "$field_title" 0 0 9 \
@@ -246,6 +248,7 @@ query_field() {
     fieldt
   queries=$(dialog \
     --title "$field_title" \
+    --no-tags \
     --backtitle "$title" \
     --cancel-label "Back" \
     --menu "$field_title" 0 0 9 \
@@ -264,6 +267,7 @@ query_field() {
     fieldt
   queries=$(dialog \
     --title "$field_title" \
+    --no-tags \
     --backtitle "$title" \
     --cancel-label "Back" \
     --menu "$field_title" 0 0 9 \
@@ -282,6 +286,7 @@ query_field() {
     fieldt
   queries=$(dialog \
     --title "$field_title" \
+    --no-tags \
     --backtitle "$title" \
     --cancel-label "Back" \
     --menu "$field_title" 0 0 9 \
@@ -297,6 +302,7 @@ query_field() {
     fieldt
   queries=$(dialog \
     --title "$field_title" \
+    --no-tags \
     --backtitle "$title" \
     --cancel-label "Back" \
     --menu "$field_title" 0 0 9 \
@@ -325,6 +331,7 @@ while true; do
   main=$(dialog \
     --backtitle "$title" \
     --title "Menu" \
+    --no-tags \
     --cancel-label "Exit" \
     --menu "Please select:" 0 0 9 \
     1 "First Query" \
@@ -351,6 +358,7 @@ while true; do
       fields=$(dialog \
         --backtitle "$title" \
         --title "First Query" \
+        --no-tags \
         --cancel-label "Exit" \
         --menu "Please select:" 0 0 9 \
         1 'HTF move this move is in' \
@@ -369,6 +377,7 @@ while true; do
       fields=$(dialog \
         --backtitle "$title" \
         --title "Second Query" \
+        --no-tags \
         --cancel-label "Exit" \
         --menu "Please select:" 0 0 9 \
         1 'HTF move this move is in' \
@@ -387,6 +396,7 @@ while true; do
       fields=$(dialog \
         --backtitle "$title" \
         --title "Third Query" \
+        --no-tags \
         --cancel-label "Exit" \
         --menu "Please select:" 0 0 9 \
         1 'HTF move this move is in' \
@@ -405,6 +415,7 @@ while true; do
       print_default
       prints=$(dialog \
         --title "$title" \
+        --no-tags \
         --cancel-label "Back" \
         --checklist "Please select:" 0 0 9 \
         1 'HTF Move this move is in' $print1\
