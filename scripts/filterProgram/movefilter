@@ -78,6 +78,7 @@ query_field() {
       ;;
   2)
     fieldt
+    print2=on
   queries=$(dialog \
     --title "$field_title" \
     --backtitle "$title" \
@@ -87,6 +88,15 @@ query_field() {
       2 'With Move - First Move' \
       3 'Opposite Move' \
       2>&1 1>&3)
+  # if $? == 1 || 255; then print2=off; fi
+  case $? in
+    1)
+      print2=off
+      ;;
+    255)
+      print2=off
+      ;;
+  esac
       ;;
   3)
     fieldt
