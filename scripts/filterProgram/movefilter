@@ -81,7 +81,7 @@ query_field() {
   # print*-This is a regular expression in the name of the parameter. Check its corresponding
   # field and set it to default.
   1query=$queries
-  case $mainp in
+  case $main in
     1)
       main1="$fields $queries"
       ;;
@@ -323,7 +323,7 @@ query_field() {
 # main page of program
 while true; do
   exec 3>&1
-  mainp=$(dialog \
+  main=$(dialog \
     --backtitle "$title" \
     --title "Menu" \
     --cancel-label "Exit" \
@@ -345,7 +345,7 @@ while true; do
       exit
       ;;
   esac
-  case $mainp in
+  case $main in
     1)
       fields=$(dialog \
         --backtitle "$title" \
