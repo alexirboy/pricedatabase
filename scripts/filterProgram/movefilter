@@ -51,6 +51,22 @@ fieldt() {
       field_title="How did the beginning of this move reverse on the LTF?"
   esac
 }
+what_selected() {
+  case $main in
+    1)
+      main1="$fields $queries"
+      mainprint1=([$fields]=$queries)
+      ;;
+    2)
+      main2="$fields $queries"
+      mainprint2=([$fields]=$queries)
+      ;;
+    3)
+      main3="$fields $queries"
+      mainprint3=([$fields]=$queries)
+      ;;
+  esac 
+}
 query_field() {
     case $fields in
   1)
@@ -65,35 +81,10 @@ query_field() {
       3 'Reversal' \
       4 'Reversal Breakout' \
       2>&1 1>&3)
-  # if $? == 1 || 255; then print2=off; fi
-  # This below is to ensure that when visited the print setting isnt set
-  # This is for the default print checklist. If the number is 1 the checklist should
-  # have it selected as default to print. This could be done with a for loop saying for every
-  # print*-This is a regular expression in the name of the parameter. Check its corresponding
-  # field and set it to default.
-  case $main in
-    1)
-      main1="$fields $queries"
-      mainprint1=([$fields]=$queries)
-      ;;
-    2)
-      main2="$fields $queries"
-      mainprint2=([$fields]=$queries)
-      ;;
-    3)
-      main3="$fields $queries"
-      mainprint3=([$fields]=$queries)
-      ;;
-  esac
-
-  #
-  #This is for setting the actual awk query statement for the particular query made.
-  # if 1queries is a number then that value will correspond to a piece of awk code
-  # that will then get appended onto the final awk code.
+  what_selected
       ;;
   2)
     fieldt
-    print2=on
   queries=$(dialog \
     --title "$field_title" \
     --backtitle "$title" \
@@ -103,20 +94,10 @@ query_field() {
       2 'With Move - First Move' \
       3 'Opposite Move' \
       2>&1 1>&3)
-  # if $? == 1 || 255; then print2=off; fi
-  # This below is to ensure that when visited the print setting isnt set
-  case $? in
-    1)
-      print2=off
-      ;;
-    255)
-      print2=off
-      ;;
-  esac
+  what_selected
       ;;
   3)
     fieldt
-    print3=on
   queries=$(dialog \
     --title "$field_title" \
     --backtitle "$title" \
@@ -131,20 +112,10 @@ query_field() {
       7 'Reversal Breakout' \
       8 'Reversal Breakout - Exclusively' \
       2>&1 1>&3)
-  # if $? == 1 || 255; then print2=off; fi
-  # This below is to ensure that when visited the print setting isnt set
-  case $? in
-    1)
-      print3=off
-      ;;
-    255)
-      print3=off
-      ;;
-  esac
+  what_selected
       ;;
   4)
     fieldt
-    print4=off
   queries=$(dialog \
     --title "$field_title" \
     --backtitle "$title" \
@@ -159,20 +130,10 @@ query_field() {
       7 'H(n)TF Support/Resistance' \
       8 'H(n)TF Support/Resistance - Exclusively' \
       2>&1 1>&3)
-  # if $? == 1 || 255; then print2=off; fi
-  # This below is to ensure that when visited the print setting isnt set
-  case $? in
-    1)
-      print4=off
-      ;;
-    255)
-      print4=off
-      ;;
-  esac
+  what_selected
       ;;
   5)
     fieldt
-    print5=on
   queries=$(dialog \
     --title "$field_title" \
     --backtitle "$title" \
@@ -184,20 +145,10 @@ query_field() {
       4 'Yes - Undershot' \
       5 'No/Yes' \
       2>&1 1>&3)
-  # if $? == 1 || 255; then print2=off; fi
-  # This below is to ensure that when visited the print setting isnt set
-  case $? in
-    1)
-      print5=off
-      ;;
-    255)
-      print5=off
-      ;;
-  esac
+  what_selected
       ;;
   6)
     fieldt
-    print6=on
   queries=$(dialog \
     --title "$field_title" \
     --backtitle "$title" \
@@ -212,20 +163,10 @@ query_field() {
       7 'Reversal Breakout' \
       8 'Reversal Breakout - Exclusively' \
       2>&1 1>&3)
-  # if $? == 1 || 255; then print2=off; fi
-  # This below is to ensure that when visited the print setting isnt set
-  case $? in
-    1)
-      print6=off
-      ;;
-    255)
-      print6=off
-      ;;
-  esac
+  what_selected
       ;;
   7)
     fieldt
-    print7=on
   queries=$(dialog \
     --title "$field_title" \
     --backtitle "$title" \
@@ -240,20 +181,10 @@ query_field() {
       7 'H(n)TF Support/Resistance' \
       8 'H(n)TF Support/Resistance - Exclusively' \
       2>&1 1>&3)
-  # if $? == 1 || 255; then print2=off; fi
-  # This below is to ensure that when visited the print setting isnt set
-  case $? in
-    1)
-      print7=off
-      ;;
-    255)
-      print7=off
-      ;;
-  esac
+  what_selected
       ;;
   8)
     fieldt
-    print8=off
   queries=$(dialog \
     --title "$field_title" \
     --backtitle "$title" \
@@ -265,20 +196,10 @@ query_field() {
       4 'Yes - Undershot' \
       5 'No/Yes' \
       2>&1 1>&3)
-  # if $? == 1 || 255; then print2=off; fi
-  # This below is to ensure that when visited the print setting isnt set
-  case $? in
-    1)
-      print8=off
-      ;;
-    255)
-      print8=off
-      ;;
-  esac
+  what_selected
       ;;
   9)
     fieldt
-    print9=on
   queries=$(dialog \
     --title "$field_title" \
     --backtitle "$title" \
@@ -290,16 +211,6 @@ query_field() {
       4 'Half Double Bottom/Top' \
       5 'Quarter Double Bottom/Top' \
       2>&1 1>&3)
-  # if $? == 1 || 255; then print2=off; fi
-  # This below is to ensure that when visited the print setting isnt set
-  case $? in
-    1)
-      print9=off
-      ;;
-    255)
-      print9=off
-      ;;
-  esac
       ;;
     esac
 }
