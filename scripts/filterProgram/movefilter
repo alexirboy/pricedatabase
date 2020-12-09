@@ -16,11 +16,6 @@ dialog_esc=255
 csv='~/Documents/price_database/08_10_2020.csv'
 title="Price Filter"
 
-display_result() {
-  dialog --title "$1" \
-    --no-collapse \
-    --msgbox "$result" 0 0
-}
 fieldt() {
   case $fields in
     1)
