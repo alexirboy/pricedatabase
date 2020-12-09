@@ -81,8 +81,20 @@ query_field() {
   # print*-This is a regular expression in the name of the parameter. Check its corresponding
   # field and set it to default.
   1query=$queries
+  case $mainp in
+    1)
+      main1="$fields $queries"
+      ;;
+    2)
+      main2="$fields $queries"
+      ;;
+    3)
+      main3="$fields $queries"
+      ;;
+  esac
 
-  # This is for setting the actual awk query statement for the particular query made.
+  #
+  #This is for setting the actual awk query statement for the particular query made.
   # if 1queries is a number then that value will correspond to a piece of awk code
   # that will then get appended onto the final awk code.
       ;;
