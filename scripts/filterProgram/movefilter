@@ -46,6 +46,103 @@ fieldt() {
       field_title="How did the beginning of this move reverse on the LTF?"
   esac
 }
+print_default(){
+  if [ ${#mainprint1[@]} -gt 0 ]; then
+    case ${#mainprint1[@]} in
+      1)
+        print1=on
+        ;;
+      2)
+        print2=on
+        ;;
+      3)
+        print3=on
+        ;;
+      4)
+        print4=on
+        ;;
+      5)
+        print5=on
+        ;;
+      6)
+        print6=on
+        ;;
+      7)
+        print7=on
+        ;;
+      8)
+        print8=on
+        ;;
+      9)
+        print9=on
+        ;;
+    esac
+  fi 
+
+  if [ ${#mainprint2[@]} -gt 0 ]; then
+    case ${#mainprint2[@]} in
+      1)
+        print1=on
+        ;;
+      2)
+        print2=on
+        ;;
+      3)
+        print3=on
+        ;;
+      4)
+        print4=on
+        ;;
+      5)
+        print5=on
+        ;;
+      6)
+        print6=on
+        ;;
+      7)
+        print7=on
+        ;;
+      8)
+        print8=on
+        ;;
+      9)
+        print9=on
+        ;;
+    esac
+  fi 
+
+  if [ ${#mainprint3[@]} -gt 0 ]; then
+    case ${#mainprint3[@]} in
+      1)
+        print1=on
+        ;;
+      2)
+        print2=on
+        ;;
+      3)
+        print3=on
+        ;;
+      4)
+        print4=on
+        ;;
+      5)
+        print5=on
+        ;;
+      6)
+        print6=on
+        ;;
+      7)
+        print7=on
+        ;;
+      8)
+        print8=on
+        ;;
+      9)
+        print9=on
+        ;;
+    esac
+  fi 
+}
 what_selected() {
   case $main in
     1)
