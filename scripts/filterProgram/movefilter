@@ -49,16 +49,19 @@ fieldt() {
 what_selected() {
   case $main in
     1)
+      unset mainprint1
       main1="$fields $queries"
-      mainprint1=([$fields]=$queries)
+      mainprint1=([$fields]$queries)
       ;;
     2)
+      unset mainprint2
       main2="$fields $queries"
-      mainprint2=([$fields]=$queries)
+      mainprint2=([$fields]$queries)
       ;;
     3)
+      unset mainprint3
       main3="$fields $queries"
-      mainprint3=([$fields]=$queries)
+      mainprint3=([$fields]$queries)
       ;;
   esac 
 }
