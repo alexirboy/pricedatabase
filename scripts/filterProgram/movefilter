@@ -659,5 +659,12 @@ while true; do
         9 'How did the beginning of this move reverse from the LTF perspective' $print9\
         2>&1 1>&3)
       ;;
+    5)
+      dialog --title "$title" \
+        --msgbox "Output Query" 0 0 0 \
+        awk -F ',' -v o1="$out1"  -v o2="$out2" -v o3="$out3" \
+        -v p1="$printing" -v h1="$heading" \
+        'BEGIN{print v1} o1,o2,o3 {print p1}' $csv
+        ;;
   esac
 done
