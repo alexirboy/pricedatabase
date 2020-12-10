@@ -17,7 +17,7 @@ csv='~/Documents/price_database/08_10_2020.csv'
 title="Price Filter"
 
   # For loop that takes the what_selected result
-  # and for each variable i in each of the mainprints,
+  # and for each variable i in each of the mains,
   # it gets the index number, which is the field, in a case
   # then the corresponding query number changes a awk statement
   # variable by adding its own custom code to the header
@@ -27,28 +27,29 @@ title="Price Filter"
   #in the main menu.
 
 custom_query(){
-  for i in "${!mainprint1[@]}" "${!mainprint2[@]}" "${!mainprint3[@]}"; do
+  for i in "${!main1[@]}" "${!main2[@]}" "${!main3[@]}"; do
     case "${i}" in
       1)
-        case ${mainprint1[$i]} in
+        case ${main1[$i]} in
           1)
              
           ;;
           2)
+             
           ;;
           3)
-
+             
           ;;
           4)
-
+             
           ;;
         esac
-        case ${mainprint2[$i]} in
+        case ${main2[$i]} in
           1)
-            hello="my guy ye ye"
+             
           ;;
           2)
-            right="is it me or you you pirate"
+             
           ;;
           3)
 
@@ -277,8 +278,8 @@ fieldt() {
 #while statements will not work for the print_default function
 #it creates a endless loop
 print_default(){
-  if [ ${#mainprint1[@]} -gt 0 ]; then
-    case ${!mainprint1[@]} in
+  if [ ${#main1[@]} -gt 0 ]; then
+    case ${!main1[@]} in
       1)
         print1=on
         ;;
@@ -309,8 +310,8 @@ print_default(){
     esac
   fi 
 
-  if [ ${#mainprint2[@]} -gt 0 ]; then
-    case ${!mainprint2[@]} in
+  if [ ${#main2[@]} -gt 0 ]; then
+    case ${!main2[@]} in
       1)
         print1=on
         ;;
@@ -341,8 +342,8 @@ print_default(){
     esac
   fi 
 
-  if [ ${#mainprint3[@]} -gt 0 ]; then
-    case ${!mainprint3[@]} in
+  if [ ${#main3[@]} -gt 0 ]; then
+    case ${!main3[@]} in
       1)
         print1=on
         ;;
@@ -376,13 +377,13 @@ print_default(){
 what_selected() {
   case $main in
     1)
-      mainprint1=([$fields]=$queries)
+      main1=([$fields]=$queries)
       ;;
     2)
-      mainprint2=([$fields]=$queries)
+      main2=([$fields]=$queries)
       ;;
     3)
-      mainprint3=([$fields]=$queries)
+      main3=([$fields]=$queries)
       ;;
   esac 
 }
