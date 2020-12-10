@@ -26,6 +26,210 @@ title="Price Filter"
   #Another function is needed that corresponds to print
   #in the main menu.
 
+custom_query(){
+  for i in ${mainprint1} ${mainprint2} ${mainprint3}; do
+    case ${!i[@]} in
+      1)
+        case ${i[@]} in
+          1)
+             
+          ;;
+          2)
+
+          ;;
+          3)
+
+          ;;
+          4)
+
+          ;;
+        esac
+        ;;
+      2)
+        case ${i[@]} in
+          1)
+             
+          ;;
+          2)
+
+          ;;
+          3)
+
+          ;;
+        esac
+        ;;
+      3)
+        case ${i[@]} in
+          1)
+             
+          ;;
+          2)
+
+          ;;
+          3)
+
+          ;;
+          4)
+
+          ;;
+          5)
+             
+          ;;
+          6)
+
+          ;;
+          7)
+
+          ;;
+          8)
+
+          ;;
+        esac
+        ;;
+      4)
+        case ${i[@]} in
+          1)
+             
+          ;;
+          2)
+
+          ;;
+          3)
+
+          ;;
+          4)
+
+          ;;
+          5)
+             
+          ;;
+          6)
+
+          ;;
+          7)
+
+          ;;
+          8)
+
+          ;;
+        esac
+        ;;
+      5)
+        case ${i[@]} in
+          1)
+             
+          ;;
+          2)
+
+          ;;
+          3)
+
+          ;;
+          4)
+
+          ;;
+          5)
+             
+          ;;
+        esac
+        ;;
+      6)
+        case ${i[@]} in
+          1)
+             
+          ;;
+          2)
+
+          ;;
+          3)
+
+          ;;
+          4)
+
+          ;;
+          5)
+             
+          ;;
+          6)
+
+          ;;
+          7)
+
+          ;;
+          8)
+
+          ;;
+        esac
+        ;;
+      7)
+        case ${i[@]} in
+          1)
+             
+          ;;
+          2)
+
+          ;;
+          3)
+
+          ;;
+          4)
+
+          ;;
+          5)
+             
+          ;;
+          6)
+
+          ;;
+          7)
+
+          ;;
+          8)
+
+          ;;
+        esac
+        ;;
+      8)
+        case ${i[@]} in
+          1)
+             
+          ;;
+          2)
+
+          ;;
+          3)
+
+          ;;
+          4)
+
+          ;;
+          5)
+             
+          ;;
+        esac
+        ;;
+      9)
+        case ${i[@]} in
+          1)
+             
+          ;;
+          2)
+
+          ;;
+          3)
+
+          ;;
+          4)
+
+          ;;
+          5)
+             
+          ;;
+        esac
+        ;;
+    esac
+  done
+}
 fieldt() {
   case $fields in
     1)
