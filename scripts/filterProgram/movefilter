@@ -56,6 +56,9 @@ fieldt() {
       field_title="How did the beginning of this move reverse on the LTF?"
   esac
 }
+
+#while statements will not work for the print_default function
+#it creates a endless loop
 print_default(){
   if [ ${#mainprint1[@]} -gt 0 ]; then
     case ${mainprint1[@]} in
