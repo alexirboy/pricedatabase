@@ -30,12 +30,25 @@ custom_query(){
   for i in "${!mainprint1[@]}" "${!mainprint2[@]}" "${!mainprint3[@]}"; do
     case "${i}" in
       1)
-        case ${[$i]} in
+        case ${mainprint1[$i]} in
           1)
              
           ;;
           2)
+          ;;
+          3)
 
+          ;;
+          4)
+
+          ;;
+        esac
+        case ${mainprint2[$i]} in
+          1)
+            hello="my guy ye ye"
+          ;;
+          2)
+            right="is it me or you you pirate"
           ;;
           3)
 
@@ -389,6 +402,7 @@ query_field() {
       4 'Reversal Breakout' \
       2>&1 1>&3)
   what_selected
+  custom_query
       ;;
   2)
     fieldt
