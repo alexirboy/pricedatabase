@@ -46,7 +46,7 @@ custom_query(){
         esac
         ;;
       2)
-        case ${i[@]} in
+        case ${[$i]} in
           1)
              
           ;;
@@ -59,7 +59,7 @@ custom_query(){
         esac
         ;;
       3)
-        case ${i[@]} in
+        case ${[$i]} in
           1)
              
           ;;
@@ -87,7 +87,7 @@ custom_query(){
         esac
         ;;
       4)
-        case ${i[@]} in
+        case ${[$i]} in
           1)
              
           ;;
@@ -115,7 +115,7 @@ custom_query(){
         esac
         ;;
       5)
-        case ${i[@]} in
+        case ${[$i]} in
           1)
              
           ;;
@@ -134,7 +134,7 @@ custom_query(){
         esac
         ;;
       6)
-        case ${i[@]} in
+        case ${[$i]} in
           1)
              
           ;;
@@ -162,7 +162,7 @@ custom_query(){
         esac
         ;;
       7)
-        case ${i[@]} in
+        case ${[$i]} in
           1)
              
           ;;
@@ -190,7 +190,7 @@ custom_query(){
         esac
         ;;
       8)
-        case ${i[@]} in
+        case ${[$i]} in
           1)
              
           ;;
@@ -209,7 +209,7 @@ custom_query(){
         esac
         ;;
       9)
-        case ${i[@]} in
+        case ${[$i]} in
           1)
              
           ;;
