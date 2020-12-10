@@ -12,14 +12,16 @@ print8='off'
 print9='off'
 printing=""
 
+
+awk_output="$(awk -F, -v o1="$out1" -v o2="$out2" -v o3="$out3" \
+  -v p1="$printing" -v h1="$heading" \
+  "o1,o2,o3 {print p1}" "$csv")"
+
 dialog_cancel=1
 dialog_esc=255
 csv='~/Documents/price_database/08_10_2020.csv'
 title="Price Filter"
 
-awk_output=$(awk -F ',' -v o1="$out1" -v o2="$out2" -v o3="$out3" \
-  -v p1="$printing" -v h1="$heading" \
-  'o1,o2,o3 {print p1}' "$csv")
   # For loop that takes the what_selected result
   # and for each variable i in each of the mains,
   # it gets the index number, which is the field, in a case
@@ -593,6 +595,7 @@ while true; do
     1)
       clear
       echo "Hope it was helpful Alex, Till next time I guess :)"
+      echo "$awk_output"
       exit
       ;;
     255)
