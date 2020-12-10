@@ -10,12 +10,16 @@ print6='off'
 print7='off'
 print8='off'
 print9='off'
+printing=""
 
 dialog_cancel=1
 dialog_esc=255
 csv='~/Documents/price_database/08_10_2020.csv'
 title="Price Filter"
 
+awk_output=$(awk -F ',' -v o1="$out1" -v o2="$out2" -v o3="$out3" \
+  -v p1="$printing" -v h1="$heading" \
+  'o1,o2,o3 {print p1}' "$csv")
   # For loop that takes the what_selected result
   # and for each variable i in each of the mains,
   # it gets the index number, which is the field, in a case
@@ -672,6 +676,28 @@ while true; do
         8 'Did it overshoot or undershoot' $print8\
         9 'How did the beginning of this move reverse from the LTF perspective' $print9\
         2>&1 1>&3)
+      for p in "$prints"; do
+        case $p in
+          1)
+            printing+='"\t"$3';;
+          2)
+            printing+='"\t"$4';;
+          3)
+            printing+='"\t"$5';;
+          4)
+            printing+='"\t"$6';;
+          5)
+            printing+='"\t"$7';;
+          6)
+            printing+='"\t"$8';;
+          7)
+            printing+='"\t"$9';;
+          8)
+            printing+='"\t"$10';;
+          9)
+            printing+='"\t"$11';;
+        esac
+      done
       ;;
     5)
       dialog --title "$title" \
