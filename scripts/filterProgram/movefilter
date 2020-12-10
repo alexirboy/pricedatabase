@@ -16,6 +16,16 @@ dialog_esc=255
 csv='~/Documents/price_database/08_10_2020.csv'
 title="Price Filter"
 
+  # For loop that takes the what_selected result
+  # and for each variable i in each of the mainprints,
+  # it gets the index number, which is the field, in a case
+  # then the corresponding query number changes a awk statement
+  # variable by adding its own custom code to the header
+  # and query section.
+  #
+  #Another function is needed that corresponds to print
+  #in the main menu.
+
 fieldt() {
   case $fields in
     1)
