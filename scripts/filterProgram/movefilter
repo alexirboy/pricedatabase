@@ -700,7 +700,7 @@ while true; do
       ;;
     5)
       awk_output=$(awk -F, -v o1="$out1" -v o2="$out2" -v o3="$out3" -v p1="$printing" \
-        'o1 o2 o3 { print NR,p1}' ~/Documents/price_database/08_10_2020.csv) 
+        'o1 o2 o3 { print NR,$ENVIRON["$printing"]}' ~/Documents/price_database/08_10_2020.csv)
       dialog --title "$title" \
         --msgbox "$awk_output" 0 0 \
         ;;
