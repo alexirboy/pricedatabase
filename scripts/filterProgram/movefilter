@@ -678,23 +678,23 @@ while true; do
       for p in "${prints[@]}"; do
         case "${p}" in
           1)
-            printing+='"\t"$3';;
+            printing+=''"\t"'$3';;
           2)
-            printing+='"\t"$4';;
+            printing+=''"\t"'$4';;
           3)
-            printing+='"\t"$5';;
+            printing+=''"\t"'$5';;
           4)
-            printing+='"\t"$6';;
+            printing+=''"\t"'$6';;
           5)
-            printing+='"\t"$7';;
+            printing+=''"\t"'$7';;
           6)
-            printing+='"\t"$8';;
+            printing+=''"\t"'$8';;
           7)
-            printing+='"\t"$9';;
+            printing+=''"\t"'$9';;
           8)
-            printing+='"\t"$10';;
+            printing+=''"\t"'$10';;
           9)
-            printing+='"\t"$11';;
+            printing+=''"\t"'$11';;
         esac
       done
       ;;
