@@ -585,6 +585,7 @@ while true; do
     1)
       clear
       echo "Hope it was helpful Alex, Till next time I guess :)"
+      # testing echos to see what variables are being assigned properly
       echo "$awk_output"
       echo "$out1"
       echo "$out2"
@@ -699,7 +700,7 @@ while true; do
       ;;
     5)
       awk_output=$(awk -F, -v o1="$out1" -v o2="$out2" -v o3="$out3" -v p1="$printing" \
-        'o1 o2 o3 { print NR,p1}' ~/Documents/price_database/08_10_2020.csv 2>&1 1>&3) 
+        'o1 o2 o3 { print NR,p1}' ~/Documents/price_database/08_10_2020.csv) 
       dialog --title "$title" \
         --msgbox "$awk_output" 0 0 \
         ;;
