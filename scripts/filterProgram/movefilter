@@ -407,27 +407,27 @@ custom_query(){
         esac
         case ${main2[$i]} in
           1)
-            '&& $10 ~ /^no$|^no -/';;
+            out2='&& $10 ~ /^no$|^no -/';;
           2)
-            '&& $10 ~ /^yes$|^yes -/';;
+            out2='&& $10 ~ /^yes$|^yes -/';;
           3)
-            '&& $10 ~ /^yes -.*overshot/';;
+            out2='&& $10 ~ /^yes -.*overshot/';;
           4)
-            '&& $10 ~ /^yes -.*undershot/';;
+            out2='&& $10 ~ /^yes -.*undershot/';;
           5)
-            '&& $7 ~ /^no\/yes/';;
+            out2='&& $7 ~ /^no\/yes/';;
         esac
         case ${main3[$i]} in
           1)
-            '&& $10 ~ /^no$|^no -/';;
+            out3='&& $10 ~ /^no$|^no -/';;
           2)
-            '&& $10 ~ /^yes$|^yes -/';;
+            out3='&& $10 ~ /^yes$|^yes -/';;
           3)
-            '&& $10 ~ /^yes -.*overshot/';;
+            out3='&& $10 ~ /^yes -.*overshot/';;
           4)
-            '&& $10 ~ /^yes -.*undershot/';;
+            out3='&& $10 ~ /^yes -.*undershot/';;
           5)
-            '&& $7 ~ /^no\/yes/';;
+            out3='&& $7 ~ /^no\/yes/';;
         esac;;
       9)
         case ${main1[$i]} in
