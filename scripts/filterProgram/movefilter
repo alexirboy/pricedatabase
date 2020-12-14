@@ -28,47 +28,34 @@ custom_query(){
       1)
         case ${main1[$i]} in
           1)
-            out1='$3 ~ "F[0-9]"'
-          ;;
+            out1='$3 ~ "F[0-9]"';;
           2)
-            out1='$3 ~ /H*TF/'
-          ;;
+            out1='$3 ~ /H*TF/';;
           3)
-            out1='$3 ~ /\/R|R$|\w R|R\//' 
-          ;;
+            out1='$3 ~ /\/R|R$|\w R|R\//';;
           4)
-            out1='$3 ~ "RB"' 
-          ;;
+            out1='$3 ~ "RB"';;
         esac
         case ${main2[$i]} in
           1)
-            out2='$3 ~ "F[0-9]" &&'
-          ;;
+            out2='&& $3 ~ "F[0-9]"';;
           2)
-            out2='$3 ~ /H*TF/ &&'
-          ;;
+            out2='&& $3 ~ /H*TF/';;
           3)
-            out2='$3 ~ /\/R|R$|\w R|R\// &&' 
-          ;;
+            out2='&& $3 ~ /\/R|R$|\w R|R\//';;
           4)
-            out2='$3 ~ "RB" &&' 
-          ;;
+            out2='&& $3 ~ "RB"';;
         esac
         case ${main3[$i]} in
           1)
-            out3='$3 ~ "F[0-9]"'
-          ;;
+            out3='&& $3 ~ "F[0-9]"';;
           2)
-            out3='$3 ~ /H*TF/'
-          ;;
+            out3='&& $3 ~ /H*TF/';;
           3)
-            out3='$3 ~ /\/R|R$|\w R|R\//' 
-          ;;
+            out3='&& $3 ~ /\/R|R$|\w R|R\//';;
           4)
-            out3='$3 ~ "RB"' 
-          ;;
-        esac
-        ;;
+            out3='&& $3 ~ "RB"';;
+        esac ;;
       2)
         case ${[$i]} in
           1)
@@ -700,7 +687,7 @@ while true; do
       ;;
     5)
       awk_output=$(awk -F, \
-        "$out1 $out2 $out3 { print NR,$printing}" ~/Documents/price_database/08_10_2020.csv)
+        "$out1 $out2 $out3 {print NR,$printing}" ~/Documents/price_database/08_10_2020.csv)
       dialog --title "$title" \
         --msgbox "$awk_output" 0 0 \
         ;;
