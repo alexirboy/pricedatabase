@@ -678,29 +678,29 @@ while true; do
       for p in "${prints[@]}"; do
         case "${p}" in
           1)
-            printing+=''"\t"'$3';;
+            printing+='"\t"$3';;
           2)
-            printing+=''"\t"'$4';;
+            printing+='"\t"$4';;
           3)
-            printing+=''"\t"'$5';;
+            printing+='"\t"$5';;
           4)
-            printing+=''"\t"'$6';;
+            printing+='"\t"$6';;
           5)
-            printing+=''"\t"'$7';;
+            printing+='"\t"$7';;
           6)
-            printing+=''"\t"'$8';;
+            printing+='"\t"$8';;
           7)
-            printing+=''"\t"'$9';;
+            printing+='"\t"$9';;
           8)
-            printing+=''"\t"'$10';;
+            printing+='"\t"$10';;
           9)
-            printing+=''"\t"'$11';;
+            printing+='"\t"$11';;
         esac
       done
       ;;
     5)
-      awk_output=$(awk -F, -v o1="$out1" -v o2="$out2" -v o3="$out3" -v p1="$printing" \
-        'o1 o2 o3 { print NR,p1}' ~/Documents/price_database/08_10_2020.csv)
+      awk_output=$(awk -F, \
+        "$out1 $out2 $out3 { print NR,$printing}" ~/Documents/price_database/08_10_2020.csv)
       dialog --title "$title" \
         --msgbox "$awk_output" 0 0 \
         ;;
