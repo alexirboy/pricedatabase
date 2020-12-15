@@ -950,7 +950,7 @@ while true; do
       ;;
     5)
       awk_output=$(awk -F, \
-        "BEGIN {print $header} $out1 $out2 $out3 {print NR,$printing}" ~/Documents/price_database/08_10_2020.csv)
+        "$out1 $out2 $out3 {print NR,$printing}" ~/Documents/price_database/08_10_2020.csv)
       dialog --title "$title" \
         --no-collapse \
         --msgbox "$awk_output" 40 180 \
