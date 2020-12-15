@@ -11,7 +11,7 @@ print7='off'
 print8='off'
 print9='off'
 printing=""
-
+header='Move No'
 
 
 dialog_cancel=1
@@ -832,6 +832,7 @@ while true; do
       echo "$out1 $out2 $out3"
       echo "$printing"
       echo "$prints"
+      echo "$header"
       exit
       ;;
     255)
@@ -918,31 +919,41 @@ while true; do
       for p in "${prints[@]}"; do
         case "${p}" in
           1)
-            printing+='"\t"$3';;
+            printing+='"\t"$3'
+            header+='"\t"HTF move';;
           2)
-            printing+='"\t"$4';;
+            printing+='"\t"$4'
+            header+='"\t"Direction in relation to HTF move';;
           3)
-            printing+='"\t"$5';;
+            printing+='"\t"$5'
+            header+='"\t"Previous move';;
           4)
-            printing+='"\t"$6';;
+            printing+='"\t"$6'
+            header+='"\t"Line previous move started from';;
           5)
-            printing+='"\t"$7';;
+            printing+='"\t"$7'
+            header+='"\t"Previous move over/undershoot';;
           6)
-            printing+='"\t"$8';;
+            printing+='"\t"$8'
+            header+='"\t"This move';;
           7)
-            printing+='"\t"$9';;
+            printing+='"\t"$9'
+            header+='"\t"Line this move started from';;
           8)
-            printing+='"\t"$10';;
+            printing+='"\t"$10'
+            header+='"\t"This move over/undershoot';;
           9)
-            printing+='"\t"$11';;
+            printing+='"\t"$11'
+            header+='"\t"LTF reversal pattern';;
         esac
       done
       ;;
     5)
       awk_output=$(awk -F, \
-        "$out1 $out2 $out3 {print NR,$printing}" ~/Documents/price_database/08_10_2020.csv)
+        "BEGIN {print $header} $out1 $out2 $out3 {print NR,$printing}" ~/Documents/price_database/08_10_2020.csv)
       dialog --title "$title" \
-        --msgbox "$awk_output" 0 0 \
+        --no-collapse \
+        --msgbox "$awk_output" 40 180 \
         ;;
   esac
 done
