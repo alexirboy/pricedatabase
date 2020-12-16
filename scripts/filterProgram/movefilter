@@ -826,9 +826,6 @@ while true; do
       echo "Hope it was helpful Alex, Till next time I guess :)"
       # testing echos to see what variables are being assigned properly
       echo "$awk_output"
-      echo "$out1"
-      echo "$out2"
-      echo "$out3"
       echo "$out1 $out2 $out3"
       echo "$printing"
       echo "$prints"
@@ -920,31 +917,31 @@ while true; do
         case "${p}" in
           1)
             printing+='"\t"$3'
-            header+='"\t"HTF move';;
+            header+='\tHTF move';;
           2)
             printing+='"\t"$4'
-            header+='"\t"Direction in relation to HTF move';;
+            header+='\tDirection in relation to HTF move';;
           3)
             printing+='"\t"$5'
-            header+='"\t"Previous move';;
+            header+='\tPrevious move';;
           4)
             printing+='"\t"$6'
-            header+='"\t"Line previous move started from';;
+            header+='\tLine previous move started from';;
           5)
             printing+='"\t"$7'
-            header+='"\t"Previous move over/undershoot';;
+            header+='\tPrevious move over/undershoot';;
           6)
             printing+='"\t"$8'
-            header+='"\t"This move';;
+            header+='\tThis move';;
           7)
             printing+='"\t"$9'
-            header+='"\t"Line this move started from';;
+            header+='\tLine this move started from';;
           8)
             printing+='"\t"$10'
-            header+='"\t"This move over/undershoot';;
+            header+='\tThis move over/undershoot';;
           9)
             printing+='"\t"$11'
-            header+='"\t"LTF reversal pattern';;
+            header+='\tLTF reversal pattern';;
         esac
       done
       ;;
@@ -953,7 +950,20 @@ while true; do
         "$out1 $out2 $out3 {print NR,$printing}" ~/Documents/price_database/08_10_2020.csv)
       dialog --title "$title" \
         --no-collapse \
-        --msgbox "$awk_output" 40 180 \
+        --extra-button --extra-label "To-File" \
+        --msgbox "$awk_output" 40 180
+
+        if [ $? = 3 ]; then \
+          file=$(dialog --title "$title" \
+          --fselect ~/Documents/price_database/research/ 14 48 2>&1 1>&3)
+
+            echo "" >> "$file"
+            echo "#+BEGIN_SRC awk :in-file $csv :exports results" >> "$file"
+            echo 'BEGIN {FS=","' >> "$file"
+            echo "print \"$header\"}" >> "$file"
+            echo "$out1 $out2 $out3 {print NR$printing}" >> "$file"
+            echo "#+END_SRC" >> "$file"
+        fi
         ;;
   esac
 done
