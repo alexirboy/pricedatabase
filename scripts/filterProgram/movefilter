@@ -1,15 +1,15 @@
 #!/bin/env bash
 
 # Initial print variables
-print1='off'
-print2='off'
-print3='off'
-print4='off'
-print5='off'
-print6='off'
-print7='off'
-print8='off'
-print9='off'
+print1=off
+print2=off
+print3=off
+print4=off
+print5=off
+print6=off
+print7=off
+print8=off
+print9=off
 printing=""
 header='Move No'
 
@@ -820,6 +820,7 @@ while true; do
     --title "Menu" \
     --no-tags \
     --cancel-label "Exit" \
+    --extra-button --extra-label "Clear All" \
     --menu "Please select:" 0 0 9 \
     1 "First Query" \
     2 "Second Query" \
@@ -839,6 +840,31 @@ while true; do
       echo "$prints"
       echo "$header"
       exit
+      ;;
+    3)
+      out1=""
+      out2=""
+      out3=""
+      print1=off
+      print2=off
+      print3=off
+      print4=off
+      print5=off
+      print6=off
+      print7=off
+      print8=off
+      print9=off
+      printing=""
+      header='Move No'
+      awk_output=""
+      prints=""
+      unset main1
+      unset main2
+      unset main3
+
+      dialog --sleep 3 \
+        --title "$title" \
+        --infobox "Cleared all paramters. Moving onto item cursor was on when pressed" 10 52
       ;;
     255)
       clear
