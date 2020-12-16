@@ -862,7 +862,7 @@ while true; do
       unset main2
       unset main3
 
-      dialog --sleep 3 \
+      dialog --sleep 1 \
         --title "$title" \
         --infobox "Cleared all paramters. Moving onto item cursor was on when pressed" 10 52
       ;;
