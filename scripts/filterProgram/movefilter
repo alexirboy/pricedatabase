@@ -543,8 +543,21 @@ fieldt() {
   esac
 }
 
-#while statements will not work for the print_default function
-#it creates a endless loop
+#trying to allow the default print to change with the selection of prints
+status_check_mini(){
+  if $(( pstatus1 + pstatus2 + pstatus3 + pstatus4 + pstatus5 + pstatus6 + pstatus7 + pstatus8 + pstatus9 -eq 0 )); then
+  print_default
+  fi
+}
+status_check(){
+  if $(( pstatus1 + pstatus2 + pstatus3 + pstatus4 + pstatus5 + pstatus6 + pstatus7 + pstatus8 + pstatus9 -eq 0 )); then
+  print_default
+  else
+    for ps in "$pstatus1" "$pstatus1" "$pstatus1" "$pstatus1" "$pstatus1" "$pstatus1" "$pstatus1" "$pstatus1" "$pstatus1"; do
+      df
+    done
+  fi
+}
 print_default(){
   if [ ${#main1[@]} -gt 0 ]; then
     case ${!main1[@]} in
@@ -642,6 +655,7 @@ print_default(){
     esac
   fi 
 }
+
 what_selected() {
   case $main in
     1)
@@ -981,30 +995,39 @@ while true; do
       for p in "${prints[@]}"; do
         case "${p}" in
           1)
+            pstatus1=1
             printcheck+='"\t"$3'
             headercheck+='\tHTF move';;
           2)
+            pstatus2=1
             printcheck+='"\t"$4'
             headercheck+='\tDirection in relation to HTF move';;
           3)
+            pstatus3=1
             printcheck+='"\t"$5'
             headercheck+='\tPrevious move';;
           4)
+            pstatus4=1
             printcheck+='"\t"$6'
             headercheck+='\tLine previous move started from';;
           5)
+            pstatus5=1
             printcheck+='"\t"$7'
             headercheck+='\tPrevious move over/undershoot';;
           6)
+            pstatus6=1
             printcheck+='"\t"$8'
             headercheck+='\tThis move';;
           7)
+            pstatus7=1
             printcheck+='"\t"$9'
             headercheck+='\tLine this move started from';;
           8)
+            pstatus8=1
             printcheck+='"\t"$10'
             headercheck+='\tThis move over/undershoot';;
           9)
+            pstatus9=1
             printcheck+='"\t"$11'
             headercheck+='\tLTF reversal pattern';;
         esac
