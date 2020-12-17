@@ -17,3 +17,8 @@
 - It is safer to trade a move after the RB move has happened because there are generally only 2 possible moves that can happen.
 
 - When a RB is followed by an RB move, is it because on the HTF the previous move was a RB move and the current move is the R or F that follows it and the move after will be in the direction of the HHTF move?
+
+- A new possible category on the database - is the move currently within a HTF SS/RR area? it hasnt broken out yet of the HTF point no?
+
+- When is a move more messy or giving itself more chances to get through to a lower low or higher high? or pushing through barriers it could stop at?
+  I think when the HTF move is allowed to do that. If the previous HTF move was a reversal and this HTF move could be a RB, then the TTF moves do not have to stop at HTF SS/RR that would not stop the HTF move. Hence why moves are allowed multiple swings on the LTF before going in the opposite direction. Becasue there is less reason on the HTF why it should do so. Basically potential must count towards something

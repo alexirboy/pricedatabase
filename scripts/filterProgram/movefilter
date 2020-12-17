@@ -871,10 +871,32 @@ while true; do
       exit
       ;;
     3)
-      dialog --sleep 1 \
+      clearing=$(dialog \
         --title "$title" \
-        --infobox "Cleared all paramters. Moving onto item cursor was on when pressed" 10 52
-      ;;
+        --backtitle "clearing menu" \
+        --cancel-label "Back" \
+        --menu "Clearing Menu" 0 0 9 \
+        1 "Clear 2nd Query" \
+        2 "Clear 3nd Query" \
+        3 "Clear All Queries" \
+        2>&1 1>&3)
+      case $clearing in
+        1)
+          clear_2
+          dialog --sleep 1 \
+            --title "$title" \
+            --infobox "Cleared 2nd query" 10 52;;
+        2)
+          clear_3
+          dialog --sleep 1 \
+            --title "$title" \
+            --infobox "Cleared 3rd query" 10 52;;
+        3)
+          clear_all
+          dialog --sleep 1 \
+            --title "$title" \
+            --infobox "Cleared all queries" 10 52;;
+      esac;;
     255)
       clear
       echo "aaaahhh it was helpful Alex, Till next time I guess :)"
