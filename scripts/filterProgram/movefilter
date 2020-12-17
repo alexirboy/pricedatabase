@@ -12,6 +12,7 @@ print8=off
 print9=off
 printing=""
 header='Move No'
+headercheck='Move No'
 
 
 dialog_cancel=1
@@ -982,33 +983,65 @@ while true; do
         case "${p}" in
           1)
             printing+='"\t"$3'
-            header+='\tHTF move';;
+            printcheck+='"\t"$3'
+
+            header+='\tHTF move'
+            headercheck+='\tHTF move';;
           2)
             printing+='"\t"$4'
-            header+='\tDirection in relation to HTF move';;
+            printcheck+='"\t"$4'
+
+            header+='\tDirection in relation to HTF move'
+            headercheck+='\tDirection in relation to HTF move';;
           3)
             printing+='"\t"$5'
-            header+='\tPrevious move';;
+            printcheck+='"\t"$5'
+
+            header+='\tPrevious move'
+            headercheck+='\tPrevious move';;
           4)
             printing+='"\t"$6'
-            header+='\tLine previous move started from';;
+            printcheck+='"\t"$6'
+
+            header+='\tLine previous move started from'
+            headercheck+='\tLine previous move started from';;
           5)
             printing+='"\t"$7'
-            header+='\tPrevious move over/undershoot';;
+            printcheck+='"\t"$7'
+
+            header+='\tPrevious move over/undershoot'
+            headercheck+='\tPrevious move over/undershoot';;
           6)
             printing+='"\t"$8'
-            header+='\tThis move';;
+            printcheck+='"\t"$8'
+
+            header+='\tThis move'
+            headercheck+='\tThis move';;
           7)
             printing+='"\t"$9'
-            header+='\tLine this move started from';;
+            printcheck+='"\t"$9'
+
+            header+='\tLine this move started from'
+            headercheck+='\tLine this move started from';;
           8)
             printing+='"\t"$10'
-            header+='\tThis move over/undershoot';;
+            printcheck+='"\t"$10'
+
+            header+='\tThis move over/undershoot'
+            headercheck+='\tThis move over/undershoot';;
           9)
             printing+='"\t"$11'
-            header+='\tLTF reversal pattern';;
+            printcheck+='"\t"$11'
+
+            header+='\tLTF reversal pattern'
+            headercheck+='\tLTF reversal pattern';;
         esac
       done
+      printing="$printcheck"
+      printcheck=""
+
+      header="$headercheck"
+      headercheck='Move No'
       ;;
     5)
       awk_output=$(awk -F, \
