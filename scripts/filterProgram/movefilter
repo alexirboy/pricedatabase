@@ -13,7 +13,6 @@ print9=off
 header='Move No'
 headercheck='Move No'
 
-
 dialog_cancel=1
 dialog_esc=255
 csv='~/Documents/price_database/08_10_2020.csv'
@@ -34,7 +33,17 @@ clear_all(){
   print7=off
   print8=off
   print9=off
+  pstatus1=0
+  pstatus2=0
+  pstatus3=0
+  pstatus4=0
+  pstatus5=0
+  pstatus6=0
+  pstatus7=0
+  pstatus8=0
+  pstatus9=0
   printing=""
+  prevprint=
   header='Move No'
   awk_output=""
   prints=""
@@ -544,18 +553,69 @@ fieldt() {
 }
 
 #trying to allow the default print to change with the selection of prints
+status_set(){
+  if [ $pstatus1 = 1 ]; then
+  print1=on
+  pstatus1=0
+    else print1=off
+  fi
+
+  if [ $pstatus2 = 1 ]; then
+  print2=on
+  pstatus2=0
+    else print2=off
+  fi
+
+  if [ $pstatus3 = 1 ]; then
+  print3=on
+  pstatus3=0
+    else print3=off
+  fi
+
+  if [ $pstatus4 = 1 ]; then
+  print4=on
+  pstatus4=0
+    else print4=off
+  fi
+
+  if [ $pstatus5 = 1 ]; then
+  print5=on
+  pstatus5=0
+    else print5=off
+  fi
+
+  if [ $pstatus6 = 1 ]; then
+  print6=on
+  pstatus6=0
+    else print6=off
+  fi
+
+  if [ $pstatus7 = 1 ]; then
+  print7=on
+  pstatus7=0
+    else print7=off
+  fi
+
+  if [ $pstatus8 = 1 ]; then
+  print8=on
+  pstatus8=0
+    else print8=off
+  fi
+
+  if [ $pstatus9 = 1 ]; then
+  print9=on
+  pstatus9=0
+    else print9=off
+  fi
+}
 status_check_mini(){
-  if $(( pstatus1 + pstatus2 + pstatus3 + pstatus4 + pstatus5 + pstatus6 + pstatus7 + pstatus8 + pstatus9 -eq 0 )); then
+  if [ $prevprint ==  ]; then
   print_default
   fi
 }
 status_check(){
-  if $(( pstatus1 + pstatus2 + pstatus3 + pstatus4 + pstatus5 + pstatus6 + pstatus7 + pstatus8 + pstatus9 -eq 0 )); then
-  print_default
-  else
-    for ps in "$pstatus1" "$pstatus1" "$pstatus1" "$pstatus1" "$pstatus1" "$pstatus1" "$pstatus1" "$pstatus1" "$pstatus1"; do
-      df
-    done
+  if [ $prevprint == yes ]; then
+  status_set
   fi
 }
 print_default(){
@@ -976,7 +1036,7 @@ while true; do
       query_field
       ;;
     4)
-      print_default
+      status_check_mini
       prints=($(dialog \
         --title "$title" \
         --no-tags \
@@ -1038,6 +1098,17 @@ while true; do
 
       header="$headercheck"
       headercheck='Move No'
+      prevprint=yes
+      status_check
+      pstatus1=0
+      pstatus2=0
+      pstatus3=0
+      pstatus4=0
+      pstatus5=0
+      pstatus6=0
+      pstatus7=0
+      pstatus8=0
+      pstatus9=0
       fi
       ;;
     5)
