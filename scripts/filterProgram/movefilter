@@ -17,6 +17,9 @@ dialog_cancel=1
 dialog_esc=255
 csv='~/Documents/price_database/08_10_2020.csv'
 title="Price Filter"
+query1="Will show what the 1st query is"
+query2="Will show what the 2nd query is"
+query3="Will show what the 3rd query is"
 
 
 # create a clear extra button that clears all the variables that has been set6 in current session
@@ -74,449 +77,650 @@ custom_query(){
       1)
         case ${main1[$i]} in
           1)
-            out1='$3 ~ "F[0-9]"';;
+            out1='$3 ~ "F[0-9]"'
+            query1="HTF move is a Fib";;
           2)
-            out1='$3 ~ /H*TF/';;
+            out1='$3 ~ /H*TF/'
+            query1="HTF move is a H(n)TF move, before a reversal";;
           3)
-            out1='$3 ~ /\/R|R$|\w R|R\//';;
+            out1='$3 ~ /\/R|R$|\w R|R\//'
+            query1="HTF move is a Reversal";;
           4)
-            out1='$3 ~ "RB"';;
+            out1='$3 ~ "RB"'
+            query1="HTF move is a Reversal Breakout";;
         esac
         case ${main2[$i]} in
           1)
-            out2='&& $3 ~ "F[0-9]"';;
+            out2='&& $3 ~ "F[0-9]"'
+            query2="HTF move is a Fib";;
           2)
-            out2='&& $3 ~ /H*TF/';;
+            out2='&& $3 ~ /H*TF/'
+            query2="HTF move is a H(n)TF move, before a reversal";;
           3)
-            out2='&& $3 ~ /\/R|R$|\w R|R\//';;
+            out2='&& $3 ~ /\/R|R$|\w R|R\//'
+            query2="HTF move is a Reversal";;
           4)
-            out2='&& $3 ~ "RB"';;
+            out2='&& $3 ~ "RB"'
+            query2="HTF move is a Reversal Breakout";;
         esac
         case ${main3[$i]} in
           1)
-            out3='&& $3 ~ "F[0-9]"';;
+            out3='&& $3 ~ "F[0-9]"'
+            query3="HTF move is a Fib";;
           2)
-            out3='&& $3 ~ /H*TF/';;
+            out3='&& $3 ~ /H*TF/'
+            query3="HTF move is a H(n)TF move, before a reversal";;
           3)
-            out3='&& $3 ~ /\/R|R$|\w R|R\//';;
+            out3='&& $3 ~ /\/R|R$|\w R|R\//'
+            query3="HTF move is a Reversal";;
           4)
-            out3='&& $3 ~ "RB"';;
+            out3='&& $3 ~ "RB"'
+            query3="HTF move is a Reversal Breakout";;
         esac ;;
       2)
         case ${main1[$i]} in
           1)
-            out1='$4 == "WM"';;
+            out1='$4 == "WM"'
+            query1="HTF move - With Move";;
           2)
-            out1='$4 == "WM-FM"';;
+            out1='$4 == "WM-FM"'
+            query1="HTF move - With move, First Move";;
           3)
-            out1='$4 == "OM"';;
+            out1='$4 == "OM"'
+            query1="HTF move - Opposite Move";;
         esac
         case ${main2[$i]} in
           1)
-            out2='&& $4 == "WM"';;
+            out2='&& $4 == "WM"'
+            query2="HTF move - With Move";;
           2)
-            out2='&& $4 == "WM-FM"';;
+            out2='&& $4 == "WM-FM"'
+            query2="HTF move - With move, First Move";;
           3)
-            out2='&& $4 == "OM"';;
+            out2='&& $4 == "OM"'
+            query2="HTF move - Opposite Move";;
         esac
         case ${main3[$i]} in
           1)
-            out3='&& $4 == "WM"';;
+            out3='&& $4 == "WM"'
+            query3="HTF move - With Move";;
           2)
-            out3='&& $4 == "WM-FM"';;
+            out3='&& $4 == "WM-FM"'
+            query3="HTF move - With move, First Move";;
           3)
-            out3='&& $4 == "OM"';;
+            out3='&& $4 == "OM"'
+            query3="HTF move - Opposite Move";;
         esac;;
       3)
         case ${main1[$i]} in
           1)
-            out1='$5 ~ "F[0-9]"';;
+            out1='$5 ~ "F[0-9]"'
+            query1="Previous move - FB";;
           2)
-            out1='$5 ~ "^F[0-9]"';;
+            out1='$5 ~ "^F[0-9]"'
+            query1="Previous move - FB Exclusively";;
           3)
-            out1='$5 ~ "H"';;
+            out1='$5 ~ "H"'
+            query1="Previous move - H(n)TF move (Before Reversal)";;
           4)
-            out1='$5 ~ "H\w* F"';;
+            out1='$5 ~ "H\w* F"'
+            query1="Previous move - H(n)TF FB (Before Reversal)";;
           5)
-            out1='$5 ~ "^H\w* F"';;
+            out1='$5 ~ "^H\w* F"'
+            query1="Previous move - H(n)TF FB (Before Reversal) - Exclusively";;
           6)
-            out1='$5 ~ "H\w* R"';;
+            out1='$5 ~ "H\w* R"'
+            query1="Previous move - H(n)TF R (Before TTF Reversal)";;
           7)
-            out1='$5 ~ "^H\w* R"';;
+            out1='$5 ~ "^H\w* R"'
+            query1="Previous move - H(n)TF R (Before TTF Reversal) - Exclusively";;
           8)
-            out1='$5 ~ /\/R|R$|\w R|R\//';;
+            out1='$5 ~ /\/R|R$|\w R|R\//'
+            query1="Previous move - Reversal";;
           9)
-            out1='$5 ~ /^R$/';;
+            out1='$5 ~ /^R$/'
+            query1="Previous move - Reversal - Exclusviely";;
           10)
-            out1='$5 ~ "RB"';;
+            out1='$5 ~ "RB"'
+            query1="Previous move - Reversal Breakout";;
           11)
-            out1='$5 ~ "^RB$"';;
+            out1='$5 ~ "^RB$"'
+            query1="Previous move - Reversal Breakout - Exclusively";;
         esac
         case ${main2[$i]} in
           1)
-            out2='&& $5 ~ "F[0-9]"';;
+            out2='&& $5 ~ "F[0-9]"'
+            query2="Previous move - FB";;
           2)
-            out2='&& $5 ~ "^F[0-9]"';;
+            out2='&& $5 ~ "^F[0-9]"'
+            query2="Previous move - FB Exclusively";;
           3)
-            out2='&& $5 ~ "H"';;
+            out2='&& $5 ~ "H"'
+            query2="Previous move - H(n)TF move (Before Reversal)";;
           4)
-            out2='&& $5 ~ "H\w* F"';;
+            out2='&& $5 ~ "H\w* F"'
+            query2="Previous move - H(n)TF FB (Before Reversal)";;
           5)
-            out2='&& $5 ~ "^H\w* F"';;
+            out2='&& $5 ~ "^H\w* F"'
+            query2="Previous move - H(n)TF FB (Before Reversal) - Exclusively";;
           6)
-            out2='&& $5 ~ "H\w* R"';;
+            out2='&& $5 ~ "H\w* R"'
+            query2="Previous move - H(n)TF R (Before TTF Reversal)";;
           7)
-            out2='&& $5 ~ "^H\w* R"';;
+            out2='&& $5 ~ "^H\w* R"'
+            query2="Previous move - H(n)TF R (Before TTF Reversal) - Exclusively";;
           8)
-            out2='&& $5 ~ /\/R|R$|\w R|R\//';;
+            out2='&& $5 ~ /\/R|R$|\w R|R\//'
+            query2="Previous move - Reversal";;
           9)
-            out2='&& $5 ~ /^R$/';;
+            out2='&& $5 ~ /^R$/'
+            query2="Previous move - Reversal - Exclusviely";;
           10)
-            out2='&& $5 ~ "RB"';;
+            out2='&& $5 ~ "RB"'
+            query2="Previous move - Reversal Breakout";;
           11)
-            out2='&& $5 ~ "^RB$"';;
+            out2='&& $5 ~ "^RB$"'
+            query2="Previous move - Reversal Breakout - Exclusively";;
         esac
         case ${main3[$i]} in
           1)
-            out3='&& $5 ~ "F[0-9]"';;
+            out3='&& $5 ~ "F[0-9]"'
+            query3="Previous move - FB";;
           2)
-            out3='&& $5 ~ "^F[0-9]"';;
+            out3='&& $5 ~ "^F[0-9]"'
+            query3="Previous move - FB Exclusively";;
           3)
-            out3='&& $5 ~ "H"';;
+            out3='&& $5 ~ "H"'
+            query3="Previous move - H(n)TF move (Before Reversal)";;
           4)
-            out3='&& $5 ~ "H\w* F"';;
+            out3='&& $5 ~ "H\w* F"'
+            query3="Previous move - H(n)TF FB (Before Reversal)";;
           5)
-            out3='&& $5 ~ "^H\w* F"';;
+            out3='&& $5 ~ "^H\w* F"'
+            query3="Previous move - H(n)TF FB (Before Reversal) - Exclusively";;
           6)
-            out3='&& $5 ~ "H\w* R"';;
+            out3='&& $5 ~ "H\w* R"'
+            query3="Previous move - H(n)TF R (Before TTF Reversal)";;
           7)
-            out3='&& $5 ~ "^H\w* R"';;
+            out3='&& $5 ~ "^H\w* R"'
+            query3="Previous move - H(n)TF R (Before TTF Reversal) - Exclusively";;
           8)
-            out3='&& $5 ~ /\/R|R$|\w R|R\//';;
+            out3='&& $5 ~ /\/R|R$|\w R|R\//'
+            query3="Previous move - Reversal";;
           9)
-            out3='&& $5 ~ /^R$/';;
+            out3='&& $5 ~ /^R$/'
+            query3="Previous move - Reversal - Exclusviely";;
           10)
-            out3='&& $5 ~ "RB"';;
+            out3='&& $5 ~ "RB"'
+            query3="Previous move - Reversal Breakout";;
           11)
-            out3='&& $5 ~ "^RB$"';;
+            out3='&& $5 ~ "^RB$"'
+            query3="Previous move - Reversal Breakout - Exclusively";;
         esac;;
       4)
         case ${main1[$i]} in
           1)
-            out1='$6 ~ /^F[0-9].%/';;
+            out1='$6 ~ /^F[0-9].%/'
+            query1="Previous move start line - TTF Fib";;
           2)
-            out1='$6 ~ /^F[0-9].%$/';;
+            out1='$6 ~ /^F[0-9].%$/'
+            query1="Previous move start line - TTF Fib Exclusively";;
           3)
-            out1='$6 ~ "synonymous"';;
+            out1='$6 ~ "synonymous"'
+            query1="Previous move start line - TTF Fib Synonymous";;
           4)
-            out1='$6 ~ /^F[0-9].% /';;
+            out1='$6 ~ /^F[0-9].% /'
+            query1="Previous move start line - TTF Fib at H(n)TF line";;
           5)
-            out1='$6 ~ /^[SS|RR]/';;
+            out1='$6 ~ /^[SS|RR]/'
+            query1="Previous move start line - TTF S/R";;
           6)
-            out1='$6 ~ /^SS$|^RR$/';;
+            out1='$6 ~ /^SS$|^RR$/'
+            query1="Previous move start line - TTF S/R Exclusively";;
           7)
-            out1='$6 ~ /H\w* F/';;
+            out1='$6 ~ /H\w* F/'
+            query1="Previous move start line - H(n)TF Fib";;
           8)
-            out1='$6 ~ /^H\w* F[0-9].%$/';;
+            out1='$6 ~ /^H\w* F[0-9].%$/'
+            query1="Previous move start line - H(n)TF Fib Exclusively";;
           9)
-            out1='$6 ~ /H\w* [SS|RR]/';;
+            out1='$6 ~ /H\w* [SS|RR]/'
+            query1="Previous move start line - H(n)TF S/R";;
           10)
-            out1='^$6 ~ /H\w* [SS|RR]/';;
+            out1='^$6 ~ /H\w* [SS|RR]/'
+            query1="Previous move start line - H(n)TF S/R Exclusively";;
         esac
         case ${main2[$i]} in
           1)
-            out2='&& $6 ~ /^F[0-9].%/';;
+            out2='&& $6 ~ /^F[0-9].%/'
+            query2="Previous move start line - TTF Fib";;
           2)
-            out2='&& $6 ~ /^F[0-9].%$/';;
+            out2='&& $6 ~ /^F[0-9].%$/'
+            query2="Previous move start line - TTF Fib Exclusively";;
           3)
-            out2='&& $6 ~ "synonymous"';;
+            out2='&& $6 ~ "synonymous"'
+            query2="Previous move start line - TTF Fib Synonymous";;
           4)
-            out2='&& $6 ~ /^F[0-9].% /';;
+            out2='&& $6 ~ /^F[0-9].% /'
+            query2="Previous move start line - TTF Fib at H(n)TF line";;
           5)
-            out2='&& $6 ~ /^[SS|RR]/';;
+            out2='&& $6 ~ /^[SS|RR]/'
+            query2="Previous move start line - TTF S/R";;
           6)
-            out2='&& $6 ~ /^SS$|^RR$/';;
+            out2='&& $6 ~ /^SS$|^RR$/'
+            query2="Previous move start line - TTF S/R Exclusively";;
           7)
-            out2='&& $6 ~ /H\w* F/';;
+            out2='&& $6 ~ /H\w* F/'
+            query2="Previous move start line - H(n)TF Fib";;
           8)
-            out2='&& $6 ~ /^H\w* F[0-9].%$/';;
+            out2='&& $6 ~ /^H\w* F[0-9].%$/'
+            query2="Previous move start line - H(n)TF Fib Exclusively";;
           9)
-            out2='&& $6 ~ /H\w* [SS|RR]/';;
+            out2='&& $6 ~ /H\w* [SS|RR]/'
+            query2="Previous move start line - H(n)TF S/R";;
           10)
-            out2='&& ^$6 ~ /H\w* [SS|RR]/';;
+            out2='&& ^$6 ~ /H\w* [SS|RR]/'
+            query2="Previous move start line - H(n)TF S/R Exclusively";;
         esac
         case ${main3[$i]} in
           1)
-            out3='&& $6 ~ /^F[0-9].%/';;
+            out3='&& $6 ~ /^F[0-9].%/'
+            query3="Previous move start line - TTF Fib";;
           2)
-            out3='&& $6 ~ /^F[0-9].%$/';;
+            out3='&& $6 ~ /^F[0-9].%$/'
+            query3="Previous move start line - TTF Fib Exclusively";;
           3)
-            out3='&& $6 ~ "synonymous"';;
+            out3='&& $6 ~ "synonymous"'
+            query3="Previous move start line - TTF Fib Synonymous";;
           4)
-            out3='&& $6 ~ /^F[0-9].% /';;
+            out3='&& $6 ~ /^F[0-9].% /'
+            query3="Previous move start line - TTF Fib at H(n)TF line";;
           5)
-            out3='&& $6 ~ /^[SS|RR]/';;
+            out3='&& $6 ~ /^[SS|RR]/'
+            query3="Previous move start line - TTF S/R";;
           6)
-            out3='&& $6 ~ /^SS$|^RR$/';;
+            out3='&& $6 ~ /^SS$|^RR$/'
+            query3="Previous move start line - TTF S/R Exclusively";;
           7)
-            out3='&& $6 ~ /H\w* F/';;
+            out3='&& $6 ~ /H\w* F/'
+            query3="Previous move start line - H(n)TF Fib";;
           8)
-            out3='&& $6 ~ /^H\w* F[0-9].%$/';;
+            out3='&& $6 ~ /^H\w* F[0-9].%$/'
+            query3="Previous move start line - H(n)TF Fib Exclusively";;
           9)
-            out3='&& $6 ~ /H\w* [SS|RR]/';;
+            out3='&& $6 ~ /H\w* [SS|RR]/'
+            query3="Previous move start line - H(n)TF S/R";;
           10)
-            out3='&& ^$6 ~ /H\w* [SS|RR]/';;
+            out3='&& ^$6 ~ /H\w* [SS|RR]/'
+            query3="Previous move start line - H(n)TF S/R Exclusively";;
         esac;;
       5)
         case ${main1[$i]} in
           1)
-            out1='$7 ~ /^no$|^no -/';;
+            out1='$7 ~ /^no$|^no -/'
+            query1="Previous move did not Over/Undershoot";;
           2)
-            out1='$7 ~ /^yes$|^yes -/';;
+            out1='$7 ~ /^yes$|^yes -/'
+            query1="Previous move did Over or Undershoot";;
           3)
-            out1='$7 ~ /^yes -.*overshot/';;
+            out1='$7 ~ /^yes -.*overshot/'
+            query1="Previous move Overshot";;
           4)
-            out1='$7 ~ /^yes -.*undershot/';;
+            out1='$7 ~ /^yes -.*undershot/'
+            query1="Previous move Undershot";;
           5)
-            out1='$7 ~ /^no\/yes/';;
+            out1='$7 ~ /^no\/yes/'
+            query1="Previous move Over/Undershoot? No and Yes";;
         esac
         case ${main2[$i]} in
           1)
-            out2='&& $7 ~ /^no$|^no -/';;
+            out2='&& $7 ~ /^no$|^no -/'
+            query2="Previous move did not Over/Undershoot";;
           2)
-            out2='&& $7 ~ /^yes$|^yes -/';;
+            out2='&& $7 ~ /^yes$|^yes -/'
+            query2="Previous move did Over or Undershoot";;
           3)
-            out2='&& $7 ~ /^yes -.*overshot/';;
+            out2='&& $7 ~ /^yes -.*overshot/'
+            query2="Previous move Overshot";;
           4)
-            out2='&& $7 ~ /^yes -.*undershot/';;
+            out2='&& $7 ~ /^yes -.*undershot/'
+            query2="Previous move Undershot";;
           5)
-            out2='&& $7 ~ /^no\/yes/';;
+            out2='&& $7 ~ /^no\/yes/'
+            query2="Previous move Over/Undershoot? No and Yes";;
         esac
         case ${main3[$i]} in
           1)
-            out3='&& $7 ~ /^no$|^no -/';;
+            out3='&& $7 ~ /^no$|^no -/'
+            query3="Previous move did not Over/Undershoot";;
           2)
-            out3='&& $7 ~ /^yes$|^yes -/';;
+            out3='&& $7 ~ /^yes$|^yes -/'
+            query3="Previous move did Over or Undershoot";;
           3)
-            out3='&& $7 ~ /^yes -.*overshot/';;
+            out3='&& $7 ~ /^yes -.*overshot/'
+            query3="Previous move Overshot";;
           4)
-            out3='&& $7 ~ /^yes -.*undershot/';;
+            out3='&& $7 ~ /^yes -.*undershot/'
+            query3="Previous move Undershot";;
           5)
-            out3='&& $7 ~ /^no\/yes/';;
+            out3='&& $7 ~ /^no\/yes/'
+            query3="Previous move Over/Undershoot? No and Yes";;
         esac;;
       6)
         case ${main1[$i]} in
           1)
-            out1='$8 ~ "F[0-9]"';;
+            out1='$8 ~ "F[0-9]"'
+            query1="This move - FB";;
           2)
-            out1='$8 ~ "^F[0-9]"';;
+            out1='$8 ~ "^F[0-9]"'
+            query1="This move - FB Exclusively";;
           3)
-            out1='$8 ~ "H"';;
+            out1='$8 ~ "H"'
+            query1=" move - H(n)TFThis move (Before Reversal)";;
           4)
-            out1='$8 ~ "H\w* F"';;
+            out1='$8 ~ "H\w* F"'
+            query1="This move - H(n)TF FB (Before Reversal)";;
           5)
-            out1='$8 ~ "^H\w* F"';;
+            out1='$8 ~ "^H\w* F"'
+            query1="This move - H(n)TF FB (Before Reversal) - Exclusively";;
           6)
-            out1='$8 ~ "H\w* R"';;
+            out1='$8 ~ "H\w* R"'
+            query1="This move - H(n)TF R (Before TTF Reversal)";;
           7)
-            out1='$8 ~ "^H\w* R"';;
+            out1='$8 ~ "^H\w* R"'
+            query1="This move - H(n)TF R (Before TTF Reversal) - Exclusively";;
           8)
-            out1='$8 ~ /\/R|R$|\w R|R\//';;
+            out1='$8 ~ /\/R|R$|\w R|R\//'
+            query1="This move - Reversal";;
           9)
-            out1='$8 ~ /^R$/';;
+            out1='$8 ~ /^R$/'
+            query1="This move - Reversal - Exclusviely";;
           10)
-            out1='$8 ~ "RB"';;
+            out1='$8 ~ "RB"'
+            query1="This move - Reversal Breakout";;
           11)
-            out1='$8 ~ "^RB$"';;
+            out1='$8 ~ "^RB$"'
+            query1="This move - Reversal Breakout - Exclusively";;
         esac
         case ${main2[$i]} in
           1)
-            out2='&& $8 ~ "F[0-9]"';;
+            out2='&& $8 ~ "F[0-9]"'
+            query2="This move - FB";;
           2)
-            out2='&& $8 ~ "^F[0-9]"';;
+            out2='&& $8 ~ "^F[0-9]"'
+            query2="This move - FB Exclusively";;
           3)
-            out2='&& $8 ~ "H"';;
+            out2='&& $8 ~ "H"'
+            query2=" move - H(n)TFThis move (Before Reversal)";;
           4)
-            out2='&& $8 ~ "H\w* F"';;
+            out2='&& $8 ~ "H\w* F"'
+            query2="This move - H(n)TF FB (Before Reversal)";;
           5)
-            out2='&& $8 ~ "^H\w* F"';;
+            out2='&& $8 ~ "^H\w* F"'
+            query2="This move - H(n)TF FB (Before Reversal) - Exclusively";;
           6)
-            out2='&& $8 ~ "H\w* R"';;
+            out2='&& $8 ~ "H\w* R"'
+            query2="This move - H(n)TF R (Before TTF Reversal)";;
           7)
-            out2='&& $8 ~ "^H\w* R"';;
+            out2='&& $8 ~ "^H\w* R"'
+            query2="This move - H(n)TF R (Before TTF Reversal) - Exclusively";;
           8)
-            out2='&& $8 ~ /\/R|R$|\w R|R\//';;
+            out2='&& $8 ~ /\/R|R$|\w R|R\//'
+            query2="This move - Reversal";;
           9)
-            out2='&& $8 ~ /^R$/';;
+            out2='&& $8 ~ /^R$/'
+            query2="This move - Reversal - Exclusviely";;
           10)
-            out2='&& $8 ~ "RB"';;
+            out2='&& $8 ~ "RB"'
+            query2="This move - Reversal Breakout";;
           11)
-            out2='&& $8 ~ "^RB$"';;
+            out2='&& $8 ~ "^RB$"'
+            query2="This move - Reversal Breakout - Exclusively";;
         esac
         case ${main3[$i]} in
           1)
-            out3='&& $8 ~ "F[0-9]"';;
+            out3='&& $8 ~ "F[0-9]"'
+            query3="This move - FB";;
           2)
-            out3='&& $8 ~ "^F[0-9]"';;
+            out3='&& $8 ~ "^F[0-9]"'
+            query3="This move - FB Exclusively";;
           3)
-            out3='&& $8 ~ "H"';;
+            out3='&& $8 ~ "H"'
+            query3=" move - H(n)TFThis move (Before Reversal)";;
           4)
-            out3='&& $8 ~ "H\w* F"';;
+            out3='&& $8 ~ "H\w* F"'
+            query3="This move - H(n)TF FB (Before Reversal)";;
           5)
-            out3='&& $8 ~ "^H\w* F"';;
+            out3='&& $8 ~ "^H\w* F"'
+            query3="This move - H(n)TF FB (Before Reversal) - Exclusively";;
           6)
-            out3='&& $8 ~ "H\w* R"';;
+            out3='&& $8 ~ "H\w* R"'
+            query3="This move - H(n)TF R (Before TTF Reversal)";;
           7)
-            out3='&& $8 ~ "^H\w* R"';;
+            out3='&& $8 ~ "^H\w* R"'
+            query3="This move - H(n)TF R (Before TTF Reversal) - Exclusively";;
           8)
-            out3='&& $8 ~ /\/R|R$|\w R|R\//';;
+            out3='&& $8 ~ /\/R|R$|\w R|R\//'
+            query3="This move - Reversal";;
           9)
-            out3='&& $8 ~ /^R$/';;
+            out3='&& $8 ~ /^R$/'
+            query3="This move - Reversal - Exclusviely";;
           10)
-            out3='&& $8 ~ "RB"';;
+            out3='&& $8 ~ "RB"'
+            query3="This move - Reversal Breakout";;
           11)
-            out3='&& $8 ~ "^RB$"';;
+            out3='&& $8 ~ "^RB$"'
+            query3="This move - Reversal Breakout - Exclusively";;
         esac;;
       7)
         case ${main1[$i]} in
           1)
-            out1='$9 ~ /^F/';;
+            out1='$9 ~ /^F/'
+            query1="This move start line - TTF Fib";;
           2)
-            out1='$9 ~ /^F[0-9].%$/';;
+            out1='$9 ~ /^F[0-9].%$/'
+            query1="This move start line - TTF Fib Exclusively";;
           3)
-            out1='$9 ~ "synonymous"';;
+            out1='$9 ~ "synonymous"'
+            query1="This move start line - TTF Fib Synonymous";;
           4)
-            out1='$9 ~ /^[SS|RR]/';;
+            out1='$6 ~ /^F[0-9].% /'
+            query1="This move start line - TTF Fib at H(n)TF line";;
           5)
-            out1='$9 ~ /^SS$|^RR$/';;
+            out1='$9 ~ /^[SS|RR]/'
+            query1="This move start line - TTF S/R";;
           6)
-            out1='$9 ~ /H\w* F/';;
+            out1='$9 ~ /^SS$|^RR$/'
+            query1="This move start line - TTF S/R Exclusively";;
           7)
-            out1='$9 ~ /^H\w* F/';;
+            out1='$9 ~ /H\w* F/'
+            query1="This move start line - H(n)TF Fib";;
           8)
-            out1='$9 ~ /H\w* [SS|RR]/';;
+            out1='$9 ~ /^H\w* F/'
+            query1="This move start line - H(n)TF Fib Exclusively";;
           9)
-            out1='$9 ~ /^H\w* [SS|RR]/';;
+            out1='$9 ~ /H\w* [SS|RR]/'
+            query1="This move start line - H(n)TF S/R";;
+          10)
+            out1='$9 ~ /^H\w* [SS|RR]/'
+            query1="This move start line - H(n)TF S/R Exclusively";;
         esac
         case ${main2[$i]} in
           1)
-            out2='&& $9 ~ /^F/';;
+            out2='&& $9 ~ /^F/'
+            query2="This move start line - TTF Fib";;
           2)
-            out2='&& $9 ~ /^F[0-9].%$/';;
+            out2='&& $9 ~ /^F[0-9].%$/'
+            query2="This move start line - TTF Fib Exclusively";;
           3)
-            out2='&& $9 ~ "synonymous"';;
+            out2='&& $9 ~ "synonymous"'
+            query2="This move start line - TTF Fib Synonymous";;
           4)
-            out2='&& $9 ~ /^[SS|RR]/';;
+            out2='$6 ~ /^F[0-9].% /'
+            query2="This move start line - TTF Fib at H(n)TF line";;
           5)
-            out2='&& $9 ~ /^SS$|^RR$/';;
+            out2='&& $9 ~ /^[SS|RR]/'
+            query2="This move start line - TTF S/R";;
           6)
-            out2='&& $9 ~ /H\w* F/';;
+            out2='&& $9 ~ /^SS$|^RR$/'
+            query2="This move start line - TTF S/R Exclusively";;
           7)
-            out2='&& $9 ~ /^H\w* F/';;
+            out2='&& $9 ~ /H\w* F/'
+            query2="This move start line - H(n)TF Fib";;
           8)
-            out2='&& $9 ~ /H\w* [SS|RR]/';;
+            out2='&& $9 ~ /^H\w* F/'
+            query2="This move start line - H(n)TF Fib Exclusively";;
           9)
-            out2='&& $9 ~ /^H\w* [SS|RR]/';;
+            out2='&& $9 ~ /H\w* [SS|RR]/'
+            query2="This move start line - H(n)TF S/R";;
+          10)
+            out2='&& $9 ~ /^H\w* [SS|RR]/'
+            query2="This move start line - H(n)TF S/R Exclusively";;
         esac
         case ${main3[$i]} in
           1)
-            out3='&& $9 ~ /^F/';;
+            out3='&& $9 ~ /^F/'
+            query3="This move start line - TTF Fib";;
           2)
-            out3='&& $9 ~ /^F[0-9].%$/';;
+            out3='&& $9 ~ /^F[0-9].%$/'
+            query3="This move start line - TTF Fib Exclusively";;
           3)
-            out3='&& $9 ~ "synonymous"';;
+            out3='&& $9 ~ "synonymous"'
+            query3="This move start line - TTF Fib Synonymous";;
           4)
-            out3='&& $9 ~ /^[SS|RR]/';;
+            out3='$6 ~ /^F[0-9].% /'
+            query3="This move start line - TTF Fib at H(n)TF line";;
           5)
-            out3='&& $9 ~ /^SS$|^RR$/';;
+            out3='&& $9 ~ /^[SS|RR]/'
+            query3="This move start line - TTF S/R";;
           6)
-            out3='&& $9 ~ /H\w* F/';;
+            out3='&& $9 ~ /^SS$|^RR$/'
+            query3="This move start line - TTF S/R Exclusively";;
           7)
-            out3='&& $9 ~ /^H\w* F/';;
+            out3='&& $9 ~ /H\w* F/'
+            query3="This move start line - H(n)TF Fib";;
           8)
-            out3='&& $9 ~ /H\w* [SS|RR]/';;
+            out3='&& $9 ~ /^H\w* F/'
+            query3="This move start line - H(n)TF Fib Exclusively";;
           9)
-            out3='&& $9 ~ /^H\w* [SS|RR]/';;
+            out3='&& $9 ~ /H\w* [SS|RR]/'
+            query3="This move start line - H(n)TF S/R";;
+          10)
+            out3='&& $9 ~ /^H\w* [SS|RR]/'
+            query3="This move start line - H(n)TF S/R Exclusively";;
         esac;;
       8)
         case ${main1[$i]} in
           1)
-            out1='$10 ~ /^no$|^no -/';;
+            out1='$10 ~ /^no$|^no -/'
+            query1="This move did not Over/Undershoot";;
           2)
-            out1='$10 ~ /^yes$|^yes -/';;
+            out1='$10 ~ /^yes$|^yes -/'
+            query1="This move did Over or Undershoot";;
           3)
-            out1='$10 ~ /^yes -.*overshot/';;
+            out1='$10 ~ /^yes -.*overshot/'
+            query1="This move Overshot";;
           4)
-            out1='$10 ~ /^yes -.*undershot/';;
+            out1='$10 ~ /^yes -.*undershot/'
+            query1="This move Undershot";;
           5)
-            out1='$7 ~ /^no\/yes/';;
+            out1='$7 ~ /^no\/yes/'
+            query1="This move Over/Undershoot? No and Yes";;
         esac
         case ${main2[$i]} in
           1)
-            out2='&& $10 ~ /^no$|^no -/';;
+            out2='&& $10 ~ /^no$|^no -/'
+            query2="This move did not Over/Undershoot";;
           2)
-            out2='&& $10 ~ /^yes$|^yes -/';;
+            out2='&& $10 ~ /^yes$|^yes -/'
+            query2="This move did Over or Undershoot";;
           3)
-            out2='&& $10 ~ /^yes -.*overshot/';;
+            out2='&& $10 ~ /^yes -.*overshot/'
+            query2="This move Overshot";;
           4)
-            out2='&& $10 ~ /^yes -.*undershot/';;
+            out2='&& $10 ~ /^yes -.*undershot/'
+            query2="This move Undershot";;
           5)
-            out2='&& $7 ~ /^no\/yes/';;
+            out2='&& $7 ~ /^no\/yes/'
+            query2="This move Over/Undershoot? No and Yes";;
         esac
         case ${main3[$i]} in
           1)
-            out3='&& $10 ~ /^no$|^no -/';;
+            out3='&& $10 ~ /^no$|^no -/'
+            query3="This move did not Over/Undershoot";;
           2)
-            out3='&& $10 ~ /^yes$|^yes -/';;
+            out3='&& $10 ~ /^yes$|^yes -/'
+            query3="This move did Over or Undershoot";;
           3)
-            out3='&& $10 ~ /^yes -.*overshot/';;
+            out3='&& $10 ~ /^yes -.*overshot/'
+            query3="This move Overshot";;
           4)
-            out3='&& $10 ~ /^yes -.*undershot/';;
+            out3='&& $10 ~ /^yes -.*undershot/'
+            query3="This move Undershot";;
           5)
-            out3='&& $7 ~ /^no\/yes/';;
+            out3='&& $7 ~ /^no\/yes/'
+            query3="This move Over/Undershoot? No and Yes";;
         esac;;
       9)
         case ${main1[$i]} in
           1)
-            out1='$11 ~ /^OS/';;
+            out1='$11 ~ /^OS/'
+            query1="LTF reversed with One Swing";;
           2)
-            out1='$11 ~ /^OS - R$/';;
+            out1='$11 ~ /^OS - R$/'
+            query1="LTF reversed with One Swing - Reversal";;
           3)
-            out1='$11 ~ /^OS - RB/';;
+            out1='$11 ~ /^OS - RB/'
+            query1="LTF reversed with One Swing - Reversal Breakout";;
           4)
-            out1='$11 ~ /^DT|^DB/';;
+            out1='$11 ~ /^DT|^DB/'
+            query1="LTF reversed with DB/DT";;
           5)
-            out1='$11 ~ /^HDT|^HDB/';;
+            out1='$11 ~ /^HDT|^HDB/'
+            query1="LTF reversed with HDB/HDT";;
           6)
-            out1='$11 ~ /^QDB|^QDT/';;
+            out1='$11 ~ /^QDB|^QDT/'
+            query1="LTF reversed with QDB/QDT";;
         esac
         case ${main2[$i]} in
           1)
-            out2='&& $11 ~ /^OS/';;
+            out2='&& $11 ~ /^OS/'
+            query2="LTF reversed with One Swing";;
           2)
-            out2='&& $11 ~ /^OS - R$/';;
+            out2='&& $11 ~ /^OS - R$/'
+            query2="LTF reversed with One Swing - Reversal";;
           3)
-            out2='&& $11 ~ /^OS - RB/';;
+            out2='&& $11 ~ /^OS - RB/'
+            query2="LTF reversed with One Swing - Reversal Breakout";;
           4)
-            out2='&& $11 ~ /^DT|^DB/';;
+            out2='&& $11 ~ /^DT|^DB/'
+            query2="LTF reversed with DB/DT";;
           5)
-            out2='&& $11 ~ /^HDT|^HDB/';;
+            out2='&& $11 ~ /^HDT|^HDB/'
+            query2="LTF reversed with HDB/HDT";;
           6)
-            out2='&& $11 ~ /^QDB|^QDT/';;
+            out2='&& $11 ~ /^QDB|^QDT/'
+            query2="LTF reversed with QDB/QDT";;
         esac
         case ${main3[$i]} in
           1)
-            out3='&& $11 ~ /^OS/';;
+            out3='&& $11 ~ /^OS/'
+            query3="LTF reversed with One Swing";;
           2)
-            out3='&& $11 ~ /^OS - R$/';;
+            out3='&& $11 ~ /^OS - R$/'
+            query3="LTF reversed with One Swing - Reversal";;
           3)
-            out3='&& $11 ~ /^OS - RB/';;
+            out3='&& $11 ~ /^OS - RB/'
+            query3="LTF reversed with One Swing - Reversal Breakout";;
           4)
-            out3='&& $11 ~ /^DT|^DB/';;
+            out3='&& $11 ~ /^DT|^DB/'
+            query3="LTF reversed with DB/DT";;
           5)
-            out3='&& $11 ~ /^HDT|^HDB/';;
+            out3='&& $11 ~ /^HDT|^HDB/'
+            query3="LTF reversed with HDB/HDT";;
           6)
-            out3='&& $11 ~ /^QDB|^QDT/';;
+            out3='&& $11 ~ /^QDB|^QDT/'
+            query3="LTF reversed with QDB/QDT";;
         esac;;
     esac
   done
@@ -858,12 +1062,13 @@ query_field() {
       1 'TTF Fib' \
       2 'TTF Fib - Exclusively' \
       3 'TTF Fib - Synoymous' \
-      4 'TTF Support/Resistance' \
-      5 'TTF Support/Resistance - Exclusively' \
-      6 'H(n)TF Fib' \
-      7 'H(n)TF Fib - Exclusively' \
-      8 'H(n)TF Support/Resistance' \
-      9 'H(n)TF Support/Resistance - Exclusively' \
+      4 'TTF Fibs at H(n)TF' \
+      5 'TTF Support/Resistance' \
+      6 'TTF Support/Resistance - Exclusively' \
+      7 'H(n)TF Fib' \
+      8 'H(n)TF Fib - Exclusively' \
+      9 'H(n)TF Support/Resistance' \
+      10 'H(n)TF Support/Resistance - Exclusively' \
       2>&1 1>&3)
   what_selected
   custom_query
@@ -926,10 +1131,13 @@ while true; do
     --extra-button --extra-label "Clear Menu" \
     --menu "Please select:" 0 0 9 \
     1 "First Query" \
-    2 "Second Query" \
-    3 "Third Query" \
-    4 "Print Fields" \
-    5 "View" \
+    2 "$query1" \
+    3 "Second Query" \
+    4 "$query2" \
+    5 "Third Query" \
+    6 "$query3" \
+    7 "Print Fields" \
+    8 "View" \
     2>&1 1>&3)
   # exit statements below 
   case $? in
@@ -997,7 +1205,7 @@ while true; do
         2>&1 1>&3)
       query_field
       ;;
-    2)
+    3)
       fields=$(dialog \
         --backtitle "$title" \
         --title "Second Query" \
@@ -1016,7 +1224,7 @@ while true; do
         2>&1 1>&3)
       query_field
       ;;
-    3)
+    5)
       fields=$(dialog \
         --backtitle "$title" \
         --title "Third Query" \
@@ -1035,7 +1243,7 @@ while true; do
         2>&1 1>&3)
       query_field
       ;;
-    4)
+    7)
       status_check_mini
       prints=($(dialog \
         --title "$title" \
@@ -1111,7 +1319,7 @@ while true; do
       pstatus9=0
       fi
       ;;
-    5)
+    8)
       awk_output=$(awk -F, -v header="$header" \
         "BEGIN {print header} \
         $out1 $out2 $out3 {print NR,$printing}" ~/Documents/price_database/08_10_2020.csv)
