@@ -53,6 +53,7 @@ clear_all(){
   unset query1
   unset query2
   unset query3
+  unset herelast
 }
 clear_2(){
   out2=""
@@ -1129,6 +1130,7 @@ while true; do
     --backtitle "$title" \
     --title "Menu" \
     --no-tags \
+    --default-item "$herelast" \
     --cancel-label "Exit" \
     --extra-button --extra-label "Clear Menu" \
     --menu "Please select:" 0 0 12 \
@@ -1210,6 +1212,7 @@ while true; do
         9 'How did the beginning of this move reverse from the LTF perspective' \
         2>&1 1>&3)
       query_field
+      herelast=4
       ;;
     4)
       fields=$(dialog \
@@ -1229,6 +1232,7 @@ while true; do
         9 'How did the beginning of this move reverse from the LTF perspective' \
         2>&1 1>&3)
       query_field
+      herelast=7
       ;;
     7)
       fields=$(dialog \
@@ -1248,6 +1252,7 @@ while true; do
         9 'How did the beginning of this move reverse from the LTF perspective' \
         2>&1 1>&3)
       query_field
+      herelast=10
       ;;
     10)
       status_check_mini
@@ -1323,6 +1328,8 @@ while true; do
       pstatus7=0
       pstatus8=0
       pstatus9=0
+
+      herelast=11
       fi
       ;;
     11)
