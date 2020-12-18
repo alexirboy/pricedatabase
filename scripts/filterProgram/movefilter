@@ -1336,7 +1336,7 @@ while true; do
 
         if [ $? = 3 ]; then \
           file=$(dialog --title "$title" \
-          --fselect ~/Documents/price_database/research/ 14 48 2>&1 1>&3)
+          --fselect ~/Documents/price_database/research/reversalBreakout/ 14 48 2>&1 1>&3)
           if [[ "$file" =~ \.org$ ]]; then
           file_print >> "$file"
           else
