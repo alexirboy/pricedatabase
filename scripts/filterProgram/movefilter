@@ -1123,8 +1123,11 @@ while true; do
         if [ $? = 3 ]; then \
           file=$(dialog --title "$title" \
           --fselect ~/Documents/price_database/research/ 14 48 2>&1 1>&3)
-
-          file_print | install -D /dev/stdin "$file.org"
+          if [[ "$file" =~ \.org$ ]]; then
+          file_print >> "$file"
+          else
+            file_print | install -D /dev/stdin "$file.org"
+          fi
         fi
         ;;
   esac
