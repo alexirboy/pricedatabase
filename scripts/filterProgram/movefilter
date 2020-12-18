@@ -17,9 +17,6 @@ dialog_cancel=1
 dialog_esc=255
 csv='~/Documents/price_database/08_10_2020.csv'
 title="Price Filter"
-query1="Will show what the 1st query is"
-query2="Will show what the 2nd query is"
-query3="Will show what the 3rd query is"
 
 
 # create a clear extra button that clears all the variables that has been set6 in current session
@@ -53,14 +50,19 @@ clear_all(){
   unset main1
   unset main2
   unset main3
+  unset query1
+  unset query2
+  unset query3
 }
 clear_2(){
   out2=""
   unset main2
+  unset query2
 }
 clear_3(){
   out3=""
   unset main3
+  unset query3
 }
 # basically makes them all become "" again
 file_print(){
@@ -925,10 +927,10 @@ what_selected() {
     1)
       main1=([$fields]=$queries)
       ;;
-    2)
+    4)
       main2=([$fields]=$queries)
       ;;
-    3)
+    7)
       main3=([$fields]=$queries)
       ;;
   esac 
@@ -1129,15 +1131,18 @@ while true; do
     --no-tags \
     --cancel-label "Exit" \
     --extra-button --extra-label "Clear Menu" \
-    --menu "Please select:" 0 0 9 \
+    --menu "Please select:" 0 0 12 \
     1 "First Query" \
     2 "$query1" \
-    3 "Second Query" \
-    4 "$query2" \
-    5 "Third Query" \
-    6 "$query3" \
-    7 "Print Fields" \
-    8 "View" \
+    3 "" \
+    4 "Second Query" \
+    5 "$query2" \
+    6 "" \
+    7 "Third Query" \
+    8 "$query3" \
+    9 "" \
+    10 "Print Fields" \
+    11 "View" \
     2>&1 1>&3)
   # exit statements below 
   case $? in
@@ -1156,6 +1161,7 @@ while true; do
       clearing=$(dialog \
         --title "$title" \
         --backtitle "clearing menu" \
+        --no-tags \
         --cancel-label "Back" \
         --menu "Clearing Menu" 0 0 9 \
         1 "Clear 2nd Query" \
@@ -1205,7 +1211,7 @@ while true; do
         2>&1 1>&3)
       query_field
       ;;
-    3)
+    4)
       fields=$(dialog \
         --backtitle "$title" \
         --title "Second Query" \
@@ -1224,7 +1230,7 @@ while true; do
         2>&1 1>&3)
       query_field
       ;;
-    5)
+    7)
       fields=$(dialog \
         --backtitle "$title" \
         --title "Third Query" \
@@ -1243,7 +1249,7 @@ while true; do
         2>&1 1>&3)
       query_field
       ;;
-    7)
+    10)
       status_check_mini
       prints=($(dialog \
         --title "$title" \
@@ -1319,7 +1325,7 @@ while true; do
       pstatus9=0
       fi
       ;;
-    8)
+    11)
       awk_output=$(awk -F, -v header="$header" \
         "BEGIN {print header} \
         $out1 $out2 $out3 {print NR,$printing}" ~/Documents/price_database/08_10_2020.csv)
