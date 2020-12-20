@@ -50,9 +50,13 @@ clear_all(){
   unset main1
   unset main2
   unset main3
+  unset main4
+  unset main5
   unset query1
   unset query2
   unset query3
+  unset query4
+  unset query5
   unset herelast
 }
 clear_2(){
@@ -65,6 +69,16 @@ clear_3(){
   unset main3
   unset query3
 }
+clear_4(){
+  out4=""
+  unset main4
+  unset query4
+}
+clear_5(){
+  out5=""
+  unset main5
+  unset query5
+}
 # basically makes them all become "" again
 file_print(){
   echo ""
@@ -75,7 +89,7 @@ file_print(){
   echo "#+END_SRC"
 }
 custom_query(){
-  for i in "${!main1[@]}" "${!main2[@]}" "${!main3[@]}"; do
+  for i in "${!main1[@]}" "${!main2[@]}" "${!main3[@]}" "${!main4[@]}" "${!main5[@]}"; do
     case "${i}" in
       1)
         case ${main1[$i]} in
@@ -119,7 +133,35 @@ custom_query(){
           4)
             out3='&& $3 ~ "RB"'
             query3="HTF move is a Reversal Breakout";;
-        esac ;;
+        esac
+        case ${main4[$i]} in
+          1)
+            out4='&& $3 ~ "F[0-9]"'
+            query4="HTF move is a Fib";;
+          2)
+            out4='&& $3 ~ /H*TF/'
+            query4="HTF move is a H(n)TF move, before a reversal";;
+          3)
+            out4='&& $3 ~ /\/R|R$|\w R|R\//'
+            query4="HTF move is a Reversal";;
+          4)
+            out4='&& $3 ~ "RB"'
+            query4="HTF move is a Reversal Breakout";;
+        esac
+        case ${main5[$i]} in
+          1)
+            out5='&& $3 ~ "F[0-9]"'
+            query5="HTF move is a Fib";;
+          2)
+            out5='&& $3 ~ /H*TF/'
+            query5="HTF move is a H(n)TF move, before a reversal";;
+          3)
+            out5='&& $3 ~ /\/R|R$|\w R|R\//'
+            query5="HTF move is a Reversal";;
+          4)
+            out5='&& $3 ~ "RB"'
+            query5="HTF move is a Reversal Breakout";;
+        esac;;
       2)
         case ${main1[$i]} in
           1)
@@ -153,6 +195,28 @@ custom_query(){
           3)
             out3='&& $4 == "OM"'
             query3="HTF move - Opposite Move";;
+        esac
+        case ${main4[$i]} in
+          1)
+            out4='&& $4 == "WM"'
+            query4="HTF move - With Move";;
+          2)
+            out4='&& $4 == "WM-FM"'
+            query4="HTF move - With move, First Move";;
+          3)
+            out4='&& $4 == "OM"'
+            query4="HTF move - Opposite Move";;
+        esac
+        case ${main5[$i]} in
+          1)
+            out5='&& $4 == "WM"'
+            query5="HTF move - With Move";;
+          2)
+            out5='&& $4 == "WM-FM"'
+            query5="HTF move - With move, First Move";;
+          3)
+            out5='&& $4 == "OM"'
+            query5="HTF move - Opposite Move";;
         esac;;
       3)
         case ${main1[$i]} in
@@ -259,6 +323,76 @@ custom_query(){
           11)
             out3='&& $5 ~ "^RB$"'
             query3="Previous move - Reversal Breakout - Exclusively";;
+        esac
+        case ${main4[$i]} in
+          1)
+            out4='&& $5 ~ "F[0-9]"'
+            query4="Previous move - FB";;
+          2)
+            out4='&& $5 ~ "^F[0-9]"'
+            query4="Previous move - FB Exclusively";;
+          3)
+            out4='&& $5 ~ "H"'
+            query4="Previous move - H(n)TF move (Before Reversal)";;
+          4)
+            out4='&& $5 ~ "H\w* F"'
+            query4="Previous move - H(n)TF FB (Before Reversal)";;
+          5)
+            out4='&& $5 ~ "^H\w* F"'
+            query4="Previous move - H(n)TF FB (Before Reversal) - Exclusively";;
+          6)
+            out4='&& $5 ~ "H\w* R"'
+            query4="Previous move - H(n)TF R (Before TTF Reversal)";;
+          7)
+            out4='&& $5 ~ "^H\w* R"'
+            query4="Previous move - H(n)TF R (Before TTF Reversal) - Exclusively";;
+          8)
+            out4='&& $5 ~ /\/R|R$|\w R|R\//'
+            query4="Previous move - Reversal";;
+          9)
+            out4='&& $5 ~ /^R$/'
+            query4="Previous move - Reversal - Exclusviely";;
+          10)
+            out4='&& $5 ~ "RB"'
+            query4="Previous move - Reversal Breakout";;
+          11)
+            out4='&& $5 ~ "^RB$"'
+            query4="Previous move - Reversal Breakout - Exclusively";;
+        esac
+        case ${main5[$i]} in
+          1)
+            out5='&& $5 ~ "F[0-9]"'
+            query5="Previous move - FB";;
+          2)
+            out5='&& $5 ~ "^F[0-9]"'
+            query5="Previous move - FB Exclusively";;
+          3)
+            out5='&& $5 ~ "H"'
+            query5="Previous move - H(n)TF move (Before Reversal)";;
+          4)
+            out5='&& $5 ~ "H\w* F"'
+            query5="Previous move - H(n)TF FB (Before Reversal)";;
+          5)
+            out5='&& $5 ~ "^H\w* F"'
+            query5="Previous move - H(n)TF FB (Before Reversal) - Exclusively";;
+          6)
+            out5='&& $5 ~ "H\w* R"'
+            query5="Previous move - H(n)TF R (Before TTF Reversal)";;
+          7)
+            out5='&& $5 ~ "^H\w* R"'
+            query5="Previous move - H(n)TF R (Before TTF Reversal) - Exclusively";;
+          8)
+            out5='&& $5 ~ /\/R|R$|\w R|R\//'
+            query5="Previous move - Reversal";;
+          9)
+            out5='&& $5 ~ /^R$/'
+            query5="Previous move - Reversal - Exclusviely";;
+          10)
+            out5='&& $5 ~ "RB"'
+            query5="Previous move - Reversal Breakout";;
+          11)
+            out5='&& $5 ~ "^RB$"'
+            query5="Previous move - Reversal Breakout - Exclusively";;
         esac;;
       4)
         case ${main1[$i]} in
@@ -356,6 +490,70 @@ custom_query(){
           10)
             out3='&& ^$6 ~ /H\w* [SS|RR]/'
             query3="Previous move start line - H(n)TF S/R Exclusively";;
+        esac
+        case ${main4[$i]} in
+          1)
+            out4='&& $6 ~ /^F[0-9].%/'
+            query4="Previous move start line - TTF Fib";;
+          2)
+            out4='&& $6 ~ /^F[0-9].%$/'
+            query4="Previous move start line - TTF Fib Exclusively";;
+          3)
+            out4='&& $6 ~ "synonymous"'
+            query4="Previous move start line - TTF Fib Synonymous";;
+          4)
+            out4='&& $6 ~ /^F[0-9].% /'
+            query4="Previous move start line - TTF Fib at H(n)TF line";;
+          5)
+            out4='&& $6 ~ /^[SS|RR]/'
+            query4="Previous move start line - TTF S/R";;
+          6)
+            out4='&& $6 ~ /^SS$|^RR$/'
+            query4="Previous move start line - TTF S/R Exclusively";;
+          7)
+            out4='&& $6 ~ /H\w* F/'
+            query4="Previous move start line - H(n)TF Fib";;
+          8)
+            out4='&& $6 ~ /^H\w* F[0-9].%$/'
+            query4="Previous move start line - H(n)TF Fib Exclusively";;
+          9)
+            out4='&& $6 ~ /H\w* [SS|RR]/'
+            query4="Previous move start line - H(n)TF S/R";;
+          10)
+            out4='&& ^$6 ~ /H\w* [SS|RR]/'
+            query4="Previous move start line - H(n)TF S/R Exclusively";;
+        esac
+        case ${main5[$i]} in
+          1)
+            out5='&& $6 ~ /^F[0-9].%/'
+            query5="Previous move start line - TTF Fib";;
+          2)
+            out5='&& $6 ~ /^F[0-9].%$/'
+            query5="Previous move start line - TTF Fib Exclusively";;
+          3)
+            out5='&& $6 ~ "synonymous"'
+            query5="Previous move start line - TTF Fib Synonymous";;
+          4)
+            out5='&& $6 ~ /^F[0-9].% /'
+            query5="Previous move start line - TTF Fib at H(n)TF line";;
+          5)
+            out5='&& $6 ~ /^[SS|RR]/'
+            query5="Previous move start line - TTF S/R";;
+          6)
+            out5='&& $6 ~ /^SS$|^RR$/'
+            query5="Previous move start line - TTF S/R Exclusively";;
+          7)
+            out5='&& $6 ~ /H\w* F/'
+            query5="Previous move start line - H(n)TF Fib";;
+          8)
+            out5='&& $6 ~ /^H\w* F[0-9].%$/'
+            query5="Previous move start line - H(n)TF Fib Exclusively";;
+          9)
+            out5='&& $6 ~ /H\w* [SS|RR]/'
+            query5="Previous move start line - H(n)TF S/R";;
+          10)
+            out5='&& ^$6 ~ /H\w* [SS|RR]/'
+            query5="Previous move start line - H(n)TF S/R Exclusively";;
         esac;;
       5)
         case ${main1[$i]} in
@@ -408,6 +606,40 @@ custom_query(){
           5)
             out3='&& $7 ~ /^no\/yes/'
             query3="Previous move Over/Undershoot? No and Yes";;
+        esac
+        case ${main4[$i]} in
+          1)
+            out4='&& $7 ~ /^no$|^no -/'
+            query4="Previous move did not Over/Undershoot";;
+          2)
+            out4='&& $7 ~ /^yes$|^yes -/'
+            query4="Previous move did Over or Undershoot";;
+          3)
+            out4='&& $7 ~ /^yes -.*overshot/'
+            query4="Previous move Overshot";;
+          4)
+            out4='&& $7 ~ /^yes -.*undershot/'
+            query4="Previous move Undershot";;
+          5)
+            out4='&& $7 ~ /^no\/yes/'
+            query4="Previous move Over/Undershoot? No and Yes";;
+        esac
+        case ${main5[$i]} in
+          1)
+            out5='&& $7 ~ /^no$|^no -/'
+            query5="Previous move did not Over/Undershoot";;
+          2)
+            out5='&& $7 ~ /^yes$|^yes -/'
+            query5="Previous move did Over or Undershoot";;
+          3)
+            out5='&& $7 ~ /^yes -.*overshot/'
+            query5="Previous move Overshot";;
+          4)
+            out5='&& $7 ~ /^yes -.*undershot/'
+            query5="Previous move Undershot";;
+          5)
+            out5='&& $7 ~ /^no\/yes/'
+            query5="Previous move Over/Undershoot? No and Yes";;
         esac;;
       6)
         case ${main1[$i]} in
@@ -514,6 +746,76 @@ custom_query(){
           11)
             out3='&& $8 ~ "^RB$"'
             query3="This move - Reversal Breakout - Exclusively";;
+        esac
+        case ${main4[$i]} in
+          1)
+            out4='&& $8 ~ "F[0-9]"'
+            query4="This move - FB";;
+          2)
+            out4='&& $8 ~ "^F[0-9]"'
+            query4="This move - FB Exclusively";;
+          3)
+            out4='&& $8 ~ "H"'
+            query4=" move - H(n)TFThis move (Before Reversal)";;
+          4)
+            out4='&& $8 ~ "H\w* F"'
+            query4="This move - H(n)TF FB (Before Reversal)";;
+          5)
+            out4='&& $8 ~ "^H\w* F"'
+            query4="This move - H(n)TF FB (Before Reversal) - Exclusively";;
+          6)
+            out4='&& $8 ~ "H\w* R"'
+            query4="This move - H(n)TF R (Before TTF Reversal)";;
+          7)
+            out4='&& $8 ~ "^H\w* R"'
+            query4="This move - H(n)TF R (Before TTF Reversal) - Exclusively";;
+          8)
+            out4='&& $8 ~ /\/R|R$|\w R|R\//'
+            query4="This move - Reversal";;
+          9)
+            out4='&& $8 ~ /^R$/'
+            query4="This move - Reversal - Exclusviely";;
+          10)
+            out4='&& $8 ~ "RB"'
+            query4="This move - Reversal Breakout";;
+          11)
+            out4='&& $8 ~ "^RB$"'
+            query4="This move - Reversal Breakout - Exclusively";;
+        esac
+        case ${main5[$i]} in
+          1)
+            out5='&& $8 ~ "F[0-9]"'
+            query5="This move - FB";;
+          2)
+            out5='&& $8 ~ "^F[0-9]"'
+            query5="This move - FB Exclusively";;
+          3)
+            out5='&& $8 ~ "H"'
+            query5=" move - H(n)TFThis move (Before Reversal)";;
+          4)
+            out5='&& $8 ~ "H\w* F"'
+            query5="This move - H(n)TF FB (Before Reversal)";;
+          5)
+            out5='&& $8 ~ "^H\w* F"'
+            query5="This move - H(n)TF FB (Before Reversal) - Exclusively";;
+          6)
+            out5='&& $8 ~ "H\w* R"'
+            query5="This move - H(n)TF R (Before TTF Reversal)";;
+          7)
+            out5='&& $8 ~ "^H\w* R"'
+            query5="This move - H(n)TF R (Before TTF Reversal) - Exclusively";;
+          8)
+            out5='&& $8 ~ /\/R|R$|\w R|R\//'
+            query5="This move - Reversal";;
+          9)
+            out5='&& $8 ~ /^R$/'
+            query5="This move - Reversal - Exclusviely";;
+          10)
+            out5='&& $8 ~ "RB"'
+            query5="This move - Reversal Breakout";;
+          11)
+            out5='&& $8 ~ "^RB$"'
+            query5="This move - Reversal Breakout - Exclusively";;
         esac;;
       7)
         case ${main1[$i]} in
@@ -611,6 +913,70 @@ custom_query(){
           10)
             out3='&& $9 ~ /^H\w* [SS|RR]/'
             query3="This move start line - H(n)TF S/R Exclusively";;
+        esac
+        case ${main4[$i]} in
+          1)
+            out4='&& $9 ~ /^F/'
+            query4="This move start line - TTF Fib";;
+          2)
+            out4='&& $9 ~ /^F[0-9].%$/'
+            query4="This move start line - TTF Fib Exclusively";;
+          3)
+            out4='&& $9 ~ "synonymous"'
+            query4="This move start line - TTF Fib Synonymous";;
+          4)
+            out4='$6 ~ /^F[0-9].% /'
+            query4="This move start line - TTF Fib at H(n)TF line";;
+          5)
+            out4='&& $9 ~ /^[SS|RR]/'
+            query4="This move start line - TTF S/R";;
+          6)
+            out4='&& $9 ~ /^SS$|^RR$/'
+            query4="This move start line - TTF S/R Exclusively";;
+          7)
+            out4='&& $9 ~ /H\w* F/'
+            query4="This move start line - H(n)TF Fib";;
+          8)
+            out4='&& $9 ~ /^H\w* F/'
+            query4="This move start line - H(n)TF Fib Exclusively";;
+          9)
+            out4='&& $9 ~ /H\w* [SS|RR]/'
+            query4="This move start line - H(n)TF S/R";;
+          10)
+            out4='&& $9 ~ /^H\w* [SS|RR]/'
+            query4="This move start line - H(n)TF S/R Exclusively";;
+        esac
+        case ${main5[$i]} in
+          1)
+            out5='&& $9 ~ /^F/'
+            query5="This move start line - TTF Fib";;
+          2)
+            out5='&& $9 ~ /^F[0-9].%$/'
+            query5="This move start line - TTF Fib Exclusively";;
+          3)
+            out5='&& $9 ~ "synonymous"'
+            query5="This move start line - TTF Fib Synonymous";;
+          4)
+            out5='$6 ~ /^F[0-9].% /'
+            query5="This move start line - TTF Fib at H(n)TF line";;
+          5)
+            out5='&& $9 ~ /^[SS|RR]/'
+            query5="This move start line - TTF S/R";;
+          6)
+            out5='&& $9 ~ /^SS$|^RR$/'
+            query5="This move start line - TTF S/R Exclusively";;
+          7)
+            out5='&& $9 ~ /H\w* F/'
+            query5="This move start line - H(n)TF Fib";;
+          8)
+            out5='&& $9 ~ /^H\w* F/'
+            query5="This move start line - H(n)TF Fib Exclusively";;
+          9)
+            out5='&& $9 ~ /H\w* [SS|RR]/'
+            query5="This move start line - H(n)TF S/R";;
+          10)
+            out5='&& $9 ~ /^H\w* [SS|RR]/'
+            query5="This move start line - H(n)TF S/R Exclusively";;
         esac;;
       8)
         case ${main1[$i]} in
@@ -663,6 +1029,40 @@ custom_query(){
           5)
             out3='&& $7 ~ /^no\/yes/'
             query3="This move Over/Undershoot? No and Yes";;
+        esac
+        case ${main4[$i]} in
+          1)
+            out4='&& $10 ~ /^no$|^no -/'
+            query4="This move did not Over/Undershoot";;
+          2)
+            out4='&& $10 ~ /^yes$|^yes -/'
+            query4="This move did Over or Undershoot";;
+          3)
+            out4='&& $10 ~ /^yes -.*overshot/'
+            query4="This move Overshot";;
+          4)
+            out4='&& $10 ~ /^yes -.*undershot/'
+            query4="This move Undershot";;
+          5)
+            out4='&& $7 ~ /^no\/yes/'
+            query4="This move Over/Undershoot? No and Yes";;
+        esac
+        case ${main5[$i]} in
+          1)
+            out5='&& $10 ~ /^no$|^no -/'
+            query5="This move did not Over/Undershoot";;
+          2)
+            out5='&& $10 ~ /^yes$|^yes -/'
+            query5="This move did Over or Undershoot";;
+          3)
+            out5='&& $10 ~ /^yes -.*overshot/'
+            query5="This move Overshot";;
+          4)
+            out5='&& $10 ~ /^yes -.*undershot/'
+            query5="This move Undershot";;
+          5)
+            out5='&& $7 ~ /^no\/yes/'
+            query5="This move Over/Undershoot? No and Yes";;
         esac;;
       9)
         case ${main1[$i]} in
@@ -724,6 +1124,46 @@ custom_query(){
           6)
             out3='&& $11 ~ /^QDB|^QDT/'
             query3="LTF reversed with QDB/QDT";;
+        esac
+        case ${main4[$i]} in
+          1)
+            out4='&& $11 ~ /^OS/'
+            query4="LTF reversed with One Swing";;
+          2)
+            out4='&& $11 ~ /^OS - R$/'
+            query4="LTF reversed with One Swing - Reversal";;
+          3)
+            out4='&& $11 ~ /^OS - RB/'
+            query4="LTF reversed with One Swing - Reversal Breakout";;
+          4)
+            out4='&& $11 ~ /^DT|^DB/'
+            query4="LTF reversed with DB/DT";;
+          5)
+            out4='&& $11 ~ /^HDT|^HDB/'
+            query4="LTF reversed with HDB/HDT";;
+          6)
+            out4='&& $11 ~ /^QDB|^QDT/'
+            query4="LTF reversed with QDB/QDT";;
+        esac
+        case ${main5[$i]} in
+          1)
+            out5='&& $11 ~ /^OS/'
+            query5="LTF reversed with One Swing";;
+          2)
+            out5='&& $11 ~ /^OS - R$/'
+            query5="LTF reversed with One Swing - Reversal";;
+          3)
+            out5='&& $11 ~ /^OS - RB/'
+            query5="LTF reversed with One Swing - Reversal Breakout";;
+          4)
+            out5='&& $11 ~ /^DT|^DB/'
+            query5="LTF reversed with DB/DT";;
+          5)
+            out5='&& $11 ~ /^HDT|^HDB/'
+            query5="LTF reversed with HDB/HDT";;
+          6)
+            out5='&& $11 ~ /^QDB|^QDT/'
+            query5="LTF reversed with QDB/QDT";;
         esac;;
     esac
   done
@@ -921,19 +1361,82 @@ print_default(){
         ;;
     esac
   fi 
+  if [ ${#main4[@]} -gt 0 ]; then
+    case ${!main4[@]} in
+      1)
+        print1=on
+        ;;
+      2)
+        print2=on
+        ;;
+      3)
+        print3=on
+        ;;
+      4)
+        print4=on
+        ;;
+      5)
+        print5=on
+        ;;
+      6)
+        print6=on
+        ;;
+      7)
+        print7=on
+        ;;
+      8)
+        print8=on
+        ;;
+      9)
+        print9=on
+        ;;
+    esac
+  fi 
+  if [ ${#main5[@]} -gt 0 ]; then
+    case ${!main5[@]} in
+      1)
+        print1=on
+        ;;
+      2)
+        print2=on
+        ;;
+      3)
+        print3=on
+        ;;
+      4)
+        print4=on
+        ;;
+      5)
+        print5=on
+        ;;
+      6)
+        print6=on
+        ;;
+      7)
+        print7=on
+        ;;
+      8)
+        print8=on
+        ;;
+      9)
+        print9=on
+        ;;
+    esac
+  fi 
 }
 
 what_selected() {
   case $main in
     1)
-      main1=([$fields]=$queries)
-      ;;
+      main1=([$fields]=$queries);;
     4)
-      main2=([$fields]=$queries)
-      ;;
+      main2=([$fields]=$queries);;
     7)
-      main3=([$fields]=$queries)
-      ;;
+      main3=([$fields]=$queries);;
+    10)
+      main4=([$fields]=$queries);;
+    13)
+      main5=([$fields]=$queries);;
   esac 
 }
 query_field() {
@@ -1133,7 +1636,7 @@ while true; do
     --default-item "$herelast" \
     --cancel-label "Exit" \
     --extra-button --extra-label "Clear Menu" \
-    --menu "Please select:" 0 0 12 \
+    --menu "Please select:" 0 0 18 \
     1 "First Query" \
     2 "$query1" \
     3 "" \
@@ -1143,8 +1646,14 @@ while true; do
     7 "Third Query" \
     8 "$query3" \
     9 "" \
-    10 "Print Fields" \
-    11 "View" \
+    10 "Fourth Query" \
+    11 "$query4" \
+    12 "" \
+    13 "Fifth Query" \
+    14 "$query5" \
+    15 "" \
+    16 "Print Fields" \
+    17 "View" \
     2>&1 1>&3)
   # exit statements below 
   case $? in
@@ -1168,7 +1677,9 @@ while true; do
         --menu "Clearing Menu" 0 0 9 \
         1 "Clear 2nd Query" \
         2 "Clear 3nd Query" \
-        3 "Clear All Queries" \
+        3 "Clear 4th Query" \
+        4 "Clear 5th Query" \
+        5 "Clear All Queries" \
         2>&1 1>&3)
       case $clearing in
         1)
@@ -1182,6 +1693,16 @@ while true; do
             --title "$title" \
             --infobox "Cleared 3rd query" 10 52;;
         3)
+          clear_4
+          dialog --sleep 1 \
+            --title "$title" \
+            --infobox "Cleared 4th query" 10 52;;
+        4)
+          clear_5
+          dialog --sleep 1 \
+            --title "$title" \
+            --infobox "Cleared 5th query" 10 52;;
+        5)
           clear_all
           dialog --sleep 1 \
             --title "$title" \
@@ -1255,6 +1776,46 @@ while true; do
       herelast=10
       ;;
     10)
+      fields=$(dialog \
+        --backtitle "$title" \
+        --title "Fourth Query" \
+        --no-tags \
+        --cancel-label "Exit" \
+        --menu "Please select:" 0 0 9 \
+        1 'HTF move this move is in' \
+        2 'Direction in relation to HTF move' \
+        3 'Previous move on this TF' \
+        4 'Line the previous move started from' \
+        5 'Did it overshoot or undershoot' \
+        6 'What is this move' \
+        7 'What line Did it start from' \
+        8 'Did it overshoot or undershoot' \
+        9 'How did the beginning of this move reverse from the LTF perspective' \
+        2>&1 1>&3)
+      query_field
+      herelast=13
+      ;;
+    13)
+      fields=$(dialog \
+        --backtitle "$title" \
+        --title "Fifth Query" \
+        --no-tags \
+        --cancel-label "Exit" \
+        --menu "Please select:" 0 0 9 \
+        1 'HTF move this move is in' \
+        2 'Direction in relation to HTF move' \
+        3 'Previous move on this TF' \
+        4 'Line the previous move started from' \
+        5 'Did it overshoot or undershoot' \
+        6 'What is this move' \
+        7 'What line Did it start from' \
+        8 'Did it overshoot or undershoot' \
+        9 'How did the beginning of this move reverse from the LTF perspective' \
+        2>&1 1>&3)
+      query_field
+      herelast=16
+      ;;
+    16)
       status_check_mini
       prints=($(dialog \
         --title "$title" \
@@ -1329,10 +1890,10 @@ while true; do
       pstatus8=0
       pstatus9=0
 
-      herelast=11
+      herelast=17
       fi
       ;;
-    11)
+    17)
       awk_output=$(awk -F, -v header="$header" \
         "BEGIN {print header} \
         $out1 $out2 $out3 {print NR,$printing}" ~/Documents/price_database/08_10_2020.csv)
