@@ -1915,8 +1915,9 @@ while true; do
         ;;
     18)
       next_print='NR,"\t"$8"\t"$9"\t"$10"\t"$11'
-      next_output=$(awk -F, \
-        "BEGIN {print Move No"\t"This move"\t"Line started from"\t"If move under/overshot"\t"LTF reversal pattern} \
+      next_header='Move No\tThis move\tLine this move started from\tThis move over/undershoot\tLTF reversal pattern'
+      next_output=$(awk -F, -v next_header="$next_header"\
+        "BEGIN {print next_header} \
         $out1 $out2 $out3 $out4 $out5 {getline;print $next_print;}" ~/Documents/price_database/08_10_2020.csv)
       dialog --title "$title" \
         --no-collapse \
