@@ -224,7 +224,7 @@ custom_query(){
             out1='$5 ~ "F[0-9]"'
             query1="Previous move - FB";;
           2)
-            out1='$5 ~ "^F[0-9]"'
+            out1='$5 ~ "^F[0-9][0-9]%$"'
             query1="Previous move - FB Exclusively";;
           3)
             out1='$5 ~ "H"'
@@ -259,7 +259,7 @@ custom_query(){
             out2='&& $5 ~ "F[0-9]"'
             query2="Previous move - FB";;
           2)
-            out2='&& $5 ~ "^F[0-9]"'
+            out2='&& $5 ~ "^F[0-9][0-9]%$"'
             query2="Previous move - FB Exclusively";;
           3)
             out2='&& $5 ~ "H"'
@@ -294,7 +294,7 @@ custom_query(){
             out3='&& $5 ~ "F[0-9]"'
             query3="Previous move - FB";;
           2)
-            out3='&& $5 ~ "^F[0-9]"'
+            out3='&& $5 ~ "^F[0-9][0-9]%$"'
             query3="Previous move - FB Exclusively";;
           3)
             out3='&& $5 ~ "H"'
@@ -329,7 +329,7 @@ custom_query(){
             out4='&& $5 ~ "F[0-9]"'
             query4="Previous move - FB";;
           2)
-            out4='&& $5 ~ "^F[0-9]"'
+            out4='&& $5 ~ "^F[0-9][0-9]%$"'
             query4="Previous move - FB Exclusively";;
           3)
             out4='&& $5 ~ "H"'
@@ -364,7 +364,7 @@ custom_query(){
             out5='&& $5 ~ "F[0-9]"'
             query5="Previous move - FB";;
           2)
-            out5='&& $5 ~ "^F[0-9]"'
+            out5='&& $5 ~ "^F[0-9][0-9]%$"'
             query5="Previous move - FB Exclusively";;
           3)
             out5='&& $5 ~ "H"'
@@ -647,7 +647,7 @@ custom_query(){
             out1='$8 ~ "F[0-9]"'
             query1="This move - FB";;
           2)
-            out1='$8 ~ "^F[0-9]"'
+            out1='$8 ~ "^F[0-9][0-9]%$"'
             query1="This move - FB Exclusively";;
           3)
             out1='$8 ~ "H"'
@@ -682,7 +682,7 @@ custom_query(){
             out2='&& $8 ~ "F[0-9]"'
             query2="This move - FB";;
           2)
-            out2='&& $8 ~ "^F[0-9]"'
+            out2='&& $8 ~ "^F[0-9][0-9]%$"'
             query2="This move - FB Exclusively";;
           3)
             out2='&& $8 ~ "H"'
@@ -717,7 +717,7 @@ custom_query(){
             out3='&& $8 ~ "F[0-9]"'
             query3="This move - FB";;
           2)
-            out3='&& $8 ~ "^F[0-9]"'
+            out3='&& $8 ~ "^F[0-9][0-9]%$"'
             query3="This move - FB Exclusively";;
           3)
             out3='&& $8 ~ "H"'
@@ -752,7 +752,7 @@ custom_query(){
             out4='&& $8 ~ "F[0-9]"'
             query4="This move - FB";;
           2)
-            out4='&& $8 ~ "^F[0-9]"'
+            out4='&& $8 ~ "^F[0-9][0-9]%$"'
             query4="This move - FB Exclusively";;
           3)
             out4='&& $8 ~ "H"'
@@ -787,7 +787,7 @@ custom_query(){
             out5='&& $8 ~ "F[0-9]"'
             query5="This move - FB";;
           2)
-            out5='&& $8 ~ "^F[0-9]"'
+            out5='&& $8 ~ "^F[0-9][0-9]%$"'
             query5="This move - FB Exclusively";;
           3)
             out5='&& $8 ~ "H"'
@@ -1654,6 +1654,7 @@ while true; do
     15 "" \
     16 "Print Fields" \
     17 "View" \
+    18 "Next Move" \
     2>&1 1>&3)
   # exit statements below 
   case $? in
@@ -1896,11 +1897,31 @@ while true; do
     17)
       awk_output=$(awk -F, -v header="$header" \
         "BEGIN {print header} \
-        $out1 $out2 $out3 {print NR,$printing}" ~/Documents/price_database/08_10_2020.csv)
+        $out1 $out2 $out3 $out4 $out5 {print NR,$printing}" ~/Documents/price_database/08_10_2020.csv)
       dialog --title "$title" \
         --no-collapse \
         --extra-button --extra-label "To-File" \
         --msgbox "$awk_output" 40 180
+
+        if [ $? = 3 ]; then \
+          file=$(dialog --title "$title" \
+          --fselect ~/Documents/price_database/research/reversalBreakout/ 14 48 2>&1 1>&3)
+          if [[ "$file" =~ \.org$ ]]; then
+          file_print >> "$file"
+          else
+            file_print | install -D /dev/stdin "$file.org"
+          fi
+        fi
+        ;;
+    18)
+      next_print='NR,"\t"$8"\t"$9"\t"$10"\t"$11'
+      next_output=$(awk -F, \
+        "BEGIN {print Move No"\t"This move"\t"Line started from"\t"If move under/overshot"\t"LTF reversal pattern} \
+        $out1 $out2 $out3 $out4 $out5 {getline;print $next_print;}" ~/Documents/price_database/08_10_2020.csv)
+      dialog --title "$title" \
+        --no-collapse \
+        --extra-button --extra-label "To-File" \
+        --msgbox "$next_output" 40 180
 
         if [ $? = 3 ]; then \
           file=$(dialog --title "$title" \

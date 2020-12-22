@@ -270,8 +270,9 @@ A WM RB means that the move was preceded by a RB in the same trend already or th
 2. This is the highest correlating factor that I think will be found in this study. Basically, a RB can only happen when it is following the HTF move. Not sure if this is always the case but this could mean that entering a move that is with current HTF move direction will probably result in a chance for a bigger move in general.
 3.
 4. I seemed to talk a lot about knowing what the context was in terms of how the previous few moves were when the RB happened, in particular in regards to a WM-FM. It would be good to know the structure of how they reversed the HTF move basically.
+   Also a with move means that it wasntthe first of the moves so it didnt look like it was initially going against the HTF move. The others did however. What scenario was taht in? What was the HTF move for that? I would also think that the relation and the stats of teh HTF move in regards to its own erlative HTF move would play a part.
 
-I would also like to know what the HTF move was that it was in possibly as well for the
+I would also like to know what the HTF move was that it was in possibly as well for the WM-FM also. The WM-FM is a OS-RB when viewed from teh HTF perspective. Need to know when these happen so I can excpect them.
 :END:
 
 #+BEGIN_SRC awk :in-file ../../08_10_2020.csv :exports results
@@ -417,6 +418,7 @@ A thing that I would like to know though is to look into this a little bit. When
    - If I added a FM-WM filter and printed a few more fields to this query what would return? This will help also with knowing why the RB moves followed the RB moves as they would all show up in that query.
    - RB moves that occured after a R and F remind me of the second leg of a DT or HDT structure. Is this true?
    - There are really only F and R moves that follow on from the RB move but equally so. When does each of these meoves happen? when can you expect it?
+   - Where do those R and F moves that follow on from the RB moves start from? Or put another way, where does the RB moves stop?
 :END:
 
 #+BEGIN_SRC awk :in-file ../../08_10_2020.csv :exports results
@@ -545,7 +547,7 @@ $8 ~ "RB" && $5 ~ "F[0-9]" {print NR"\t"$8"\t"$5}
 |     122 | RB        | F61%          |
 |     125 | RB        | F50%          |
 ** Line the previous move started from
-Do from what I can see there is not a whole bunch of correlation between what the previous move started from and a current RB move. To be honest I thought there might be more initially. So ye this wasnt a very correlative thing. So the previous move is almost always a OM in relation to the HTF move. and This is showing what line that opposite move started from. The previous move was almost always a F or R move as well. So what this is saying is that the previous R or F move started from a certain line. This is the stats of where that line was started from. The only thing that I think I can think at the moment is to check where F or R moves previous lines started from basically. This also means that these lines also caused a R or F move because that is the move that basically is a precursor to a RB move. One thing that I am thinking would be an interesting thing to look at as well is what line the RB moves end at as well. That would be intersting.
+So from what I can see there is not a whole bunch of correlation between what the previous move started from and a current RB move. To be honest I thought there might be more initially. So ye this wasnt a very correlative thing. So the previous move is almost always a OM in relation to the HTF move. and This is showing what line that opposite move started from. The previous move was almost always a F or R move as well. So what this is saying is that the previous R or F move started from a certain line. This is the stats of where that line was started from. The only thing that I think I can think at the moment is to check where F or R moves previous lines started from basically. This also means that these lines also caused a R or F move because that is the move that basically is a precursor to a RB move. One thing that I am thinking would be an interesting thing to look at as well is what line the RB moves end at as well. That would be intersting.
 /*post edit*/
 <<<<<<< HEAD
 So now that I have actually changed about the database so that the RR and SS is shown actually in the proper context and not minimalist and indepenedent. I see something interesting still. Almost no move starts from just its own TTF S/R alone! Thats nuts The previous move starting points where always at points of S/R on the TTF, but only when coenciding wit HTF S/R of some sort at least. There was also no other time when a previous move started from just a HTF SS or RR as well. It was always coeinciding with a TTF SS or RR also.
@@ -579,6 +581,7 @@ Would love to see where the RB moves start from and finish at as well. That wopu
 2. does not really
 3. Knowing what lines previous moves started from, and need to also check out what moves these previous mvoes where, may help in aiding to know when those type of moves occur and at what lines
 4. what lines the current RB moves stop at, look at line this move started from when RB is the previous move
+   - I think I need to look at this in a lot more detail. maybe look at a specific previous move and see what lines it started from and try and extrapolate info from that. Again though that is probably above he scope of just one move.
 :END:
 
 #+BEGIN_SRC awk :in-file ../../08_10_2020.csv :exports results
@@ -844,7 +847,7 @@ So going on from the lsat section, I am not convinced that looking at how the pr
 1. There is a slight correlation towards the previous move not starting from an overshoot when the current move is a RB, however this correlation is not strong and could just be a coincidence due to low data samples
 2.
 3. I might be able to know how this might affect the moves that come after a start that does or does not overshoot a certain line. Also I can make a new study as to figuring out when a move does or does not overshoot. This may become useful then.
-4.
+4. I think looking into what the previous moves are for each of these sections would be helpful. But it would uiltimately lead into me researching other moves when doing so.
 :END:
 
 #+BEGIN_SRC awk :in-file ../../08_10_2020.csv :exports results
@@ -930,6 +933,12 @@ BEGIN {
 }
 $8 ~ "RB" && $7 ~ /^yes$|^yes -/ {print NR"\t"$8"\t"$7}
 #+END_SRC
+#+RESULTS:
+| Move No | This move | Previous move over/undershoot                |
+|      52 | RB        | yes - slightly overshot                      |
+|     102 | RB        | yes - undershot HTF RR and overshot HTF F61% |
+|     116 | R/RB      | yes - slightly overshot                      |
+|     121 | RB        | yes - slightly overshot                      |
 
 **** No/Yes
 #+BEGIN_SRC awk :in-file ../../08_10_2020.csv :exports results
@@ -1197,6 +1206,9 @@ $8 ~ "RB" && $9 ~ /H\w* F/ {print NR"\t"$1"\t"$8"\t"$9}
 |     125 | TTF     | RB        | F38% at HTF F38% - synonymous moves           |
 
 ** Did the start of this move overshoot or undershoot
+The RB moves didnt really have over or undershoot the lines they started from. More time than not they didnt. That is interesting. I have a feeling that when the tables are turned there are probably more overshot starts. basically when the RB moves ends, I think the F or R move that follwos will generally start from a overshot position maybe? Good to find out.
+
+
 #+BEGIN_SRC awk :in-file ../../08_10_2020.csv :exports results
 BEGIN {
     FS=","
@@ -1212,34 +1224,33 @@ $8 ~ "RB" {print NR"\t"$8"\t"$10}
 |      14 | RB        | no                                                                      |
 |      24 | RB        | no                                                                      |
 |      25 | RB        | no                                                                      |
-|      33 | RB        | no                                                                      |
 |      35 | RB        | no                                                                      |
-|      41 | RB        | no                                                                      |
 |      44 | RB        | no/yes - it did not overshoot the RR but it did overshoot the HHTF F    |
-|      45 | RB        | no                                                                      |
+|      45 | RB        | no/yes - did not overshoot RR but overshot HHTF F23%                    |
 |      47 | RB        | no                                                                      |
 |      52 | RB        | no                                                                      |
 |      53 | RB        | yes - overshot the F50% by quite a bit                                  |
+|      57 | RB        | no                                                                      |
 |      59 | RB        | no/yes - did not over or undershoot anything except the HTF F61%        |
-|      64 | RB/R      | yes - overshot                                                          |
+|      64 | RB/R      | no/yes - overshot the HHTF F23%                                         |
 |      65 | RB        | no                                                                      |
-|      69 | RB        | yes - slightly overshot the farthest line and went into the F61% level  |
+|      69 | RB        | no/yes - slightly overshot the RR                                       |
 |      71 | RB        | no                                                                      |
 |      72 | RB        | no                                                                      |
 |      82 | RB        | no                                                                      |
-|      88 | RB        | yes - overshot                                                          |
+|      89 | RB        | no                                                                      |
 |      94 | RB        | no/yes - slighlty undershot the HTF F50%                                |
 |      98 | RB        | no                                                                      |
 |     101 | RB        | no                                                                      |
 |     102 | RB        | yes - slightly overshot                                                 |
 |     109 | R/RB      | no                                                                      |
-|     112 | RB        | no                                                                      |
-|     113 | RB        | no                                                                      |
+|     112 | RB        | yes - slightly overshot                                                 |
+|     113 | RB        | yes - overshot both                                                     |
 |     115 | RB        | no                                                                      |
 |     116 | R/RB      | no                                                                      |
 |     117 | RB        | no                                                                      |
 |     121 | RB        | no                                                                      |
-|     122 | RB        | yes - slightly undershot                                                |
+|     122 | RB        | yes - slightly undershot F61% slighlty overshot F38%                    |
 |     125 | RB        | no                                                                      |
 
 *** Splits
@@ -1257,21 +1268,18 @@ $8 ~ "RB" && $10 ~ /^no$|^no -/ {print NR"\t"$8"\t"$10}
 |      14 | RB        | no                            |
 |      24 | RB        | no                            |
 |      25 | RB        | no                            |
-|      33 | RB        | no                            |
 |      35 | RB        | no                            |
-|      41 | RB        | no                            |
-|      45 | RB        | no                            |
 |      47 | RB        | no                            |
 |      52 | RB        | no                            |
+|      57 | RB        | no                            |
 |      65 | RB        | no                            |
 |      71 | RB        | no                            |
 |      72 | RB        | no                            |
 |      82 | RB        | no                            |
+|      89 | RB        | no                            |
 |      98 | RB        | no                            |
 |     101 | RB        | no                            |
 |     109 | R/RB      | no                            |
-|     112 | RB        | no                            |
-|     113 | RB        | no                            |
 |     115 | RB        | no                            |
 |     116 | R/RB      | no                            |
 |     117 | RB        | no                            |
@@ -1291,11 +1299,36 @@ $8 ~ "RB" && $10 ~ /^yes$|^yes -/ {print NR"\t"$8"\t"$10}
 |       2 | RB        | yes - slighlty overshot                                                 |
 |       3 | RB        | yes - overshot the HTF SS by a bit as well as the HTF F by a little too |
 |      53 | RB        | yes - overshot the F50% by quite a bit                                  |
-|      64 | RB/R      | yes - overshot                                                          |
-|      69 | RB        | yes - slightly overshot the farthest line and went into the F61% level  |
-|      88 | RB        | yes - overshot                                                          |
 |     102 | RB        | yes - slightly overshot                                                 |
-|     122 | RB        | yes - slightly undershot                                                |
+|     112 | RB        | yes - slightly overshot                                                 |
+|     113 | RB        | yes - overshot both                                                     |
+|     122 | RB        | yes - slightly undershot F61% slighlty overshot F38%                    |
+
+***** Yes - Overshot
+#+BEGIN_SRC awk :in-file ~/Documents/price_database/08_10_2020.csv :exports results
+BEGIN {FS=","
+print "Move No\tThis move\tThis move overshot"}
+$8 ~ "RB" && $10 ~ /^yes -.*overshot/  {print NR"\t"$8"\t"$10}
+#+END_SRC
+#+RESULTS:
+| Move No | This move | This move overshot                                                      |
+|       2 | RB        | yes - slighlty overshot                                                 |
+|       3 | RB        | yes - overshot the HTF SS by a bit as well as the HTF F by a little too |
+|      53 | RB        | yes - overshot the F50% by quite a bit                                  |
+|     102 | RB        | yes - slightly overshot                                                 |
+|     112 | RB        | yes - slightly overshot                                                 |
+|     113 | RB        | yes - overshot both                                                     |
+|     122 | RB        | yes - slightly undershot F61% slighlty overshot F38%                    |
+
+***** Yes - Undershot
+#+BEGIN_SRC awk :in-file ~/Documents/price_database/08_10_2020.csv :exports results
+BEGIN {FS=","
+print "Move No\tThis move\tThis move undershot"}
+$8 ~ "RB" && $10 ~ /^yes -.*undershot/  {print NR"\t"$8"\t"$10}
+#+END_SRC
+#+RESULTS:
+| Move No | This move | This move undershot                                  |
+|     122 | RB        | yes - slightly undershot F61% slighlty overshot F38% |
 
 **** No/Yes
 #+BEGIN_SRC awk :in-file ../../08_10_2020.csv :exports results
@@ -1308,12 +1341,24 @@ $8 ~ "RB" && $10 ~ /^no\/yes/ {print NR"\t"$8"\t"$10}
 #+RESULTS:
 | Move No | This move | Did this move over/undershoot                                        |
 |      44 | RB        | no/yes - it did not overshoot the RR but it did overshoot the HHTF F |
+|      45 | RB        | no/yes - did not overshoot RR but overshot HHTF F23%                 |
 |      59 | RB        | no/yes - did not over or undershoot anything except the HTF F61%     |
+|      64 | RB/R      | no/yes - overshot the HHTF F23%                                      |
+|      69 | RB        | no/yes - slightly overshot the RR                                    |
 |      94 | RB        | no/yes - slighlty undershot the HTF F50%                             |
 
 ** How did the start of this move reverse on the LTF
-*Need to edit the format of this stuff. Seperation of DB and DT is not important because the structure between them is the same, both have two swings of the same style.
-Format it instead as OS, DB/DT, HDT/HDB, QDB/QDT instead.*
+The thing taht pops out os taht the QDB/QDT never really happens when the start of the RB move. The thing that I do not mind at all is when there are double top or bottom reversals but when there are OS. They are annoying. I want to know when they happen. What is the environment of that? They are as common as the other stuff as well.
+
+*Conclusion*
+:Conclusion:
+1. 
+   - Each LTF reversal structures are as likely to happen except QDT/B.
+   - When One Swings that happen are the case, reversals are less likely than RB swings.
+2.
+   
+:END:
+
 
 #+BEGIN_SRC awk :in-file ../../08_10_2020.csv :exports results
 BEGIN {
@@ -1379,93 +1424,79 @@ $8 ~ "RB" && $11 ~ /^OS/ {print NR"\t"$8"\t"$11}
 |     116 | R/RB      | OS - R                                  |
 |     117 | RB        | OS - RB                                 |
 |     125 | RB        | OS - RB                                 |
-
-**** Double Top
-#+BEGIN_SRC awk :in-file ../../08_10_2020.csv :exports results
-BEGIN {
-    FS=","
-    print "Move No\tThis move\tHow did the start of this move reverse?"
-}
-$8 ~ "RB" && $11 ~ /^DT/ {print NR"\t"$8"\t"$11}
+***** One Swing - Reversal
+#+BEGIN_SRC awk :in-file ~/Documents/price_database/08_10_2020.csv :exports results
+BEGIN {FS=","
+print "Move No\tThis move\tLTF reversal pattern"}
+$8 ~ "RB" && $11 ~ /^OS - R$/  {print NR"\t"$8"\t"$11}
 #+END_SRC
 #+RESULTS:
-| Move No | This move | How did the start of this move reverse?       |
+| Move No | This move | LTF reversal pattern |
+|     102 | RB        | OS - R               |
+|     109 | R/RB      | OS - R               |
+|     116 | R/RB      | OS - R               |
+
+***** One Swing - Reversal Breakout
+#+BEGIN_SRC awk :in-file ~/Documents/price_database/08_10_2020.csv :exports results
+BEGIN {FS=","
+print "Move No\tThis move\tLTF reversal pattern"}
+$8 ~ "RB" && $11 ~ /^OS - RB/  {print NR"\t"$8"\t"$11}
+#+END_SRC
+#+RESULTS:
+| Move No | This move | LTF reversal pattern |
+|      52 | RB        | OS - RB              |
+|      53 | RB        | OS - RB              |
+|      57 | RB        | OS - RB              |
+|      71 | RB        | OS - RB              |
+|      82 | RB        | OS - RB              |
+|     117 | RB        | OS - RB              |
+|     125 | RB        | OS - RB              |
+
+**** Double Bottom/Top
+#+BEGIN_SRC awk :in-file ~/Documents/price_database/08_10_2020.csv :exports results
+BEGIN {FS=","
+print "Move No\tThis move\tLTF reversal pattern"}
+$8 ~ "RB" && $11 ~ /^DT|^DB/  {print NR"\t"$8"\t"$11}
+#+END_SRC
+#+RESULTS:
+| Move No | This move | LTF reversal pattern                          |
+|       3 | RB        | DB                                            |
+|       4 | RB        | DB - the second down leg made a RB move       |
 |      24 | RB        | DT - multiple swings                          |
 |      35 | RB        | DT - slow swing and very small swings as well |
 |      44 | RB        | DT                                            |
 |      45 | RB        | DT                                            |
 |      69 | RB        | DT                                            |
-|      88 | RB        | DT                                            |
+|      94 | RB        | DB                                            |
 |     112 | RB        | DT                                            |
 |     113 | RB        | DT                                            |
 |     115 | RB        | DT                                            |
-
-***** Half Double Top
-#+BEGIN_SRC awk :in-file ../../08_10_2020.csv :exports results
-BEGIN {
-    FS=","
-    print "Move No\tThis move\tHow did the start of this move reverse?"
-}
-$8 ~ "RB" && $11 ~ /^HDT/ {print NR"\t"$8"\t"$11}
+**** Half Double Bottom/Top
+#+BEGIN_SRC awk :in-file ~/Documents/price_database/08_10_2020.csv :exports results
+BEGIN {FS=","
+print "Move No\tThis move\tLTF reversal pattern"}
+$8 ~ "RB" && $11 ~ /^HDT|^HDB/  {print NR"\t"$8"\t"$11}
 #+END_SRC
 #+RESULTS:
-| Move No | This move | How did the start of this move reverse?        |
+| Move No | This move | LTF reversal pattern                           |
+|       2 | RB        | HDB                                            |
 |      14 | RB        | HDT - first move was a R followed by F then RB |
 |      25 | RB        | HDT                                            |
 |      47 | RB        | HDT                                            |
 |      64 | RB/R      | HDT                                            |
 |      65 | RB        | HDT                                            |
+|      72 | RB        | HDB                                            |
+|      89 | RB        | HDT                                            |
+|     101 | RB        | HDB                                            |
 |     121 | RB        | HDT                                            |
-
-***** Quarter Double Top
-#+BEGIN_SRC awk :in-file ../../08_10_2020.csv :exports results
-BEGIN {
-    FS=","
-    print "Move No\tThis move\tHow did the start of this move reverse?"
-}
-$8 ~ "RB" && $11 ~ /^QDT/ {print NR"\t"$8"\t"$11}
+**** Quarter Double Bottom/Top
+#+BEGIN_SRC awk :in-file ~/Documents/price_database/08_10_2020.csv :exports results
+BEGIN {FS=","
+print "Move No\tThis move\tLTF reversal pattern"}
+$8 ~ "RB" && $11 ~ /^QDB|^QDT/  {print NR"\t"$8"\t"$11}
 #+END_SRC
 #+RESULTS:
-| Move No | This move | How did the start of this move reverse? |
-|      59 | RB        | QDT                                     |
-|      98 | RB        | QDT                                     |
-
-**** Double Bottom
-#+BEGIN_SRC awk :in-file ../../08_10_2020.csv :exports results
-BEGIN {
-    FS=","
-    print "Move No\tThis move\tHow did the start of this move reverse?"
-}
-$8 ~ "RB" && $11 ~ /^DB/ {print NR"\t"$8"\t"$11}
-#+END_SRC
-#+RESULTS:
-| Move No | This move | How did the start of this move reverse? |
-|       3 | RB        | DB                                      |
-|       4 | RB        | DB - the second down leg made a RB move |
-|      94 | RB        | DB                                      |
-
-***** Half Double Bottom
-#+BEGIN_SRC awk :in-file ../../08_10_2020.csv :exports results
-BEGIN {
-    FS=","
-    print "Move No\tThis move\tHow did the start of this move reverse?"
-}
-$8 ~ "RB" && $11 ~ /^HDB/ {print NR"\t"$8"\t"$11}
-#+END_SRC
-#+RESULTS:
-| Move No | This move | How did the start of this move reverse? |
-|       2 | RB        | HDB                                     |
-|      72 | RB        | HDB                                     |
-|     101 | RB        | HDB                                     |
-
-***** Quarter Double Bottom
-#+BEGIN_SRC awk :in-file ../../08_10_2020.csv :exports results
-BEGIN {
-    FS=","
-    print "Move No\tThis move\tHow did the start of this move reverse?"
-}
-$8 ~ "RB" && $11 ~ /^QDB/ {print NR"\t"$8"\t"$11}
-#+END_SRC
-#+RESULTS:
-| Move No | This move | How did the start of this move reverse? |
-|     122 | RB        | QDB                                     |
+| Move No | This move | LTF reversal pattern |
+|      59 | RB        | QDT                  |
+|      98 | RB        | QDT                  |
+|     122 | RB        | QDB                  |

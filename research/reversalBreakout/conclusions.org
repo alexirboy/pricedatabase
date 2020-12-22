@@ -1,0 +1,39 @@
+#+TITLE:Conclusions
+
+   - RB moves only happen when the HTF move is advancing past the point of the TTF reversal area.
+   - RB Moves only happen when the HTF move is making a new move.
+   - RB moves only happen when the HTF move still has to reach the final end point it has to get to in erms of S/R line.
+     
+   - HTF Move
+     - RB moves happen more frequently when the HTF move is also a RB move, meaning that the rules of the TTF RB moves then apply to the HTF RB move
+
+   - Direction relating to HTF Move
+     - RB moves only happen when they are WM in relation to the HTF move
+     - WM-FM are quite common. This is essentially a OS-RB structure when viewed from the HTF perspective. So knowing when these happen is paramount
+     - 
+
+   - Previous move on this TF
+     - Precursor to RB moves are rarely other RB moves. Which in turn means that Post cursor moves are rarely RB moves also
+     - Precursor moves are almos always a R or a F move, and like above, that means that the post cursor moves will also be one of these two moves as well
+     - H(n)TF moves before reversals are also a precursor to this move as well, but less common.
+
+   - Lines the previous moves started from
+     - Previous moves never really started from a just their own TTF SS/RR. There is always confluence with a HTF S/R
+     - Previous moves never start solely because fo a HTF S/R solely. It is always in conjunction with a TTF S/R also
+     - Fib lines are teh only lines that cause a new move to occur on their own. That is TTF Fib lines that is. Synonimous ones do also.
+
+   - Previous move start by over/undershooting?
+     - There is a slight correlation towards the previous move not starting from an overshoot when the current move is a RB, however this correlation is not strong and could just be a coincidence due to low data samples
+
+   - Line this move started at
+     - RB moves almost never started from solely at TTF SS/RR except from TTF Fib levels
+     - HTF SS/RR can cause a RB move on its own but rarely did though
+     - HTF Fib lines, on their own never caused a RB move in my database.
+
+   - Over/Undershoot?
+     - More time than not the RB move didnt start from a over/undershot place. It stasrted just from the point it should.
+     - The move almost never started from a undershot place either. It was always either overshot or nothing.
+
+   - LTF reversal structures
+     - Every LTF reversal structure is likely to happen apart from the QDT/B
+     - Of the One swings, The reversal breakouts seem more common
