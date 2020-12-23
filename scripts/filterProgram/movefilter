@@ -21,9 +21,11 @@ title="Price Filter"
 
 # create a clear extra button that clears all the variables that has been set6 in current session
 clear_all(){
-  out1=""
-  out2=""
-  out3=""
+  unset out1
+  unset out2
+  unset out3
+  unset out4
+  unset out5
   print1=off
   print2=off
   print3=off
@@ -1428,14 +1430,19 @@ print_default(){
 what_selected() {
   case $main in
     1)
+      unset main1
       main1=([$fields]=$queries);;
     4)
+      unset main2
       main2=([$fields]=$queries);;
     7)
+      unset main3
       main3=([$fields]=$queries);;
     10)
+      unset main4
       main4=([$fields]=$queries);;
     13)
+      unset main5
       main5=([$fields]=$queries);;
   esac 
 }
@@ -1663,7 +1670,7 @@ while true; do
       echo "Hope it was helpful Alex, Till next time I guess :)"
       # testing echos to see what variables are being assigned properly
       echo "$awk_output"
-      echo "$out1 $out2 $out3"
+      echo "$out1 $out2 $out3 $out4 $out5"
       echo "$printing"
       echo "$prints"
       echo "$header"
