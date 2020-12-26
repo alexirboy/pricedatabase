@@ -995,7 +995,7 @@ custom_query(){
             out1='$10 ~ /^yes -.*undershot/'
             query1="This move Undershot";;
           5)
-            out1='$7 ~ /^no\/yes/'
+            out1='$10 ~ /^no\/yes/'
             query1="This move Over/Undershoot? No and Yes";;
         esac
         case ${main2[$i]} in
@@ -1012,7 +1012,7 @@ custom_query(){
             out2='&& $10 ~ /^yes -.*undershot/'
             query2="This move Undershot";;
           5)
-            out2='&& $7 ~ /^no\/yes/'
+            out2='&& $10 ~ /^no\/yes/'
             query2="This move Over/Undershoot? No and Yes";;
         esac
         case ${main3[$i]} in
@@ -1029,7 +1029,7 @@ custom_query(){
             out3='&& $10 ~ /^yes -.*undershot/'
             query3="This move Undershot";;
           5)
-            out3='&& $7 ~ /^no\/yes/'
+            out3='&& $10 ~ /^no\/yes/'
             query3="This move Over/Undershoot? No and Yes";;
         esac
         case ${main4[$i]} in
@@ -1046,7 +1046,7 @@ custom_query(){
             out4='&& $10 ~ /^yes -.*undershot/'
             query4="This move Undershot";;
           5)
-            out4='&& $7 ~ /^no\/yes/'
+            out4='&& $10 ~ /^no\/yes/'
             query4="This move Over/Undershoot? No and Yes";;
         esac
         case ${main5[$i]} in
@@ -1063,7 +1063,7 @@ custom_query(){
             out5='&& $10 ~ /^yes -.*undershot/'
             query5="This move Undershot";;
           5)
-            out5='&& $7 ~ /^no\/yes/'
+            out5='&& $10 ~ /^no\/yes/'
             query5="This move Over/Undershoot? No and Yes";;
         esac;;
       9)

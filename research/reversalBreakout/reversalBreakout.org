@@ -66,6 +66,23 @@ There is a small guide in the index.
 
 Also just to know. I do not think it will be possible to know for every single move if it will be a RB or not but what I am hoping to practically achieve is to know when these moves are more liekly to occur, in what conditions, in both hindsight as well as foresight, in order to help me have a better chance of gettin it right. Basically stack the odds in my favour innit. But who knows where this journey will take me or how good I can be. Just need to put in time and correct actions and I may be pleasnatly surprised.
 
+So the thing that I am thinking on how to structure this is this. I have 3 areas of understanding that I am trying to get as a whole.
+1. What the next move is
+2. How the next move will begin when looked at from the LTF perspective
+3. If the start of the next move will over/undershoot or not
+
+These three areas of knowledge all contain inside of them environment categories within wich they exist. These, at teh minute ae unfirm within each of the three different things and are the 8 other categories comparitors within my program. Each of these have different states they can be set in. When I use the program what I am trying to figure out is for each category environment, what setting of it does not equal a move or what is the only category which does equal a move. I am trying to eliminate as much as possible in the first round of comparisons as possible from the options available in the enviroment categories. I can then say tha this move occurs when this envionmetn category is the case or not the caseas exclusively as possible. I am looking for extremely wighted results. If there are even splits between seetings then there is moer random chance of me getting stuff correct. that is not what I want.
+Once I can eleimniate at least one of the settings of a environment cateegory then I can say that when this setting is the case, this move cannot be the case and another move is the case. it is all a process of elimination. every move has a conclusion of findings beased on the simple comparisons that is saying what serttings have been elimnated from what environmnet variable. This helps with knowing what is the case.
+
+HTF move this move is in,
+Direction in relation to HTF move,
+Previous move on this TF,
+Line the previous move started from,
+Did it overshoot or undershoot,
+What line Did it start from,
+Did it overshoot or undershoot,
+How did the beginning of this move reverse from the LTF perspective,
+
 * Edit Notes
 - As I was looking through the database on the day of 08-10-2020 I realized that I had made a mistake in some fields when I was doing HTF moves. When I wrote down wat line they started from I accidently added them as "HTF SS" or "HTF RR" instead of Just SS or RR. This mistake may mean that this day would not always be as accurate a representaion to the way I am defining stuff as It seems as the S/R it started from was actually a HHTF one. This would need to be manually changed by lookingat the chart and editing the database accordingly however that takes up time. I do not want to do that right now so just a heads up.
 - I think I may need to add another category to my database for future reference. Basically knowing how the beginning of the move reversed is not only useful for the TTF but also for the HTF and I could also possibly at it for the HHTF also. It would be an interesting look at how it happened easily.
