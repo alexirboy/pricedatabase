@@ -1267,20 +1267,18 @@ $8 ~ /\/R|R$|\w R|R\// && $5 ~ "F[0-9]"  {print NR"\t"$5"\t"$8}
 #+END_SRC
 #+RESULTS:
 | Move No | Previous move                       | This move  |
-|      12 | F38%                                | R          |
-|      18 | F50%/HTF F50%                       | R          |
-|      22 | F50%                                | R/HTF F61% |
-|      55 | F61%                                | R          |
-|      60 | F50%                                | R          |
-|      67 | F50%                                | R          |
-|      74 | F38%/HTF F38%                       | R          |
-|      76 | F61%                                | R          |
-|      84 | F50%/HTF F38%                       | R          |
-|      85 | F61%                                | R          |
-|      92 | F50%                                | R          |
-|      96 | F50%                                | R          |
-|     107 | F50%                                | R          |
-|     119 | F50% at HTF F50% - synonymous moves | HTF R      |
+|       9 | F38%                                | R          |
+|      14 | F50%/HTF F50%                       | R          |
+|      18 | F50%                                | R/HTF F61% |
+|      44 | F61%                                | R          |
+|      53 | F50%                                | R          |
+|      58 | F38%/HTF F38%                       | R          |
+|      60 | F61%                                | R          |
+|      66 | F50%/HTF F38%                       | R          |
+|      72 | F50%                                | R          |
+|      76 | F50%                                | R          |
+|      83 | F38%/HTF F38%                       | R          |
+|      93 | F50% at HTF F50% - synonymous moves | HTF R      |
 
 #+BEGIN_SRC awk :in-file ~/Documents/price_database/08_10_2020.csv :exports results
 BEGIN {FS=","
@@ -1289,25 +1287,24 @@ $8 ~ /\/R|R$|\w R|R\// && $5 ~ /\/R|R$|\w R|R\//  {print NR"\t"$5"\t"$8}
 #+END_SRC
 #+RESULTS:
 | Move No | Previous move | This move  |
-|       7 | R             | R          |
-|       8 | R             | R          |
-|      13 | R             | R          |
-|      19 | R             | R          |
-|      20 | R             | R/HTF F61% |
-|      28 | R             | R          |
-|      29 | R             | R          |
-|      30 | R             | R/HTF F23% |
-|      38 | TTF R         | R          |
-|      40 | R             | R          |
-|      43 | R             | R          |
-|      56 | R             | R          |
-|      64 | R             | RB/R       |
-|      68 | R             | R          |
-|      86 | R             | R          |
-|      93 | R             | R          |
-|     109 | R             | R/RB       |
-|     110 | R/RB          | R          |
-|     111 | R             | R          |
+|       5 | R             | R          |
+|       6 | R             | R          |
+|      10 | R             | R          |
+|      15 | R             | R          |
+|      16 | R             | R/HTF F61% |
+|      22 | R             | R          |
+|      23 | R             | R          |
+|      24 | R             | R/HTF F23% |
+|      34 | R             | R          |
+|      45 | R             | R          |
+|      49 | HTF R         | F61%/HTF R |
+|      54 | R             | R          |
+|      67 | R             | R          |
+|      73 | R             | R          |
+|      84 | R             | R          |
+|      85 | R             | R/RB       |
+|      86 | R/RB          | R          |
+|      87 | R             | R          |
 
 #+BEGIN_SRC awk :in-file ~/Documents/price_database/08_10_2020.csv :exports results
 BEGIN {FS=","
@@ -1316,18 +1313,14 @@ $8 ~ /\/R|R$|\w R|R\// && $5 ~ "RB"  {print NR"\t"$5"\t"$8}
 #+END_SRC
 #+RESULTS:
 | Move No | Previous move | This move |
-|      16 | RB            | R         |
-|      36 | RB            | TTF R     |
-|      37 | RB            | R         |
-|      42 | RB            | R         |
-|      49 | RB            | R         |
-|      61 | RB            | HTF R     |
-|      70 | RB            | HHHTF R   |
-|      77 | RB            | R         |
-|      90 | RB            | R         |
-|      99 | RB            | HTF R     |
-|     110 | R/RB          | R         |
-|     116 | RB            | R/RB      |
+|      12 | RB            | R         |
+|      30 | RB            | R         |
+|      33 | RB            | R         |
+|      38 | RB            | R         |
+|      48 | RB            | HTF R     |
+|      70 | RB            | R         |
+|      78 | RB            | HTF R     |
+|      86 | R/RB          | R         |
 *** Previous move under/overshoot
 
 #+BEGIN_SRC awk :in-file ~/Documents/price_database/08_10_2020.csv :exports results

@@ -232,16 +232,16 @@ custom_query(){
             out1='$5 ~ "H"'
             query1="Previous move - H(n)TF move (Before Reversal)";;
           4)
-            out1='$5 ~ "H\w* F"'
+            out1='$5 ~ /H\w+ F/'
             query1="Previous move - H(n)TF FB (Before Reversal)";;
           5)
-            out1='$5 ~ "^H\w* F"'
+            out1='$5 ~ /^H\w+ F/'
             query1="Previous move - H(n)TF FB (Before Reversal) - Exclusively";;
           6)
-            out1='$5 ~ "H\w* R"'
+            out1='$5 ~ /H\w+ R/'
             query1="Previous move - H(n)TF R (Before TTF Reversal)";;
           7)
-            out1='$5 ~ "^H\w* R"'
+            out1='$5 ~ /^H\w+ R/'
             query1="Previous move - H(n)TF R (Before TTF Reversal) - Exclusively";;
           8)
             out1='$5 ~ /\/R|R$|\w R|R\//'
@@ -267,16 +267,16 @@ custom_query(){
             out2='&& $5 ~ "H"'
             query2="Previous move - H(n)TF move (Before Reversal)";;
           4)
-            out2='&& $5 ~ "H\w* F"'
+            out2='&& $5 ~ /H\w+ F/'
             query2="Previous move - H(n)TF FB (Before Reversal)";;
           5)
-            out2='&& $5 ~ "^H\w* F"'
+            out2='&& $5 ~ /^H\w+ F/'
             query2="Previous move - H(n)TF FB (Before Reversal) - Exclusively";;
           6)
-            out2='&& $5 ~ "H\w* R"'
+            out2='&& $5 ~ /H\w+ R/'
             query2="Previous move - H(n)TF R (Before TTF Reversal)";;
           7)
-            out2='&& $5 ~ "^H\w* R"'
+            out2='&& $5 ~ /^H\w+ R/'
             query2="Previous move - H(n)TF R (Before TTF Reversal) - Exclusively";;
           8)
             out2='&& $5 ~ /\/R|R$|\w R|R\//'
@@ -302,16 +302,16 @@ custom_query(){
             out3='&& $5 ~ "H"'
             query3="Previous move - H(n)TF move (Before Reversal)";;
           4)
-            out3='&& $5 ~ "H\w* F"'
+            out3='&& $5 ~ /H\w+ F/'
             query3="Previous move - H(n)TF FB (Before Reversal)";;
           5)
-            out3='&& $5 ~ "^H\w* F"'
+            out3='&& $5 ~ /^H\w+ F/'
             query3="Previous move - H(n)TF FB (Before Reversal) - Exclusively";;
           6)
-            out3='&& $5 ~ "H\w* R"'
+            out3='&& $5 ~ /H\w+ R/'
             query3="Previous move - H(n)TF R (Before TTF Reversal)";;
           7)
-            out3='&& $5 ~ "^H\w* R"'
+            out3='&& $5 ~ /^H\w+ R/'
             query3="Previous move - H(n)TF R (Before TTF Reversal) - Exclusively";;
           8)
             out3='&& $5 ~ /\/R|R$|\w R|R\//'
@@ -337,16 +337,16 @@ custom_query(){
             out4='&& $5 ~ "H"'
             query4="Previous move - H(n)TF move (Before Reversal)";;
           4)
-            out4='&& $5 ~ "H\w* F"'
+            out4='&& $5 ~ /H\w+ F/'
             query4="Previous move - H(n)TF FB (Before Reversal)";;
           5)
-            out4='&& $5 ~ "^H\w* F"'
+            out4='&& $5 ~ /^H\w+ F/'
             query4="Previous move - H(n)TF FB (Before Reversal) - Exclusively";;
           6)
-            out4='&& $5 ~ "H\w* R"'
+            out4='&& $5 ~ /H\w+ R/'
             query4="Previous move - H(n)TF R (Before TTF Reversal)";;
           7)
-            out4='&& $5 ~ "^H\w* R"'
+            out4='&& $5 ~ /^H\w+ R/'
             query4="Previous move - H(n)TF R (Before TTF Reversal) - Exclusively";;
           8)
             out4='&& $5 ~ /\/R|R$|\w R|R\//'
@@ -372,16 +372,16 @@ custom_query(){
             out5='&& $5 ~ "H"'
             query5="Previous move - H(n)TF move (Before Reversal)";;
           4)
-            out5='&& $5 ~ "H\w* F"'
+            out5='&& $5 ~ /H\w+ F/'
             query5="Previous move - H(n)TF FB (Before Reversal)";;
           5)
-            out5='&& $5 ~ "^H\w* F"'
+            out5='&& $5 ~ /^H\w+ F/'
             query5="Previous move - H(n)TF FB (Before Reversal) - Exclusively";;
           6)
-            out5='&& $5 ~ "H\w* R"'
+            out5='&& $5 ~ /H\w+ R/'
             query5="Previous move - H(n)TF R (Before TTF Reversal)";;
           7)
-            out5='&& $5 ~ "^H\w* R"'
+            out5='&& $5 ~ /^H\w+ R/'
             query5="Previous move - H(n)TF R (Before TTF Reversal) - Exclusively";;
           8)
             out5='&& $5 ~ /\/R|R$|\w R|R\//'
@@ -655,19 +655,19 @@ custom_query(){
             out1='$8 ~ "H"'
             query1=" move - H(n)TFThis move (Before Reversal)";;
           4)
-            out1='$8 ~ "H\w* F"'
+            out1='$8 ~ /H\w+ F/'
             query1="This move - H(n)TF FB (Before Reversal)";;
           5)
-            out1='$8 ~ "^H\w* F"'
+            out1='$8 ~ /^H\w+ F/'
             query1="This move - H(n)TF FB (Before Reversal) - Exclusively";;
           6)
-            out1='$8 ~ "H\w* R"'
+            out1='$8 ~ /H\w+ R/'
             query1="This move - H(n)TF R (Before TTF Reversal)";;
           7)
-            out1='$8 ~ "^H\w* R"'
+            out1='$8 ~ /^H\w+ R/'
             query1="This move - H(n)TF R (Before TTF Reversal) - Exclusively";;
           8)
-            out1='$8 ~ /\/R|R$|\w R|R\//'
+            out1='$8 ~ /\/R|^R$|^R\//'
             query1="This move - Reversal";;
           9)
             out1='$8 ~ /^R$/'
@@ -690,19 +690,19 @@ custom_query(){
             out2='&& $8 ~ "H"'
             query2=" move - H(n)TFThis move (Before Reversal)";;
           4)
-            out2='&& $8 ~ "H\w* F"'
+            out2='&& $8 ~ /H\w+ F/'
             query2="This move - H(n)TF FB (Before Reversal)";;
           5)
-            out2='&& $8 ~ "^H\w* F"'
+            out2='&& $8 ~ /^H\w+ F/'
             query2="This move - H(n)TF FB (Before Reversal) - Exclusively";;
           6)
-            out2='&& $8 ~ "H\w* R"'
+            out2='&& $8 ~ /H\w+ R/'
             query2="This move - H(n)TF R (Before TTF Reversal)";;
           7)
-            out2='&& $8 ~ "^H\w* R"'
+            out2='&& $8 ~ /^H\w+ R/'
             query2="This move - H(n)TF R (Before TTF Reversal) - Exclusively";;
           8)
-            out2='&& $8 ~ /\/R|R$|\w R|R\//'
+            out2='&& $8 ~ /\/R|^R$|^R\//'
             query2="This move - Reversal";;
           9)
             out2='&& $8 ~ /^R$/'
@@ -725,19 +725,19 @@ custom_query(){
             out3='&& $8 ~ "H"'
             query3=" move - H(n)TFThis move (Before Reversal)";;
           4)
-            out3='&& $8 ~ "H\w* F"'
+            out3='&& $8 ~ /H\w+ F/'
             query3="This move - H(n)TF FB (Before Reversal)";;
           5)
-            out3='&& $8 ~ "^H\w* F"'
+            out3='&& $8 ~ /^H\w+ F/'
             query3="This move - H(n)TF FB (Before Reversal) - Exclusively";;
           6)
-            out3='&& $8 ~ "H\w* R"'
+            out3='&& $8 ~ /H\w+ R/'
             query3="This move - H(n)TF R (Before TTF Reversal)";;
           7)
-            out3='&& $8 ~ "^H\w* R"'
+            out3='&& $8 ~ /^H\w+ R/'
             query3="This move - H(n)TF R (Before TTF Reversal) - Exclusively";;
           8)
-            out3='&& $8 ~ /\/R|R$|\w R|R\//'
+            out3='&& $8 ~ /\/R|^R$|^R\//'
             query3="This move - Reversal";;
           9)
             out3='&& $8 ~ /^R$/'
@@ -760,19 +760,19 @@ custom_query(){
             out4='&& $8 ~ "H"'
             query4=" move - H(n)TFThis move (Before Reversal)";;
           4)
-            out4='&& $8 ~ "H\w* F"'
+            out4='&& $8 ~ /H\w+ F/'
             query4="This move - H(n)TF FB (Before Reversal)";;
           5)
-            out4='&& $8 ~ "^H\w* F"'
+            out4='&& $8 ~ /^H\w+ F/'
             query4="This move - H(n)TF FB (Before Reversal) - Exclusively";;
           6)
-            out4='&& $8 ~ "H\w* R"'
+            out4='&& $8 ~ /H\w+ R/'
             query4="This move - H(n)TF R (Before TTF Reversal)";;
           7)
-            out4='&& $8 ~ "^H\w* R"'
+            out4='&& $8 ~ /^H\w+ R/'
             query4="This move - H(n)TF R (Before TTF Reversal) - Exclusively";;
           8)
-            out4='&& $8 ~ /\/R|R$|\w R|R\//'
+            out4='&& $8 ~ /\/R|^R$|^R\//'
             query4="This move - Reversal";;
           9)
             out4='&& $8 ~ /^R$/'
@@ -795,19 +795,19 @@ custom_query(){
             out5='&& $8 ~ "H"'
             query5=" move - H(n)TFThis move (Before Reversal)";;
           4)
-            out5='&& $8 ~ "H\w* F"'
+            out5='&& $8 ~ /H\w+ F/'
             query5="This move - H(n)TF FB (Before Reversal)";;
           5)
-            out5='&& $8 ~ "^H\w* F"'
+            out5='&& $8 ~ /^H\w+ F/'
             query5="This move - H(n)TF FB (Before Reversal) - Exclusively";;
           6)
-            out5='&& $8 ~ "H\w* R"'
+            out5='&& $8 ~ /H\w+ R/'
             query5="This move - H(n)TF R (Before TTF Reversal)";;
           7)
-            out5='&& $8 ~ "^H\w* R"'
+            out5='&& $8 ~ /^H\w+ R/'
             query5="This move - H(n)TF R (Before TTF Reversal) - Exclusively";;
           8)
-            out5='&& $8 ~ /\/R|R$|\w R|R\//'
+            out5='&& $8 ~ /\/R|^R$|^R\//'
             query5="This move - Reversal";;
           9)
             out5='&& $8 ~ /^R$/'
@@ -1921,8 +1921,8 @@ while true; do
         fi
         ;;
     18)
-      next_print='NR,"\t"$8"\t"$9"\t"$10"\t"$11'
-      next_header='Move No\tThis move\tLine this move started from\tThis move over/undershoot\tLTF reversal pattern'
+      next_print='NR,"\t"$3"\t"$8"\t"$9"\t"$10"\t"$11'
+      next_header='Move No\tHTF move\tThis move\tLine this move started from\tThis move over/undershoot\tLTF reversal pattern'
       next_output=$(awk -F, -v next_header="$next_header"\
         "BEGIN {print next_header} \
         $out1 $out2 $out3 $out4 $out5 {getline;print $next_print;}" ~/Documents/price_database/08_10_2020.csv)
