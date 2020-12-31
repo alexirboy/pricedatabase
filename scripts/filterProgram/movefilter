@@ -82,12 +82,20 @@ clear_5(){
   unset query5
 }
 # basically makes them all become "" again
+file_print_next(){
+  echo ""
+  echo "#+BEGIN_SRC awk :in-file $csv :exports results"
+  echo 'BEGIN {FS=","'
+  echo "print \"$next_header\"}"
+  echo "$out1 $out2 $out3 $out4 $out5 {getline;print $next_print;}"
+  echo "#+END_SRC"
+}
 file_print(){
   echo ""
   echo "#+BEGIN_SRC awk :in-file $csv :exports results"
   echo 'BEGIN {FS=","'
   echo "print \"$header\"}"
-  echo "$out1 $out2 $out3 {print NR$printing}"
+  echo "$out1 $out2 $out3 $out4 $out5 {print NR$printing}"
   echo "#+END_SRC"
 }
 custom_query(){
@@ -1935,9 +1943,9 @@ while true; do
           file=$(dialog --title "$title" \
           --fselect ~/Documents/price_database/research/reversalBreakout/ 14 48 2>&1 1>&3)
           if [[ "$file" =~ \.org$ ]]; then
-          file_print >> "$file"
+          file_print_next >> "$file"
           else
-            file_print | install -D /dev/stdin "$file.org"
+            file_print_next | install -D /dev/stdin "$file.org"
           fi
         fi
         ;;
