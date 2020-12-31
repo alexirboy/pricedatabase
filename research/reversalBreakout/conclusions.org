@@ -9,14 +9,16 @@
 
    - Direction relating to HTF Move
      - RB moves only happen when they are WM in relation to the HTF move
-     - WM-FM are quite common. 
+     - WM-FM are normally started because of RB moves.
 
    - Previous move on this TF
      - Precursor to RB moves are rarely other RB moves. Which in turn means that Post cursor moves are rarely RB moves also
-     - Precursor moves are almos always a R or a F move, and like above, that means that the post cursor moves will also be one of these two moves as well
-     - H(n)TF moves before reversals are also a precursor to this move as well, but less common.
+     - Precursor to RB moves are rarely HTF moves before R moves exclusively which in turn means that Post cursor moves are rarely HTF moves also
+     - Precursor moves tend to generallly be R or F moves at an equal rate
 
    - Lines the previous moves started from
+     I do not thiink that thhis environment vaariable has much beaaaring on knnnowing what the next move wiill be.
+     The below thiiings shouuld be taken as thiings that apply to all moves I think.
      - Previous moves never really started from a just their own TTF SS/RR. There is always confluence with a HTF S/R
      - Previous moves never start solely because fo a HTF S/R solely. It is always in conjunction with a TTF S/R also
      - Fib lines are teh only lines that cause a new move to occur on their own. That is TTF Fib lines that is. Synonimous ones do also.
