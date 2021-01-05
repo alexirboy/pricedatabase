@@ -1499,3 +1499,49 @@ $4 == "WM-FM" && $5 ~ "^F[0-9][0-9]%$"  {print NR"\t"$4"\t"$5"\t"$8"\t"$9}
 |      51 | WM-FM                             | F61%          | RB        | F61% at HTF RR                      |
 |      64 | WM-FM                             | F61%          | RB        | F61%                                |
 |      80 | WM-FM                             | F61%          | RB        | F61% at HTF F61% - synonymous moves |
+
+this shows that when the this move is a reversal and prev move is a RB, The move after os either going to be a WM-FM or OM and if it is a WM-FM then that means that the move will be a F move. As showm by the chart below. A OM move will be followed by a reversal. So thats kl,
+#+BEGIN_SRC awk :in-file ~/Documents/price_database/08_10_2020.csv :exports results
+BEGIN {FS=","
+print "Move No\tHTF move\tDirection in relation to HTF move"}
+$5 ~ "RB" && $8 ~ /\/R|^R$|^R\//    {print NR"\t"$3"\t"$4}
+#+END_SRC
+#+RESULTS:
+| Move No | HTF move | Direction in relation to HTF move |
+|      12 | F61%     | WM-FM                             |
+|      30 | TTF R    | WM-FM                             |
+|      33 | R        | OM                                |
+|      38 | F61%     | WM-FM                             |
+|      70 | RB       | WM-FM                             |
+|      86 | F50%     | OM                                |
+
+#+BEGIN_SRC awk :in-file ~/Documents/price_database/08_10_2020.csv :exports results
+BEGIN {FS=","
+print "Move No\tHTF move\tThis move\tLine this move started from\tThis move over/undershoot\tLTF reversal pattern"}
+$5 ~ "RB" && $8 ~ /\/R|^R$|^R\//    {getline;print NR,"\t"$3"\t"$8"\t"$9"\t"$10"\t"$11;}
+#+END_SRC
+#+RESULTS:
+| Move No | HTF move | This move     | Line this move started from  | This move over/undershoot                   | LTF reversal pattern                           |
+|      13 | F61%     | F50%/HTF F50% | RR                           | no - perfectly touched the furthest RR line | DT - multiple swings just touching LTF RR line |
+|      31 | R        | F50%          | RR at HTF F23% at HHTF F23%  | no/yes - overshot the HTF F23% line         | no                                             |
+|      34 | R        | R             | SS at HTF F38%               | no                                          | R - OS                                         |
+|      39 | F61%     | F38%/HTF F38% | RR                           | yes - slightly overshot                     | DT - slow OS basicaly                          |
+|      71 | RB       | F50%          | RR within HTF RR             | yes - slightly overshot                     | OS - R                                         |
+|      87 | F50%     | R             | SS at HTF F61% within HTF SS | no                                          | OS - breakout R                                |
+
+
+This shows that whenever R moves followed RB moves they started at HTF S/R lines. this includes F lines also. That is when they are WM-FM in a new move direction. It can start from TTF SS/RR but tahts mainly for when the R move is a OM to teh HTF move
+Also none of the R moves over or undershot. Some did to one of the S/R it reversed from but all of them pretty much didnt.
+#+BEGIN_SRC awk :in-file ~/Documents/price_database/08_10_2020.csv :exports results
+BEGIN {FS=","
+print "Move No\tDirection in relation to HTF move\tLine this move started from\tThis move over/undershoot\tLTF reversal pattern"}
+$5 ~ "RB" && $8 ~ /\/R|^R$|^R\//    {print NR"\t"$4"\t"$9"\t"$10"\t"$11}
+#+END_SRC
+#+RESULTS:
+| Move No | Direction in relation to HTF move | Line this move started from     | This move over/undershoot                                                                                 | LTF reversal pattern                              |
+|      12 | WM-FM                             | HTF F61% at HHTF F38%           | no/yes - it slightly overshot the HTF F by a little bit but the HHTF F it was pretty much spot on         | DB                                                |
+|      30 | WM-FM                             | HTF SS at HHTF SS at HHHTF F50% | no/yes - overshot the HHTF SS closest line by a bit but overall was not overshooting the HTF by very much | HDB - first leg was a R followed by F             |
+|      33 | OM                                | RR                              | no                                                                                                        | RB - OS                                           |
+|      38 | WM-FM                             | HHHTF F61%                      | no                                                                                                        | QDB - LTF F followed by another F then breakout R |
+|      70 | WM-FM                             | SS within HTF SS within HHTF SS | no                                                                                                        | OS - R                                            |
+|      86 | OM                                | RR at HTF F50%                  | no                                                                                                        | DT - R followed by reversal before a breakout     |
