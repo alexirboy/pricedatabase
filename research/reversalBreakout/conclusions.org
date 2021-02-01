@@ -38,3 +38,12 @@
    - LTF reversal structures
      - Every LTF reversal structure is likely to happen apart from the QDT/B
      - Of the One swings, The reversal breakouts seem more common
+
+* New Findings
+** prev R curr RB
+*** next F
+- When the previous move is a reversal and this move is a RB move that also caused the HTF move to be a RB move, the move that follows is a F move. That means that the HTF move needs to be primed to have possible RB move. It may also mean that when there is the prev and current move as before but the RB move on the TTF did not make a RB move on the HTF move, there couuld still be a fib that is the nfollowed ba another RB move that makes a RB move on the HTF.
+-
+** prev R curr F
+*** next RB
+-

@@ -23,17 +23,17 @@ the thing done the way I would liike is quite anice.
 
 So what do you want. Forget what you think you acn do because thats you at the
 moment. Targeting yourself onto something you want will make you get better and
-hopeully at least bring you coser if not complete thte thing you watn.
+hopefully at least bring you closer if not complete the thing you want.
 so What is is taht you want the program to do?
 
 I want to be able to quickly go back and forth and change the query stuff taht I
 have done. I think first screen what would be good is these sections.
 
-1- query section showing each of of the different fields and search queseries
-within them. 1 Roww each of the different query lines.
+1- query section showing each of the different fields and search queseries
+within them. 1 Row each of the different query lines.
 The fields would have to be added when needed by the person. they are not there initially.
 2- what field is printed with the query lines checked of by default. But this
-needs to be a checkered option
+needs to be a chequered option
 3- option to save the current config of queries for the program somehow into a
 file that is readable and repliactable by the program.
 4- two output options, 1 in a file and one in a temporray table that when quit

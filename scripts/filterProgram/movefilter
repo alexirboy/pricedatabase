@@ -1929,8 +1929,8 @@ while true; do
         fi
         ;;
     18)
-      next_print='NR,"\t"$3"\t"$8"\t"$9"\t"$10"\t"$11'
-      next_header='Move No\tHTF move\tThis move\tLine this move started from\tThis move over/undershoot\tLTF reversal pattern'
+      next_print='NR,"\t"$3"\t"$4"\t"$8"\t"$9"\t"$10"\t"$11'
+      next_header='Move No\tHTF move\tRelation to HTF move\tThis move\tLine this move started from\tThis move over/undershoot\tLTF reversal pattern'
       next_output=$(awk -F, -v next_header="$next_header"\
         "BEGIN {print next_header} \
         $out1 $out2 $out3 $out4 $out5 {getline;print $next_print;}" ~/Documents/price_database/08_10_2020.csv)

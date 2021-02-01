@@ -1,31 +1,5 @@
 [
     {
-        "Move TF": "HHTF",
-        "Time of move": "04:00",
-        "HTF move this move is in": "F61%",
-        "Direction in relation to HTF move": "WM",
-        "Previous move on this TF": "R",
-        "Line the previous move started from": "HTF SS",
-        "Did it overshoot or undershoot": "yes - slighlty overshot",
-        "What is this move": "RB",
-        "What line Did it start from": "HTF SS",
-        "How did the beginning of this move reverse from the LTF perspective": "HDB",
-        "Any notes": "this move was in the asian session and carried on into the london session so take the stats witha grain of salt"
-    },
-    {
-        "Move TF": "HTF",
-        "Time of move": "11:00",
-        "HTF move this move is in": "RB",
-        "Direction in relation to HTF move": "WM",
-        "Previous move on this TF": "R/HHTF F38%",
-        "Line the previous move started from": "RR at HTF RR at HHHTF RR",
-        "Did it overshoot or undershoot": "yes - overshot the HTF SS by a bit as well as the HTF F by a little too",
-        "What is this move": "RB",
-        "What line Did it start from": "SS at HHTF F38%",
-        "How did the beginning of this move reverse from the LTF perspective": "DB",
-        "Any notes": "the move was ultimately a 4hr move and the closest daily RR line was touched on this HTF move. So because the HTF move was breaking new grounds on the TF above it; the regression would be then that this move did not have to stop except at a point that stops the move on the highest TF that was not breaking ground or was OM to. However that is the logical conclusion but does that happen?"
-    },
-    {
         "Move TF": "TTF",
         "Time of move": "11:06",
         "HTF move this move is in": "RB",
@@ -44,22 +18,23 @@
         "HTF move this move is in": "RB",
         "Direction in relation to HTF move": "OM",
         "Previous move on this TF": "RB",
-        "Line the previous move started from": "SS",
-        "Did it overshoot or undershoot": "DT - there were multiple swings in the LTF",
-        "What is this move": "RR within HHHHTF RR area",
-        "What line Did it start from": "no - it was right in the middle of the tight RR area",
-        "How did the beginning of this move reverse from the LTF perspective": "This move almost looked like two moves on the TTF. It reversed slightly to the up side on the LTF in what was a HTF RR move from the LTF context. That looked like a mini R in the TTF. The previous TTF move and the current HTF were synonymous so the F points were the same. The LTF move made a new move at the LTF RR a bit before the 38% F but then gave way into it."
+        "Line the previous move started from": "SS at HTF SS",
+        "Did it overshoot or undershoot": "yes - overshot",
+        "What is this move": "F38%/HTF F38%",
+        "What line Did it start from": "HHHHTF RR",
+        "How did the beginning of this move reverse from the LTF perspective": "DT - there were multiple swings in the LTF",
+        "Any notes": "This move almost looked like two moves on the TTF. It reversed slightly to the up side on the LTF in what was a HTF RR move from the LTF context. That looked like a mini R in the TTF. The previous TTF move and the current HTF were synonymous so the F points were the same. The LTF move made a new move at the LTF RR a bit before the 38% F but then gave way into it."
     },
     {
         "Move TF": "TTF",
         "Time of move": "11:26",
         "HTF move this move is in": "RB",
         "Direction in relation to HTF move": "WM",
-        "Previous move on this TF": "RB",
+        "Previous move on this TF": "F",
         "Line the previous move started from": "SS",
         "Did it overshoot or undershoot": "no",
         "What is this move": "R",
-        "What line Did it start from": "HTF F38%/F38%",
+        "What line Did it start from": "F38%/HTF F38%",
         "How did the beginning of this move reverse from the LTF perspective": "HDB - basically had two swings R on the LTF. Second swing was almost down to the first but just kindas missed it",
         "Any notes": "the move had a little mini R as it got to a possible weak RR on the same move as the RR it stopped at. only made a LTF movement though before continuing towards end move"
     },
@@ -90,19 +65,6 @@
         "Any notes": "stopped at the closest line on the RR"
     },
     {
-        "Move TF": "HTF",
-        "Time of move": "11:40",
-        "HTF move this move is in": "RB",
-        "Direction in relation to HTF move": "OM",
-        "Previous move on this TF": "RB",
-        "Line the previous move started from": "HTF SS/HHTF F38%",
-        "Did it overshoot or undershoot": "no/yes - depending in what line you consider it being stopped by. The TTF line was what was most accurate but the HHTF RR could be seen as being undershot and stopping it",
-        "What is this move": "F61%",
-        "What line Did it start from": "RR within HHHHTF RR area. Possibly also be HHTF RR if considered as undershooting it",
-        "How did the beginning of this move reverse from the LTF perspective": "DT - multiple swings",
-        "Any notes": "this move seemingly began from a buildup of RR moves that then just caused the previous HTF move to end. It does not look like there were any more reistance lines on any other TF that would have had an effect on ending the previous move apart from the HHHHTF one on the daily chart. This move stalled a little at the F38% level making a few swings on the TTF. That coincided with a SS point as well."
-    },
-    {
         "Move TF": "TTF",
         "Time of move": "11:39",
         "HTF move this move is in": "F61%",
@@ -124,7 +86,7 @@
         "Line the previous move started from": "RR",
         "Did it overshoot or undershoot": "no",
         "What is this move": "F38%",
-        "What line Did it start from": "HTF F38%/RR",
+        "What line Did it start from": "RR at HTF F38%",
         "How did the beginning of this move reverse from the LTF perspective": "HDT - R move followed by F then RB",
         "Any notes": ""
     },
@@ -168,19 +130,6 @@
         "Any notes": "the LTF moves was quick on this one. each swings happened within 1 to 2 candles in each move. Move stalled slightly on the HTF F50% level on its way down making a LTF move."
     },
     {
-        "Move TF": "HTF",
-        "Time of move": "12:00",
-        "HTF move this move is in": "RB",
-        "Direction in relation to HTF move": "WM",
-        "Previous move on this TF": "F61%",
-        "Line the previous move started from": "RR within HHHHTF RR area. Possibly also be HHTF RR if considered as undershooting it",
-        "Did it overshoot or undershoot": "no/yes - it slightly overshot the HTF F by a little bit but the HHTF F it was pretty much spot on",
-        "What is this move": "F61%",
-        "What line Did it start from": "F61% at HTF F38%",
-        "How did the beginning of this move reverse from the LTF perspective": "HDB - multiple swings but basically R then F with a few R in each move",
-        "Any notes": "might have expected a R or a bigger move as this was in the direction of the HHTF move and the HHTF move had not yet reached its RR on its TF."
-    },
-    {
         "Move TF": "TTF",
         "Time of move": "12:03",
         "HTF move this move is in": "F61%",
@@ -189,7 +138,7 @@
         "Line the previous move started from": "RR",
         "Did it overshoot or undershoot": "no/yes - it slightly overshot the HTF F by a little bit but the HHTF F it was pretty much spot on",
         "What is this move": "R",
-        "What line Did it start from": "HHTF F38%/HTF F61%",
+        "What line Did it start from": "HTF F61% at HHTF F38%",
         "How did the beginning of this move reverse from the LTF perspective": "DB",
         "Any notes": "move stalled quite a bit just under the HTF F50% line. Went on to break past it though without making any mini TTF move. Carried onto RR point."
     },
@@ -197,11 +146,11 @@
         "Move TF": "TTF",
         "Time of move": "12:12",
         "HTF move this move is in": "F61%",
-        "Direction in relation to HTF move": "OM - must have looked like it was a new HTF move at one point however as the HTF candle this move was in shows a lower wick",
+        "Direction in relation to HTF move": "OM",
         "Previous move on this TF": "R",
         "Line the previous move started from": "HHTF F38%/HTF F61%",
         "Did it overshoot or undershoot": "no - perfectly touched the furthest RR line",
-        "What is this move": "HTF F50%/F50% - the previous move was a new move on the HTF so the F points are the same for this move",
+        "What is this move": "F50%/HTF F50%",
         "What line Did it start from": "RR",
         "How did the beginning of this move reverse from the LTF perspective": "DT - multiple swings just touching LTF RR line",
         "Any notes": ""
@@ -211,7 +160,7 @@
         "Time of move": "12:15",
         "HTF move this move is in": "F61%",
         "Direction in relation to HTF move": "WM",
-        "Previous move on this TF": "HTF F50%/F50% - the previous move was a new move on the HTF so the F points are the same for this move",
+        "Previous move on this TF": "F50%/HTF F50%",
         "Line the previous move started from": "RR",
         "Did it overshoot or undershoot": "no",
         "What is this move": "R",
@@ -240,7 +189,7 @@
         "Previous move on this TF": "R",
         "Line the previous move started from": "HTF F50%/RR",
         "Did it overshoot or undershoot": "no",
-        "What is this move": "HTF F61%/R",
+        "What is this move": "R/HTF F61%",
         "What line Did it start from": "SS",
         "How did the beginning of this move reverse from the LTF perspective": "OS - RB",
         "Any notes": "this move reversed using the LTF RR very precisely. this move was a sort of mix between a R and a RB/HTF F"
@@ -250,11 +199,11 @@
         "Time of move": "12:23",
         "HTF move this move is in": "F61%",
         "Direction in relation to HTF move": "OM",
-        "Previous move on this TF": "HTF F61%/R",
+        "Previous move on this TF": "R/HTF F61%",
         "Line the previous move started from": "SS",
         "Did it overshoot or undershoot": "no/yes - did not really overshoot or undershoot by a lot but it overshot the RR and undershot the HTF F61%",
         "What is this move": "F50%",
-        "What line Did it start from": "HTF F61%/TTF resisatnce",
+        "What line Did it start from": "RR at HTF F61%",
         "How did the beginning of this move reverse from the LTF perspective": "DT",
         "Any notes": ""
     },
@@ -264,37 +213,12 @@
         "HTF move this move is in": "F61%",
         "Direction in relation to HTF move": "WM",
         "Previous move on this TF": "F50%",
-        "Line the previous move started from": "HTF F61%/TTF resisatnce",
+        "Line the previous move started from": "RR at HTF F61%",
         "Did it overshoot or undershoot": "no",
         "What is this move": "R/HTF F61%",
         "What line Did it start from": "F61% at HTF F23%",
         "How did the beginning of this move reverse from the LTF perspective": "OS - RB",
         "Any notes": "the moves were creaping up to touching the HTF61% line and this literally just touched it before stopping"
-    },
-    {
-        "Move TF": "HHTF",
-        "Time of move": "11:00",
-        "HTF move this move is in": "WM-FM",
-        "Direction in relation to HTF move": "RB",
-        "Previous move on this TF": "HTF SS",
-        "Line the previous move started from": "yes - slightly overshot",
-        "Did it overshoot or undershoot": "QDT",
-        "What is this move": "HHHHTF RR",
-        "What line Did it start from": "yes - overshot the HHHHTF RR closest line",
-        "How did the beginning of this move reverse from the LTF perspective": "This move began from a weird place. It didnt even get to a 4hr RR or its own TF RR level. It stopped basically at a RR line due to a build up in RR moves at that line. This move was also basically a daily move and only needed to reverse at any point the daily move would reverse at; which it was in due to being at a daily resitance area. Therefore I think that was why it could have reversed at any point within that area basically?"
-    },
-    {
-        "Move TF": "HTF",
-        "Time of move": "12:25",
-        "HTF move this move is in": "RB",
-        "Direction in relation to HTF move": "WM-FM",
-        "Previous move on this TF": "F61%",
-        "Line the previous move started from": "F61% at HTF F38%",
-        "Did it overshoot or undershoot": "no",
-        "What is this move": "RB",
-        "What line Did it start from": "F61%",
-        "How did the beginning of this move reverse from the LTF perspective": "DT - multiple swings",
-        "Any notes": "this move probably was not expected at all because the HHTF move was not hit even though this was also a HHTF move it was in. This move reversed the HHTF move so that was just not expected. The move didnt have any trouble getting past the the previous HTF move or any HTF move for that matter. It only started stalling when it got to the HHHTF F points. The HHHTF F points caused mini moves on this HTF move but didnt reverse it until it got to the 50% F point. The HHHTF F points also coincided with HHTF SS levels also."
     },
     {
         "Move TF": "TTF",
@@ -316,9 +240,9 @@
         "Direction in relation to HTF move": "OM",
         "Previous move on this TF": "RB",
         "Line the previous move started from": "HTF F61%/RR",
-        "Did it overshoot or undershoot": "SS/HHHTF F38%",
+        "Did it overshoot or undershoot": "HDT",
         "What is this move": "R - of mini move",
-        "What line Did it start from": "HDT",
+        "What line Did it start from": "SS/HHHTF F38%",
         "How did the beginning of this move reverse from the LTF perspective": "no/yes - it overshot the HHHTF F38% by a little but the SS it was in the area",
         "Any notes": "OS - RB"
     },
@@ -344,7 +268,7 @@
         "Line the previous move started from": "TTF mini move RR",
         "Did it overshoot or undershoot": "no/yes - overshot the HHHTF F and the SS but did not overshoot the HHTF SS",
         "What is this move": "R",
-        "What line Did it start from": "HHTF SS/HHHTF F38%/SS",
+        "What line Did it start from": "SS at HHTF SS at HHHTF F38%",
         "How did the beginning of this move reverse from the LTF perspective": "OS - RB",
         "Any notes": "interesting to see the HHTF SS hit even though there was a little difficulty on getting past just the HHHTF F line"
     },
@@ -393,8 +317,8 @@
         "HTF move this move is in": "RB",
         "Direction in relation to HTF move": "OM",
         "Previous move on this TF": "F61%",
-        "Line the previous move started from": "HTF F23%/RR",
-        "Did it overshoot or undershoot": "no/yes - slightly overshot F61%",
+        "Line the previous move started from": "RR at HTF F23%",
+        "Did it overshoot or undershoot": "yes - slightly overshot F61%",
         "What is this move": "F61%",
         "What line Did it start from": "F61% within HTF SS(mini move)",
         "How did the beginning of this move reverse from the LTF perspective": "OS - slow swing to TTF F",
@@ -407,10 +331,11 @@
         "Direction in relation to HTF move": "WM",
         "Previous move on this TF": "F61%",
         "Line the previous move started from": "F61% within HTF SS(mini move)",
-        "Did it overshoot or undershoot": "OS - RB",
-        "What is this move": "F61%",
-        "What line Did it start from": "no",
-        "How did the beginning of this move reverse from the LTF perspective": ""
+        "Did it overshoot or undershoot": "no",
+        "What is this move": "RB",
+        "What line Did it start from": "F61%",
+        "How did the beginning of this move reverse from the LTF perspective": "OS - RB",
+        "Any notes": ""
     },
     {
         "Move TF": "TTF",
@@ -439,19 +364,6 @@
         "Any notes": "this move was the continuation of the HHTF and HTF moves. it broke through everything in its path and only stopped at the next HHHTF F point; the 50%. Stalled slightly at the furthest recent SS line but only made a move on the LTF. more precisely the stop of this move was at the HHHTF F50% within a HHTF SS area and at the closest HTF SS line within the previous two lines."
     },
     {
-        "Move TF": "HTF",
-        "Time of move": "13:15",
-        "HTF move this move is in": "RB",
-        "Direction in relation to HTF move": "OM",
-        "Previous move on this TF": "RB",
-        "Line the previous move started from": "HTF SS",
-        "Did it overshoot or undershoot": "no/yes - overshot the HHTF SS closest line by a bit but overall was not overshooting the HTF by very much",
-        "What is this move": "TTF R",
-        "What line Did it start from": "HTF SS/HHTF SS/HHHTF F50%",
-        "How did the beginning of this move reverse from the LTF perspective": "OS - R",
-        "Any notes": "this was a weird almost mini move on the HTF but it can still be considered a move. The move is basically a TTF R move."
-    },
-    {
         "Move TF": "TTF",
         "Time of move": "13:17",
         "HTF move this move is in": "TTF R",
@@ -460,29 +372,16 @@
         "Line the previous move started from": "F50%",
         "Did it overshoot or undershoot": "no/yes - overshot the HHTF SS closest line by a bit but overall was not overshooting the HTF by very much",
         "What is this move": "R",
-        "What line Did it start from": "HTF SS/HHTF SS/HHHTF F50%",
+        "What line Did it start from": "HTF SS at HHTF SS at HHHTF F50%",
         "How did the beginning of this move reverse from the LTF perspective": "HDB - first leg was a R followed by F",
         "Any notes": "was a fast move. Stalled a little bit at a point that could have been considered a TTF F but eventually broke through to stop at the TTF mini move it started from. A bit of a weird move when looked at from the HTF as well"
-    },
-    {
-        "Move TF": "HTF",
-        "Time of move": "13:20",
-        "HTF move this move is in": "RB",
-        "Direction in relation to HTF move": "WM",
-        "Previous move on this TF": "TTF R",
-        "Line the previous move started from": "HTF SS/HHTF SS/HHHTF F50%",
-        "Did it overshoot or undershoot": "no",
-        "What is this move": "R",
-        "What line Did it start from": "RR",
-        "How did the beginning of this move reverse from the LTF perspective": "OS",
-        "Any notes": "this move was just a F retracement on the TTF to the 50% level. it however looked like a enw move on the HTF though. This and the previous HTF moves were both synonimous with one swing on the TTF."
     },
     {
         "Move TF": "TTF",
         "Time of move": "13:24",
         "HTF move this move is in": "R",
         "Direction in relation to HTF move": "WM",
-        "Previous move on this TF": "RB",
+        "Previous move on this TF": "R",
         "Line the previous move started from": "F50%",
         "Did it overshoot or undershoot": "no/yes - overshot the HTF F23% line",
         "What is this move": "F50%",
@@ -491,42 +390,29 @@
         "Any notes": "OS - basically one swing. It was a slow turnover of move on the LTF"
     },
     {
-        "Move TF": "HTF",
-        "Time of move": "13:25",
-        "HTF move this move is in": "RB",
-        "Direction in relation to HTF move": "OM",
-        "Previous move on this TF": "R",
-        "Line the previous move started from": "RR",
-        "Did it overshoot or undershoot": "no",
-        "What is this move": "R",
-        "What line Did it start from": "SS at HTF SS",
-        "How did the beginning of this move reverse from the LTF perspective": "OS - was one swing but has a long swing",
-        "Any notes": "did not really stop at a place that you would expect. could say that it stopped because of a HHTF F23% maybe but it is more likely to say that it stopped at the RR instead"
-    },
-    {
         "Move TF": "TTF",
         "Time of move": "13:28",
         "HTF move this move is in": "R",
         "Direction in relation to HTF move": "WM",
         "Previous move on this TF": "F50%",
         "Line the previous move started from": "RR at HTF F23% at HHTF F23%",
-        "Did it overshoot or undershoot": "F50% at HTF SS at HTF F50% - synonymous moves",
-        "What is this move": "no",
-        "What line Did it start from": "RB",
-        "How did the beginning of this move reverse from the LTF perspective": "no",
-        "Any notes": "HDB - multiple swings"
+        "Did it overshoot or undershoot": "no",
+        "What is this move": "R/RB",
+        "What line Did it start from": "F50% at HTF SS at HTF F50% - synonymous moves",
+        "How did the beginning of this move reverse from the LTF perspective": "HDB - multiple swings",
+        "Any notes": "this move sort of had a quick down leg and then had a mini move and then ranged on the LTF for a while before breaking through the TTF furthest RR point. this could have been a bigger point on the HTF move."
     },
     {
         "Move TF": "TTF",
         "Time of move": "13:36",
         "HTF move this move is in": "R",
         "Direction in relation to HTF move": "OM",
-        "Previous move on this TF": "RB",
-        "Line the previous move started from": "HTF F50%/F50% - the moves where the same so the Fs are the same",
+        "Previous move on this TF": "R/RB",
+        "Line the previous move started from": "F50%/HTF F50%",
         "Did it overshoot or undershoot": "no",
         "What is this move": "R",
         "What line Did it start from": "RR",
-        "How did the beginning of this move reverse from the LTF perspective": "RB - OS",
+        "How did the beginning of this move reverse from the LTF perspective": "OS - RB",
         "Any notes": "this was a weird sort of move because it could have been a bigger new move on the HTF in my view but it didnt."
     },
     {
@@ -537,30 +423,17 @@
         "Previous move on this TF": "R",
         "Line the previous move started from": "RR",
         "Did it overshoot or undershoot": "no",
-        "What is this move": "R",
-        "What line Did it start from": "SS at HTF F38%",
-        "How did the beginning of this move reverse from the LTF perspective": "R - OS",
-        "Any notes": "on the TTF this move lookede like a standard reversal but on the HTF move it is just a weird combo of moves"
-    },
-    {
-        "Move TF": "HTF",
-        "Time of move": "13:40",
-        "HTF move this move is in": "RB",
-        "Direction in relation to HTF move": "WM",
-        "Previous move on this TF": "R",
-        "Line the previous move started from": "SS at HTF SS",
-        "Did it overshoot or undershoot": "no/yes - it did not overshoot the RR but it did overshoot the HHTF F",
         "What is this move": "RB",
-        "What line Did it start from": "RR at HHTF F23%",
-        "How did the beginning of this move reverse from the LTF perspective": "DT",
-        "Any notes": "straight move to the next HHHTF F61%"
+        "What line Did it start from": "SS at HTF F38%",
+        "How did the beginning of this move reverse from the LTF perspective": "OS - R",
+        "Any notes": "on the TTF this move lookede like a standard reversal but on the HTF move it is just a weird combo of moves"
     },
     {
         "Move TF": "TTF",
         "Time of move": "13:44",
         "HTF move this move is in": "RB",
         "Direction in relation to HTF move": "WM-FM",
-        "Previous move on this TF": "R",
+        "Previous move on this TF": "RB",
         "Line the previous move started from": "SS at HTF F38%",
         "Did it overshoot or undershoot": "no/yes - did not overshoot RR but overshot HHTF F23%",
         "What is this move": "RB",
@@ -595,19 +468,6 @@
         "Any notes": "move start was quite a quick R to try get into the LTF moves. This move stalled at a HTF SS below the R point and especially when it got to the SS within that HTF SS area. This did not reverse the move however. once it did get past the stall point it quickly got to the place it would reverse from"
     },
     {
-        "Move TF": "HTF",
-        "Time of move": "13:55",
-        "HTF move this move is in": "RB",
-        "Direction in relation to HTF move": "OM",
-        "Previous move on this TF": "RB",
-        "Line the previous move started from": "RR/HHTF F23%",
-        "Did it overshoot or undershoot": "no",
-        "What is this move": "F61%",
-        "What line Did it start from": "HHHTF F61%",
-        "How did the beginning of this move reverse from the LTF perspective": "HDB",
-        "Any notes": "was not looking like a very confident move to be honest. Looked liek ot could reverse at any point for the most part when I looj at it in the entirety"
-    },
-    {
         "Move TF": "TTF",
         "Time of move": "13:59",
         "HTF move this move is in": "F61%",
@@ -628,7 +488,7 @@
         "Previous move on this TF": "R",
         "Line the previous move started from": "HHHTF F61%",
         "Did it overshoot or undershoot": "yes - slightly overshot",
-        "What is this move": "HTF F38%/F38% - HTF and TTF move were the same prior so F points are too",
+        "What is this move": "F38%/HTF F38%",
         "What line Did it start from": "RR",
         "How did the beginning of this move reverse from the LTF perspective": "DT - slow OS basicaly",
         "Any notes": ""
@@ -638,7 +498,7 @@
         "Time of move": "14:05",
         "HTF move this move is in": "F61%",
         "Direction in relation to HTF move": "WM",
-        "Previous move on this TF": "HTF F38%/F38% - HTF and TTF move were the same prior so F points are too",
+        "Previous move on this TF": "F38%/HTF F38%",
         "Line the previous move started from": "RR",
         "Did it overshoot or undershoot": "yes - slightly overshot",
         "What is this move": "F38%",
@@ -679,11 +539,11 @@
         "Direction in relation to HTF move": "OM",
         "Previous move on this TF": "RB",
         "Line the previous move started from": "HTF F50%",
-        "Did it overshoot or undershoot": "RR/HTF F61%",
+        "Did it overshoot or undershoot": "yes - slightly overshot the closest RR line and the HTF F61% line",
         "What is this move": "F61%",
-        "What line Did it start from": "RR",
-        "How did the beginning of this move reverse from the LTF perspective": "yes - slightly overshot the closest RR line and the HTF F61% line",
-        "Any notes": "OS - RB"
+        "What line Did it start from": "RR at HTF F61%",
+        "How did the beginning of this move reverse from the LTF perspective": "OS - RB",
+        "Any notes": ""
     },
     {
         "Move TF": "TTF",
@@ -691,12 +551,12 @@
         "HTF move this move is in": "F61%",
         "Direction in relation to HTF move": "WM",
         "Previous move on this TF": "F61%",
-        "Line the previous move started from": "RR",
-        "Did it overshoot or undershoot": "F61%",
-        "What is this move": "yes - slightly overshot the closest RR line and the HTF F61% line",
-        "What line Did it start from": "R",
-        "How did the beginning of this move reverse from the LTF perspective": "no",
-        "Any notes": "OS - slow start RB"
+        "Line the previous move started from": "RR at HTF F61%",
+        "Did it overshoot or undershoot": "no",
+        "What is this move": "R",
+        "What line Did it start from": "F61%",
+        "How did the beginning of this move reverse from the LTF perspective": "OS - slow start RB",
+        "Any notes": "this was a quick move. basically just a swing on the LTF"
     },
     {
         "Move TF": "TTF",
@@ -725,19 +585,6 @@
         "Any notes": "this move is also one move on the LTF. the last three moves have been synonymous on the LTF and TTF"
     },
     {
-        "Move TF": "HTF",
-        "Time of move": "14:20",
-        "HTF move this move is in": "RB",
-        "Direction in relation to HTF move": "WM",
-        "Previous move on this TF": "F",
-        "Line the previous move started from": "F61%",
-        "Did it overshoot or undershoot": "HTF resisatnce/HTF F61%",
-        "What is this move": "no",
-        "What line Did it start from": "F50%",
-        "How did the beginning of this move reverse from the LTF perspective": "yes - overshot the F line as well sa the HTF resisatnce",
-        "Any notes": "OS - RB"
-    },
-    {
         "Move TF": "TTF",
         "Time of move": "14:24",
         "HTF move this move is in": "F50%",
@@ -749,19 +596,6 @@
         "What line Did it start from": "RR at HTF RR at HTF F61%",
         "How did the beginning of this move reverse from the LTF perspective": "QDT",
         "Any notes": "this move was slightly unexpected I think"
-    },
-    {
-        "Move TF": "HTF",
-        "Time of move": "14:30",
-        "HTF move this move is in": "RB",
-        "Direction in relation to HTF move": "OM",
-        "Previous move on this TF": "F50%",
-        "Line the previous move started from": "HTF resisatnce/HTF F61%",
-        "Did it overshoot or undershoot": "no/yes - slighlty undershot F50%",
-        "What is this move": "R",
-        "What line Did it start from": "F50% at HTF SS at HHTF F50%",
-        "How did the beginning of this move reverse from the LTF perspective": "OS - R",
-        "Any notes": "the TTF move and this move were synonymous with eachother"
     },
     {
         "Move TF": "TTF",
@@ -784,7 +618,7 @@
         "Previous move on this TF": "HTF R",
         "Line the previous move started from": "HTF F50%",
         "Did it overshoot or undershoot": "yes - overshot the closest HTF ressitance line",
-        "What is this move": "F61%/HTF SS",
+        "What is this move": "F61%/HTF R",
         "What line Did it start from": "HTF RR",
         "How did the beginning of this move reverse from the LTF perspective": "OS - RB",
         "Any notes": "stalled for quite a bit at the TTF F points however broke through them very quickly and made a false breakout"
@@ -794,26 +628,13 @@
         "Time of move": "14:40",
         "HTF move this move is in": "R",
         "Direction in relation to HTF move": "WM",
-        "Previous move on this TF": "F61%/HTF SS",
+        "Previous move on this TF": "F61%/HTF R",
         "Line the previous move started from": "HTF RR",
         "Did it overshoot or undershoot": "no/yes - overshot the TTF F61%",
         "What is this move": "F61%",
         "What line Did it start from": "F61% at HTF F38% within HTF SS",
         "How did the beginning of this move reverse from the LTF perspective": "OS - R",
         "Any notes": "was basically a LTF mvoe on the TTF chart"
-    },
-    {
-        "Move TF": "HTF",
-        "Time of move": "14:35",
-        "HTF move this move is in": "RB",
-        "Direction in relation to HTF move": "WM",
-        "Previous move on this TF": "R",
-        "Line the previous move started from": "F50% at HTF SS at HHTF F50%",
-        "Did it overshoot or undershoot": "no/yes - overshot the HHTF F23%",
-        "What is this move": "RB/R",
-        "What line Did it start from": "RR at HTF F23%",
-        "How did the beginning of this move reverse from the LTF perspective": "HDT",
-        "Any notes": ""
     },
     {
         "Move TF": "TTF",
@@ -837,7 +658,7 @@
         "Line the previous move started from": "F61%",
         "Did it overshoot or undershoot": "no",
         "What is this move": "F50%",
-        "What line Did it start from": "HTF SS/SS",
+        "What line Did it start from": "SS at HTF SS",
         "How did the beginning of this move reverse from the LTF perspective": "DT",
         "Any notes": "this move ended at a SS line within the HTF SS area"
     },
@@ -881,32 +702,6 @@
         "Any notes": "as soon as the move hit the HTF SS line the LTF did a little mini move"
     },
     {
-        "Move TF": "HHTF",
-        "Time of move": "13:30",
-        "HTF move this move is in": "RB",
-        "Direction in relation to HTF move": "WM-FM",
-        "Previous move on this TF": "RB",
-        "Line the previous move started from": "HHHHTF RR",
-        "Did it overshoot or undershoot": "no",
-        "What is this move": "HHHTF R",
-        "What line Did it start from": "HHHTF F61%",
-        "How did the beginning of this move reverse from the LTF perspective": "DB",
-        "Any notes": "this move took long enough to end the london session so price moves a bit weird after this. It looked likd it could ahve been a F move but the mini move on the F61% line then got broken through. The move did not reach the HHHTF closest RR line though and undershot it by quite a bit. It did so at the point the London session shut though so it might have been that."
-    },
-    {
-        "Move TF": "HTF",
-        "Time of move": "14:55",
-        "HTF move this move is in": "HHTF R",
-        "Direction in relation to HTF move": "WM-FM",
-        "Previous move on this TF": "RB/R",
-        "Line the previous move started from": "RR at HTF F23%",
-        "Did it overshoot or undershoot": "no",
-        "What is this move": "RB",
-        "What line Did it start from": "SS at HTF SS",
-        "How did the beginning of this move reverse from the LTF perspective": "OS - RB",
-        "Any notes": "Move starting reversal had a little mini move on the TTF but it was basically a RB move on the LTF. This move confrims the second leg of a double bottom. This was basically affected bt the HHTF F61% I think"
-    },
-    {
         "Move TF": "TTF",
         "Time of move": "14:55",
         "HTF move this move is in": "RB",
@@ -927,8 +722,8 @@
         "Previous move on this TF": "RB",
         "Line the previous move started from": "HTF SS",
         "Did it overshoot or undershoot": "no/yes - overshot the HHTF F line and one of the HTF resitance lines but not the TTF rsesitance lines",
-        "What is this move": "HTF F38%/F38%",
-        "What line Did it start from": "HHTF F38%/HTF RR/RR",
+        "What is this move": "F38%/HTF F38%",
+        "What line Did it start from": "RR at HTF RR at HHTF F38%",
         "How did the beginning of this move reverse from the LTF perspective": "QDB",
         "Any notes": ""
     },
@@ -937,8 +732,8 @@
         "Time of move": "15:19",
         "HTF move this move is in": "RB",
         "Direction in relation to HTF move": "WM",
-        "Previous move on this TF": "HTF F38%/F38%",
-        "Line the previous move started from": "HHTF F38%/HTF RR/RR",
+        "Previous move on this TF": "F38%/HTF F38%",
+        "Line the previous move started from": "RR/HTF RR/HHTF F38%",
         "Did it overshoot or undershoot": "no",
         "What is this move": "R",
         "What line Did it start from": "HTF F38%/F38%",
@@ -954,7 +749,7 @@
         "Line the previous move started from": "HTF F38%/F38%",
         "Did it overshoot or undershoot": "yes - slightly undershot the closest line",
         "What is this move": "F61%",
-        "What line Did it start from": "TTF resisatnce",
+        "What line Did it start from": "RR",
         "How did the beginning of this move reverse from the LTF perspective": "OS - R",
         "Any notes": "this si basically a R move on the LTF being played out on the TTF chart"
     },
@@ -964,7 +759,7 @@
         "HTF move this move is in": "RB",
         "Direction in relation to HTF move": "WM",
         "Previous move on this TF": "F61%",
-        "Line the previous move started from": "TTF resisatnce",
+        "Line the previous move started from": "RR",
         "Did it overshoot or undershoot": "no",
         "What is this move": "R",
         "What line Did it start from": "F61%",
@@ -972,42 +767,30 @@
         "Any notes": ""
     },
     {
-        "Move TF": "HTF",
-        "Time of move": "15:15",
-        "HTF move this move is in": "HHTF R",
-        "Direction in relation to HTF move": "OM - looked like it may have been a new move on teh HHTF chart as the HTF candle had a wick under it",
-        "Previous move on this TF": "RB",
-        "Line the previous move started from": "HTF SS",
-        "Did it overshoot or undershoot": "yes - overshot both the HHTF F and HTF RR furthest line",
-        "What is this move": "R",
-        "What line Did it start from": "HHTF F38%/HTF RR",
-        "How did the beginning of this move reverse from the LTF perspective": "DT",
-        "Any notes": "the move started by breaking pst slightly the two previously mentioned lines but stopped quite precisely when it got to the RRl ine of teh HTF mini move that was slightly after both the aformentioned lines. This move was the start of a mini move on the HHTF also."
-    },
-    {
         "Move TF": "TTF",
         "Time of move": "15:25",
         "HTF move this move is in": "R",
         "Direction in relation to HTF move": "WM-FM",
-        "Previous move on this TF": "F61%",
-        "Line the previous move started from": "no",
-        "Did it overshoot or undershoot": "QDT",
-        "What is this move": "RR within area of HTF RR",
-        "What line Did it start from": "no",
-        "How did the beginning of this move reverse from the LTF perspective": "this move stalled slightly as it got to a TTF mini move that was past the R point for this move. It agaon stalled when it got to the mini move lower down as well but then suddenly broke through a little lower. The stall also coincided with the closest HHTF SS line as well"
+        "Previous move on this TF": "R",
+        "Line the previous move started from": "F61%",
+        "Did it overshoot or undershoot": "no",
+        "What is this move": "RB",
+        "What line Did it start from": "RR within area of HTF RR",
+        "How did the beginning of this move reverse from the LTF perspective": "QDT",
+        "Any notes": "this move stalled slightly as it got to a TTF mini move that was past the R point for this move. It agaon stalled when it got to the mini move lower down as well but then suddenly broke through a little lower. The stall also coincided with the closest HHTF SS line as well"
     },
     {
         "Move TF": "TTF",
         "Time of move": "15:38",
         "HTF move this move is in": "R",
         "Direction in relation to HTF move": "OM",
-        "Previous move on this TF": "F61%",
-        "Line the previous move started from": "no",
-        "Did it overshoot or undershoot": "F38%",
-        "What is this move": "RR within area of HTF RR",
-        "What line Did it start from": "no",
-        "How did the beginning of this move reverse from the LTF perspective": "HTF SS/HHTF SS",
-        "Any notes": "yes - overshot the closest HTF SS line"
+        "Previous move on this TF": "RB",
+        "Line the previous move started from": "RR within area of HTF RR",
+        "Did it overshoot or undershoot": "no",
+        "What is this move": "RB",
+        "What line Did it start from": "RR within area of HTF RR",
+        "How did the beginning of this move reverse from the LTF perspective": "F38%",
+        "Any notes": "HTF SS/HHTF SS"
     },
     {
         "Move TF": "TTF",
@@ -1015,25 +798,12 @@
         "HTF move this move is in": "R",
         "Direction in relation to HTF move": "WM",
         "Previous move on this TF": "F38%",
-        "Line the previous move started from": "HTF SS/HHTF SS",
+        "Line the previous move started from": "HTF SS at HHTF SS",
         "Did it overshoot or undershoot": "no",
         "What is this move": "F61%",
         "What line Did it start from": "F38%",
         "How did the beginning of this move reverse from the LTF perspective": "OS",
         "Any notes": "quick move again"
-    },
-    {
-        "Move TF": "HTF",
-        "Time of move": "15:35",
-        "HTF move this move is in": "HHHTF R",
-        "Direction in relation to HTF move": "WM",
-        "Previous move on this TF": "R",
-        "Line the previous move started from": "HHTF F38%/HTF RR",
-        "Did it overshoot or undershoot": "no",
-        "What is this move": "F61%",
-        "What line Did it start from": "HTF SS within HHTF SS",
-        "How did the beginning of this move reverse from the LTF perspective": "QDB",
-        "Any notes": ""
     },
     {
         "Move TF": "TTF",
@@ -1056,7 +826,7 @@
         "Previous move on this TF": "RB",
         "Line the previous move started from": "F61%",
         "Did it overshoot or undershoot": "no",
-        "What is this move": "HTF F38%/F50%",
+        "What is this move": "F50%/HTF F38%",
         "What line Did it start from": "HTF F61%",
         "How did the beginning of this move reverse from the LTF perspective": "OS - breakout R",
         "Any notes": "the move stalled so nicely on the 38% HTF F line but then it simply just broke through it and ddint even touch the HTF F50% line before reversing backand amking a new move. very sneeky. Also there was a mini TTF move at the HTF F38% as well."
@@ -1066,25 +836,12 @@
         "Time of move": "15:55",
         "HTF move this move is in": "F61%",
         "Direction in relation to HTF move": "WM",
-        "Previous move on this TF": "HTF F38%/F50%",
+        "Previous move on this TF": "F50%/HTF F38%",
         "Line the previous move started from": "HTF F61%",
         "Did it overshoot or undershoot": "yes - overshot",
         "What is this move": "R",
-        "What line Did it start from": "HTF F38%/F38%",
+        "What line Did it start from": "F38%/HTF F38%",
         "How did the beginning of this move reverse from the LTF perspective": "DT - second leg was a false breakout reversal",
-        "Any notes": ""
-    },
-    {
-        "Move TF": "HTF",
-        "Time of move": "15:50",
-        "HTF move this move is in": "HHHTF R",
-        "Direction in relation to HTF move": "OM",
-        "Previous move on this TF": "F61%",
-        "Line the previous move started from": "HTF SS within HHTF SS",
-        "Did it overshoot or undershoot": "no",
-        "What is this move": "R",
-        "What line Did it start from": "F61%",
-        "How did the beginning of this move reverse from the LTF perspective": "DT",
         "Any notes": ""
     },
     {
@@ -1118,31 +875,19 @@
         "Time of move": "16:03",
         "HTF move this move is in": "R",
         "Direction in relation to HTF move": "WM",
-        "Previous move on this TF": "SS at HTF F50%",
-        "Line the previous move started from": "no/yes - overshot SS slightly",
-        "Did it overshoot or undershoot": "DT",
-        "What is this move": "F61% at HTF RR",
-        "What line Did it start from": "no/yes - overshot F61%",
-        "How did the beginning of this move reverse from the LTF perspective": "very quick move down"
-    },
-    {
-        "Move TF": "HTF",
-        "Time of move": "16:00",
-        "HTF move this move is in": "HHHTF R",
-        "Direction in relation to HTF move": "WM",
-        "Previous move on this TF": "R",
-        "Line the previous move started from": "F61%",
-        "Did it overshoot or undershoot": "no",
+        "Previous move on this TF": "F61%",
+        "Line the previous move started from": "SS at HTF F50%",
+        "Did it overshoot or undershoot": "no/yes - overshot F61%",
         "What is this move": "RB",
-        "What line Did it start from": "SS at HTF SS",
-        "How did the beginning of this move reverse from the LTF perspective": "HDT",
-        "Any notes": ""
+        "What line Did it start from": "F61% at HTF RR",
+        "How did the beginning of this move reverse from the LTF perspective": "DT",
+        "Any notes": "very quick move down"
     },
     {
         "Move TF": "TTF",
         "Time of move": "16:04",
         "HTF move this move is in": "RB",
-        "Direction in relation to HTF move": "WM",
+        "Direction in relation to HTF move": "WM-FM",
         "Previous move on this TF": "RB",
         "Line the previous move started from": "F61%",
         "Did it overshoot or undershoot": "no",
@@ -1230,18 +975,6 @@
         "Any notes": "the start of the moves R was quite quick and the move ended by barely touching the closest R line"
     },
     {
-        "Move TF": "HTF",
-        "Time of move": "16:20",
-        "HTF move this move is in": "HHHTF R OM",
-        "Direction in relation to HTF move": "RB",
-        "Previous move on this TF": "HTF SS within HHTF SS",
-        "Line the previous move started from": "no",
-        "Did it overshoot or undershoot": "DT",
-        "What is this move": "RR at HTF F38%",
-        "What line Did it start from": "no/yes - overshot the HHTF F38% by a bit and was in the middle of the HTF RR area",
-        "How did the beginning of this move reverse from the LTF perspective": ""
-    },
-    {
         "Move TF": "TTF",
         "Time of move": "16:27",
         "HTF move this move is in": "R",
@@ -1281,19 +1014,6 @@
         "Any notes": "move whent cleanly down to the F point"
     },
     {
-        "Move TF": "HTF",
-        "Time of move": "16:30",
-        "HTF move this move is in": "HHHTF R",
-        "Direction in relation to HTF move": "WM",
-        "Previous move on this TF": "R",
-        "Line the previous move started from": "RR at HTF F38%",
-        "Did it overshoot or undershoot": "no",
-        "What is this move": "RB",
-        "What line Did it start from": "SS",
-        "How did the beginning of this move reverse from the LTF perspective": "HDB",
-        "Any notes": "was probably influened by the few touches at HTF SS the previous TTF moves had. So their was upward pressure I think"
-    },
-    {
         "Move TF": "TTF",
         "Time of move": "16:43",
         "HTF move this move is in": "RB",
@@ -1305,19 +1025,6 @@
         "What line Did it start from": "F61% at HTF F61% - synonymous moves",
         "How did the beginning of this move reverse from the LTF perspective": "OS - R",
         "Any notes": "the move reversed quite quickly and started stalling all throughout the HTF RR area. made a mini move as well but dod not actually stop until it broke all the way past it. This was a HHTF move as well so it theoretically didnt haveto stop anywhere except where the HHTF move could stop at which is what happened. Also stalled slightly before stopping as it was just shy of the HHTF F61%"
-    },
-    {
-        "Move TF": "HTF",
-        "Time of move": "16:55",
-        "HTF move this move is in": "HHHTF R",
-        "Direction in relation to HTF move": "OM",
-        "Previous move on this TF": "RB",
-        "Line the previous move started from": "HTF SS",
-        "Did it overshoot or undershoot": "yes - undershot slightly",
-        "What is this move": "F61%",
-        "What line Did it start from": "HHTF F61%",
-        "How did the beginning of this move reverse from the LTF perspective": "OS - HTF F61%",
-        "Any notes": ""
     },
     {
         "Move TF": "TTF",
@@ -1340,7 +1047,7 @@
         "Previous move on this TF": "HTF F61%",
         "Line the previous move started from": "HHTF F61%",
         "Did it overshoot or undershoot": "yes - slightly",
-        "What is this move": "HTF F38%/F38% - they were the same F points",
+        "What is this move": "F38%/HTF F38%",
         "What line Did it start from": "HTF F61%",
         "How did the beginning of this move reverse from the LTF perspective": "DB",
         "Any notes": "this move began with a mini move on the TTF and it ended very quickly"
@@ -1350,11 +1057,11 @@
         "Time of move": "17:06",
         "HTF move this move is in": "F61%",
         "Direction in relation to HTF move": "WM",
-        "Previous move on this TF": "HTF F38%/F38% - they were the same F points",
+        "Previous move on this TF": "F38%/HTF F38%",
         "Line the previous move started from": "HTF F61%",
-        "Did it overshoot or undershoot": "yes - slightly undershot",
-        "What is this move": "F50%",
-        "What line Did it start from": "HTF F38%/F38%",
+        "Did it overshoot or undershoot": "no",
+        "What is this move": "R",
+        "What line Did it start from": "F50%",
         "How did the beginning of this move reverse from the LTF perspective": "OS - F",
         "Any notes": "this was a tiny move on the TTF. The whole sequence of mvoes to come was a bit undecisive and weird. This move was basically a LTF move played out on the TTF"
     },
@@ -1363,26 +1070,13 @@
         "Time of move": "17:09",
         "HTF move this move is in": "F61%",
         "Direction in relation to HTF move": "OM",
-        "Previous move on this TF": "F50%",
-        "Line the previous move started from": "HTF F38%/F38%",
+        "Previous move on this TF": "R",
+        "Line the previous move started from": "F50%",
         "Did it overshoot or undershoot": "no/yes - slightly overshot RR",
         "What is this move": "R",
         "What line Did it start from": "RR at HTF F38%",
         "How did the beginning of this move reverse from the LTF perspective": "DB - small swings",
         "Any notes": ""
-    },
-    {
-        "Move TF": "HTF",
-        "Time of move": "17:00",
-        "HTF move this move is in": "HHHTF R",
-        "Direction in relation to HTF move": "WM",
-        "Previous move on this TF": "F61%",
-        "Line the previous move started from": "HHTF F61%",
-        "Did it overshoot or undershoot": "no",
-        "What is this move": "F50%",
-        "What line Did it start from": "F61%",
-        "How did the beginning of this move reverse from the LTF perspective": "DB - multiple swings",
-        "Any notes": "this move was a very weak one because the swings that made it up where very back and forth and indecisive of move. This was almost jsut a mini move on the HTF"
     },
     {
         "Move TF": "TTF",
@@ -1392,7 +1086,7 @@
         "Previous move on this TF": "R",
         "Line the previous move started from": "RR at HTF F38%",
         "Did it overshoot or undershoot": "no",
-        "What is this move": "R/RB",
+        "What is this move": "R",
         "What line Did it start from": "SS at HTF SS",
         "How did the beginning of this move reverse from the LTF perspective": "OS - R",
         "Any notes": "the startbasically made a mini move on the TTF. A weird mopve to try and categorize as it oculd be considered a reversal berakout as it broke past the RR hit the HTF F then retraced back and respected the RR line"
@@ -1402,11 +1096,11 @@
         "Time of move": "17:16",
         "HTF move this move is in": "F50%",
         "Direction in relation to HTF move": "OM",
-        "Previous move on this TF": "R/RB",
+        "Previous move on this TF": "R",
         "Line the previous move started from": "SS/HTF SS",
         "Did it overshoot or undershoot": "no",
         "What is this move": "R",
-        "What line Did it start from": "HTF F50%/RR",
+        "What line Did it start from": "RR at HTF F50%",
         "How did the beginning of this move reverse from the LTF perspective": "DT - R followed by reversal before a breakout",
         "Any notes": "this move started of indecisive again as it made a mini move basically from the get go. on its way down as well it was stalling throughout until a sudden quick push on the LTF got it too the SS"
     },
@@ -1422,19 +1116,6 @@
         "What line Did it start from": "SS at HTF F61% within HTF SS",
         "How did the beginning of this move reverse from the LTF perspective": "OS - breakout R",
         "Any notes": "stalled a little bit when it gotto the closest RR line and made a mini move quite sharply down but that then reversed to break through and do a false breakout of the extremes of the TTF line"
-    },
-    {
-        "Move TF": "HTF",
-        "Time of move": "17:25",
-        "HTF move this move is in": "HHHTF R",
-        "Direction in relation to HTF move": "OM",
-        "Previous move on this TF": "F50%",
-        "Line the previous move started from": "F61%",
-        "Did it overshoot or undershoot": "yes - slightly overshot",
-        "What is this move": "RB",
-        "What line Did it start from": "F50%",
-        "How did the beginning of this move reverse from the LTF perspective": "DT",
-        "Any notes": ""
     },
     {
         "Move TF": "TTF",
@@ -1476,19 +1157,6 @@
         "Any notes": "move stalled slightly when hitting the xlosest HTF line of SS but carried on slightly till hitting the furthest TTF line of SS within the HTF SS area. This was also the 61% F on the HHTF."
     },
     {
-        "Move TF": "HTF",
-        "Time of move": "17:40",
-        "HTF move this move is in": "HHHTF R",
-        "Direction in relation to HTF move": "WM",
-        "Previous move on this TF": "RB",
-        "Line the previous move started from": "F50%",
-        "Did it overshoot or undershoot": "no",
-        "What is this move": "R/RB",
-        "What line Did it start from": "SS at HHTF F61%",
-        "How did the beginning of this move reverse from the LTF perspective": "OS - R",
-        "Any notes": "this move almost looked like it could be a RB but it didnt go far enough."
-    },
-    {
         "Move TF": "TTF",
         "Time of move": "17:41",
         "HTF move this move is in": "R/RB",
@@ -1509,7 +1177,7 @@
         "Previous move on this TF": "RB",
         "Line the previous move started from": "SS within HTF SS area at HHTF F61%",
         "Did it overshoot or undershoot": "no",
-        "What is this move": "F50%/HTF F50% - previous move on the TTF and HTF were the same so the F points were too",
+        "What is this move": "F50%/HTF F50%",
         "What line Did it start from": "HTF RR",
         "How did the beginning of this move reverse from the LTF perspective": "DT",
         "Any notes": "this move began by becoming a weird combination of two moves for the HTF so it was interesting. made a mini move on the HTF"
@@ -1519,26 +1187,13 @@
         "Time of move": "18:02",
         "HTF move this move is in": "R/RB",
         "Direction in relation to HTF move": "WM",
-        "Previous move on this TF": "F50%/HTF F50% - previous move on the TTF and HTF were the same so the F points were too",
+        "Previous move on this TF": "F50% at HTF F50% - synonymous moves",
         "Line the previous move started from": "HTF RR",
         "Did it overshoot or undershoot": "yes - slightly overshot",
         "What is this move": "HTF R",
         "What line Did it start from": "F50% at HTF F50% - synonymous moves",
         "How did the beginning of this move reverse from the LTF perspective": "DB",
         "Any notes": "this move didnt stop at any real point on the TTF and only stopped at a sort of point inside the HTF area or RR made by the previous TTF RB move. This is because the previous move on the TTF made a mini move on the HTF."
-    },
-    {
-        "Move TF": "HTF",
-        "Time of move": "17:55",
-        "HTF move this move is in": "HHHTF R",
-        "Direction in relation to HTF move": "OM",
-        "Previous move on this TF": "R/RB",
-        "Line the previous move started from": "HHTF F61%/HTF SS",
-        "Did it overshoot or undershoot": "no/yes - it overshot the HTF F50% and the first HTF RR area but not the second",
-        "What is this move": "F61%",
-        "What line Did it start from": "RR at HTF F50%",
-        "How did the beginning of this move reverse from the LTF perspective": "DT",
-        "Any notes": ""
     },
     {
         "Move TF": "TTF",
@@ -1554,19 +1209,6 @@
         "Any notes": "this move stalled slightly at teh TTF F points and at the HTF F50% as well. made a few mini moves at that F point too. It did break lower from those mini moves slightily to just undershoot the HTF F61% line."
     },
     {
-        "Move TF": "HTF",
-        "Time of move": "18:20",
-        "HTF move this move is in": "HHHTF R",
-        "Direction in relation to HTF move": "WM",
-        "Previous move on this TF": "F61%",
-        "Line the previous move started from": "RR at HTF F50%",
-        "Did it overshoot or undershoot": "yes - slightly undershot F61% slighlty overshot F38%",
-        "What is this move": "RB",
-        "What line Did it start from": "F61% at HTF F38%",
-        "How did the beginning of this move reverse from the LTF perspective": "QDB",
-        "Any notes": "stalled slightly at its R point but then broke through and went past even the HTF F61% point. this move was a continutaion of the HTF move"
-    },
-    {
         "Move TF": "TTF",
         "Time of move": "18:24",
         "HTF move this move is in": "RB",
@@ -1574,7 +1216,7 @@
         "Previous move on this TF": "RB",
         "Line the previous move started from": "HTF RR",
         "Did it overshoot or undershoot": "yes - slightly undershot",
-        "What is this move": "HTF F61%",
+        "What is this move": "HTF R",
         "What line Did it start from": "HTF F61%",
         "How did the beginning of this move reverse from the LTF perspective": "HDB",
         "Any notes": "stalled slightly at the F61% point but then continued to break past slightly the HTF F61% point before reversing again"
@@ -1584,7 +1226,7 @@
         "Time of move": "18:33",
         "HTF move this move is in": "RB",
         "Direction in relation to HTF move": "OM",
-        "Previous move on this TF": "HTF F61%",
+        "Previous move on this TF": "HTF R",
         "Line the previous move started from": "HTF F61%",
         "Did it overshoot or undershoot": "no",
         "What is this move": "F50%",
@@ -1614,7 +1256,7 @@
         "Line the previous move started from": "F50%",
         "Did it overshoot or undershoot": "no",
         "What is this move": "HTF F23%",
-        "What line Did it start from": "HHHTF resisatnce",
+        "What line Did it start from": "HHHTF R",
         "How did the beginning of this move reverse from the LTF perspective": "DT - small swings",
         "Any notes": "this was a very accurate start at almost exactly a HHHTF RR line. very surprising. It als orespected the HTF F23% even though it didnt make a mini move on the HTF."
     }
