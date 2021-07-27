@@ -1,0 +1,145 @@
+#+TITLE: Trading
+
+so what is it that needs to happen then.
+so i need to do is place a trade at  point where the current move ends. So this means that the current move will actually end.
+- current move will end :: therefore you only go against the current TTF move direction
+- will need to place trades in direction of the HTF move to benefit from reversal breakout moves. :: meaning only placing trades when the TTF move is in the same direction as the HTF move, you only really want to place a new trade on at that point when the HTF move gets to a point where the HTF move can be reversed from
+- you do do not have to be able to get the whole move perfectly :: meaning that you just need to be able to enter at a place where the move on the chart will be reversed from in some form and you need to exit whilst the price is still past your entry point on a favourable direction.
+- a reversal breakout will not occur without the HTF move also making a new one :: meaning that you are safe to place trades at a reversal point as long as the HTF move is not going to reverse direction
+
+all the game is incomplete info and benefiting from it.
+you do not need to make a perfect collection of a move. You can exit whenever and still make money as long as you are in a favourable position from your entry.
+This means that you can basically exit if you are in profit because that is fine. you are in profit. you need to always enter for a reason and that is your reward. You need to always know that your knowledge is always going to be imperfect meaning you need to make money in spite of not knowing the answer and that would always be the case.
+wanting to know everything before hand will just not work and not wanting to place a trade until you figure out what the next move is will just not be the case at all. You need to not know for sure but still make money consistently. That only happens by following certain stuff that happens to price most times and playing of that.
+You need to be ok with not knowing but risking anyway and you need to be able to think properly and clearly about what your possible options are and being able to calculate the risk vs reward as accurately as possible. Know that 1 trade simply cannot take you out of the game at all.
+
+* always going to be the case - This is the game that is being played
+- Trades will be either losses or wins
+- I will never know exactly what price will do and what the outcome of a trade will be
+- current move will stop and reverse at some point
+- current move will be 1 of the 4 different types of moves
+- current HTF move reversal will play out in one of the culmination of ways on the TTF
+
+So these things are here for me to know what type of game it is that I am playing. If I am feeling a type of way about any of this stuff being the case then that means I am trying to play a different game. These are the fixed variables, the rules so to speak, of this game.
+Get to be ok with them because that is the environment you are playing in.
+
+Another thing that I need to come to grips with if I need to be ok with the environment and the set of rules and circumstances that I am playing in is that I will not be able to get to a position where every trade is worth thousands in the time it takes to snap my fingers. All of this takes time for me to complete, especially if I am not able to be feeling ok with doing basic stuff.
+
+** Quick side note.
+you *expect* a certain *feeling* when *results* happen. When those *results* do happen and the *feelings* you have are not what you *expected* then you, effectively, think that you have not done what you have set out to do because if you had done what you had set out to do then you would have felt differently about it. The proper way to go about that scenario I think is this. When you do get results and you do not get the feelings that you expected to get then you should re-adjust you're expectation's of what feelings should be expected. Never think that you have not attained the results because you have not attained the expected feelings. On the contrary you have attained the results you have just not attained the feelings you thought you would have, therefore you change what you're expectations of the feelings are so that they match reality.
+At least that's the expectation. When this cycle is repeated over and over then this can end up with the belief that you can never do stuff properly and you just can't do stuff and attempting will only bring failure, along with any negative consequences that may come with that. Focus on attempts at doing stuff not the actual results itself.
+
+So just a thought as well. You think that the future feeling of a good result will be good feelings.
+You also think that the future result of a bad feeling will be a bad result.
+
+Hence when you get a good result and the good feeling doesn't come you are left wanting because you expected a different feeling as a indicator to when you have gotten that good result. The result almost isn't really what you wanted, what you were looking for, it was the feeling.
+Like wise, when you have a bad feeling, you use this as a indicator to almost be a proof that the current action, or results that will ensue, are bad. Again the inner feeling dictates how you perceive actions and results externally.
+
+I think this is starting to be more and more the bad focal point in your sights. Maybe you should not be looking for feelings as a sign. Maybe the sign should be the attempts made.
+Maybe more attempts, more time spent actually trying to DO, to try and progress towards a thing is what should be the sign that indicates if stuff is going well or not.
+
+Ye maybe the feeling is not a dictation of a future result and neither is it a confirmation of a task successfully completed. Maybe with me my feelings at the moments are a little messy, maybe I am a little sick in this regard. Perhaps I shouldn't listen to them too much at this time until I can get better from this. Perhaps listening to attempts is a better predictor of future results and a better sign of when achievements are coming to their completion.
+
+I put this in the "always going to be the case" section because up until this point, the problems have been. Maybe I shall start to trust less, and look for less, my feelings and look upon attempts and trials more. I will attempt to at least ;)
+* back to basics
+All this is placing a bet or buying a certain amount of something at one price and then reselling it at another and vice versa.
+So to do it well means to be able to buy or sell at a point and resell at another point where the price is in your favour and you have a profit. That is basically all the concern. A good way to go about a task is to know the requirements and be able to work backwards.
+
+All this game really is dealing with is risk. The only way that you can get rewarded is if you are willing, and have, placed risk onto the market by having bought or sold something. That's it.
+You are basically saying "*I am willing to bet 2 pips that price will not move to my stop loss by fulfilling this event and I think that it will move in the other direction for around 4 pips fulfilling the other event.*"
+The second part of the risk equation that you are effectively playing in is this. "I am willing to bet that price will move up from this point than down, or vice versa, *because I think it is the more likely scenario to take place.*"
+
+That's basically the game you are playing. You are dealing with the unknown on every trade in the sense that you never know with 100% percent what is going to happen. However you do have options and you can tell roughly what may be the likelihood of these options panning out and what would be the reward or risk that would be accrued if these scenarios happened.
+The hope is when you can see and realise what the options are and what the cost to acting actually is, you will feel less inclined to feel bad about trading because you know that losing does not equate to a catastrophic loss if done right. Instead losing is most definitely part of the path to get the results that you want to get.
+** Basic Requirements
+*** be able to buy/sell at a place where price will not hit your stop loss before making a new move and exiting at a point whilst you position is still in profit.
+one way this can happen with the constraints on the SL size is through entering at points where a new move will be formed or where a new move has ben formed and you enter in hopes of the move carrying on it's momentum.
+Placing SL at a place the current move can reverse from.
+*** be able to do this consistently enough to where your win percentage is at least 50% and preferably more.
+This just means finding a method that is consistent enough to where it is reliable and happens more time than not in your favour.
+*** aim for an average win size of just over 4 pips
+Only enter the trade if the likely event that is aimed for can give at least this amount of movement in price from entry point if not more.
+- This means that if you are entering into a trade that is against the current HTF move and you are expecting that a fib will ensue then, because you think a fib will be the case and you do not know what fib line the price will reverse from, that move that just happened on the TTF should ideally be at least 12 pips in size. This will allow the 31.8% line to have been around 4 pips from the new move starting price.
+*** be able to benefit from larger moves which I am going to define as being larger than the average required move which is about 4.2 pips.
+Entering in the direction of the HTF move in order to benefit from reversal breakouts on the TTF is one way of allowing this to be the case.
+** what this does not mean
+- These requirements does not mean that getting small moves under the average size will lead to me not being profitable overall
+- does not mean that you have to never lose at all to be profitable overall
+- does not mean that you need to get the entirety of a move's span to be profitable overall
+- does not mean that you need to enter exactly where the move starts from to be profitable, because you only need to benefit from future price movement. As long as SL is not hit and price has moved to a profitable price point that's all that matters
+- does not mean that you need to always aim for large moves. Aiming for what is possible is a lot better.
+** Starting with a new plan
+So I'm gonna jot down what I think will help me achieve the thing that is needed to get this stuff done.
+
+- Every trade should be aimed for at least 4.2 pips. If the trade you want to make does not have that then you should not go for it.
+- Trade with the HTF move direction because this gives you lee way into allowing you to hopefully have a larger pip value in winnings, due to the possibility of RB moves.
+- Only trade against the HTF move direction at a place where it can be reversed from and when the events mean that it will likely start the reversal during the next TTF move or soon after. This means that if the TTF move is a reversal breakout, you only really want to trade against it when the next move has a possibility of being a reversal.
+- If you think the HTF move will not reverse but the TTF will, then only take that trade if the 31% fib would be at least 4.2 pips away from the start of the new move? This means the move length would be around 12 pips in length. Also because you think the HTF move will not reverse then that means if the TTF move does reverse then that will give you at most a reversal and at least a fib move. So being conservative means that the closest target ideally should meet the minimum requirement, just to be safe.
+
+So I think that trading in the direction of the HTF move will allow me to benefit from the most amount of price movements as this can allow me to benefit from reversal breakouts and reversals more often than not.
+I also want to only trade against the HTF move direction, in general, only at a place and when the events are right for the HTF move to be reversed.
+So I also only really want to enter a new trade at a place where the current move can end at and where the events are possibly aligned for it to do so.
+
+There are a few things you can do for a trade then that if repeated should lead to wins in general and not losses.
+1. with HTF move direction at a TTF F or R or a HTF point in between these in hopes for a continuation of the HTF move or at least a reversal of the TTF move
+2. opposite to the current HTF move but at a place and with events that would reverse the current HTF move at that time and place. Or if the HTF move will not be reversed but the likely ensuing TTF move would be, at the closest target, at average pip goal or greater.
+*** Things to think about
+**** Reversals
+- R after RB moves happen can happen when the R is starting at a SS/RR point that is 2 or 3 TF higher than it. For example, the 1m can reverse after a RB if that RB move ends at a 30m or 4h SS/RR area.
+- R after RB moves happen can happen when the HTF move that the TTF move is on is at a HHTF SS/RR for the second attempt, at least of breaking through it. Basically it's on the second leg of the trend. This I think can at least cause a few reversals to happen, even after reversals.
+- R after RB moves happen can happen when the TTF move is going in the opposite direction to the current HTF move and the TTF move has hit a point it can reverse from. The LTF move that is a RB can then lead to having a R or RB in the other direction, in line with the HTF move direction, from that point. Basically it needs less of a reason, double tops/bottoms, to reverse as it is already going against the grain of the HTF move.
+- Not technically having to be a RB after a R but when there is a stall, on a TTF move for instance, and that looks like it may cause a change of move on that TF. What can end up happening is that there is a slight poke through that point, basically a false breakout, and then the move changes. What this looks like on the LTF however is most probably a RB followed by a R or RB. Just good to know.
+**** Losing
+If losing is done properly, there is nothing to worry about. Basically you can't lose. You worry about losing a trade because you think losing a trade can mean you will lose the whole account. Not if the strategy is followed properly.
+you can have losses half of the time and as long as you follow protocol and win an average of 4.2 pips and lose on average about half that then you are actually absolutely fine. That means that you do not know what price will do exactly 100% of the time, but you will know generally that you are taking a riskier move or a less risky move.
+*LOSING CANNOT HURT YOU. IT DOESN'T MATTER*
+**** Context switching
+So different scenarios, basically when your in a trade, out a trade and in the beginning of a trade. Need different contexts to switch to in your head. Need to see risk but in different ways.
+**** Synonymous moves
+So I haven't thought of this for some time actually but just thinking about these moves in terms of having a reversal after a breakout. They are the same as their TF up equivalents so a reversal here would certainly mean a new move on the HTF. Just a thought to try and remember what I was saying when moves like this were happening and what that would mean when trading.
+**** When the HTF move is changing direction on its TF when the TTF is making a move
+I think that this means that the TTF move, whilst it is still being in play, has the risk of turning into a synonymous move for the HTF. Therefore it may be a bigger move even if the previous move was a RB move.
+*** Things to remember when getting in to a trade
+- Where do I think the HTF/HHTF move is heading towards? What move will it likely be and where would it stop?
+- If I place a trade at this place, what event will need to occur for me to get a 4.2 pip move and how likely is that to happen?
+- I want to be going in the direction of the HTF move, am I if I go into this trade direction?
+- What about the reversal structure? Do I think the LTF would more likely require a DT/DB reversal or not? Basically if I am more risky when I enter this trade by waiting for the LLTF to weaken only would that be a bad thing?
+*** Things to remember when in a trade
+-
+* states of being in a trade
+** not in a trade
+so thinking of entering a trade. risk aversiveness, there is no money that is lost for missed oportunities in this state so conservativeness is good here. the only opportunity cost there is that you may miss out on the trade that would have actually been profitable but that is ok.
+So I have the most amount of flexibility in this state with out any other constraints that are here with me. so that is the best place to try and consider factors. however you will never know for certain what will happen and you will also lose as a result your actions. Guessing makes money too, just educate guessing.
+*** what loses in this state
+- reversal is not that move :: figure out how price moves and act accordingly
+- reversal is not at that place exactly, basically it is a overshoot from where you have put the stop loss. :: enter at as an extreme area of the price as you can, wait for LTF structure to build up a bit before entering,
+** in a trade whilst winning
+so when in a winning trade you are risking your current winning for potential wins by holding onto the trade. So that in effect is the trade off. Do I hold it and wait possibly for more wins or do I let it go now as this is as good as it gets for this move.
+so this is pure risk vs reward. calculated statistically it is AMOUNT x LIKELIHOOD of risk vs reward. also what your goal is in this trade is also a part of it as well because you can wait and hold onto a move but that move can then reverse and turn into another move. then this trade is not longer trying to get a TTF move but probably a HTF move instead.
+*** what loses in this state
+- you lose your current winnings if price reverses from where it was at a previous point :: this doesn't neccessrily mean you have a losing trade just a trade that was not as much as it could have been if it was exited at an earlier point
+so in this state what is required is to calculate the risk vs the reward. That means in both the amount and likelihood in each of these things happening whilst in the context of a certain goal. Most the time this certain goal is 1 move on the TTF. The goal could also be to not have a loss or to just exit at the first signs of resistance
+** in a trade whilst move hasn't moved a lot and is not winning
+so when you first enter a trade and you are expecting it to be able to get into profit you are in a place where you have invested into a position and you are automatically on the losing side until you pretty much get into about 1.5pip nominal movement. The reason why this is a state is because the leverage is so high with the way that i trade and a 3 pip loss
+can equal over a 10% percent loss in total account size. I think the thing to do at this stage is to make sure that you are clear on why you are entering at this place. what move are you hoping to capture and if the LTF structure can help on anything here.
+This is all tied in with the above of trying to calculate risk and reward but also it is seeing if the two points of failure of entering into a trade, wrong move and an overshot move, will play a factor in this current trade.
+If you think they do then i think cutting your losses short is a great thing to do. yes you might have cut your losses short on a winner but that winner is only in hindsight when you know what already happened. Having less losses is better and a lot easier to recover from.
+* reversal points
+- undershot
+- overshot
+- just right on the spot
+* risk
+risk is both an event that may occur and a pip value that may be had both in loss and profit. A move may or may not happen, price may or may not overshoot. You are also risking a certain amount in stop loss which may allow you to make a certain amount in profit pip value wise.
+
+*EVENT, MOVE, PLACE*
+when placing a trade you need to be thinking about all these things. not only the place, aka which line you want to enter and think a new move will occur from. but also what move do you think will occur and what events in price movements will need to occur for this move to be the case.
+
+these three things at least should be in your head when looking to get a trade. It should then be weighed up with the risk of a loss happening also.
+
+** risk of loss
+The risk of loss in the market in terms of pip value is always the pip value of your stop loss and also the likelihood of price hitting that stop loss. The events this is tied to is also a risk. So the risk of a certain move being the case instead of another move or the risk of the TTF not making a move that goes against the HTF at this point and just breaking through instead. All of these events are risks as well a the likelihood of each occurring.
+
+So there are nominal risks and event driven risks that need to be calculated.
+nominal risks are always the amount of stop loss value.
+event driven risks are the events that may occur in order for the nominal risk to be realised
+** risk of reward
