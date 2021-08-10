@@ -167,8 +167,9 @@ This is the most fundamental version of a trading plan without getting into the 
 *The question on your head when thinking of entering a trade is "If I enter this trade then what would it mean event wise for price to move 4.2 pips in my favour and how likely is that to happen" and "Is this trade going to be in line with the HTF move direction?"*
 ** Sensible Defaults
 Here are a few sensible defaults that I think price generally just does "normally":
-- A reversal of a move, on the TF below it, looks like a double top/bottom mostly.
+- A reversal of a move, on the TF below it, looks like a double top/bottom mostly. This means that waiting for a LTF double top/bottom is something that can be used to assess wether the TTF move may be changing and use that as a opportunity to enter.
 - After a RB move has happened and a pull back is occurring, the default move for that is going to be a a F move followed by at a least a reversal if not a RB.
+- a new TTF move can occur in the opposite direction of the HTF move at a HTF S/R even though that HTF move will not itself end there. The opposite direction TTF move will not be a RB move unless there is a new move on the HTF also
 *** Move Combo Default Next Move
 **** Previous move was a F
 - This move was a F also and next move is a RB
@@ -182,7 +183,7 @@ Here are a few sensible defaults that I think price generally just does "normall
 - This move was a HTF move before a R and the next move is F
 **** Previous move was a RB
 - This move was a F and the next move is a R or RB
-- This move was a R and the next move is a F or HTF F
+- This move was a R and the next move is a F or HTF F. Small chance of a RB
 - This move was a RB and the next move is a F
 - This move was a HTF move before a R and the next move is a F or a HTF move before a R
 ** Nitty Gritty Technicalities for when defaults do not happen
