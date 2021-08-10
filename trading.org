@@ -85,8 +85,8 @@ There are a few things you can do for a trade then that if repeated should lead 
 2. opposite to the current HTF move but at a place and with events that would reverse the current HTF move at that time and place. Or if the HTF move will not be reversed but the likely ensuing TTF move would be, at the closest target, at average pip goal or greater.
 *** Things to think about
 **** Reversals
-- R after RB moves happen can happen when the R is starting at a SS/RR point that is 2 or 3 TF higher than it. For example, the 1m can reverse after a RB if that RB move ends at a 30m or 4h SS/RR area.
-- R after RB moves happen can happen when the HTF move that the TTF move is on is at a HHTF SS/RR for the second attempt, at least of breaking through it. Basically it's on the second leg of the trend. This I think can at least cause a few reversals to happen, even after reversals.
+- R after RB moves can happen when the R is starting at a SS/RR point that is 2 or 3 TF higher than it. For example, the 1m can reverse after a RB if that RB move ends at a 30m or 4h SS/RR area.
+- R after RB moves can happen when the HTF move that the TTF move is on is at a HHTF SS/RR for the second attempt, at least of breaking through it. Basically it's on the second leg of the trend. This I think can at least cause a few reversals to happen, even after reversals.
 - R after RB moves happen can happen when the TTF move is going in the opposite direction to the current HTF move and the TTF move has hit a point it can reverse from. The LTF move that is a RB can then lead to having a R or RB in the other direction, in line with the HTF move direction, from that point. Basically it needs less of a reason, double tops/bottoms, to reverse as it is already going against the grain of the HTF move.
 - Not technically having to be a RB after a R but when there is a stall, on a TTF move for instance, and that looks like it may cause a change of move on that TF. What can end up happening is that there is a slight poke through that point, basically a false breakout, and then the move changes. What this looks like on the LTF however is most probably a RB followed by a R or RB. Just good to know.
 **** Losing
@@ -143,3 +143,47 @@ So there are nominal risks and event driven risks that need to be calculated.
 nominal risks are always the amount of stop loss value.
 event driven risks are the events that may occur in order for the nominal risk to be realised
 ** risk of reward
+* Starting a fresh
+This bit is going to be me putting my goal of working into practise in the context of trading. What I want is to work, that is the goal. Having targeted results is basically a way of allowing me to work out on stuff in a targeted manner.
+
+** Correct Goals
+So first thing to think about is not anything technical it is actually starting with a proper goal. For the longest time I have made my goal for currency trading a result. This needs to stop because conflating the result as a goal does very bad stuff to my feelings. The first thing to do is start with changing the goal. The goal is to be working. I want to be targeting a certain result but I do not care if I get the result or not in relation to how good or bad I feel because the result does not take the place of the goal. The result is literally just a byproduct of work that I do and the work is the goal. This is the first thing that needs to happen, an actual shift in goals.
+
+So practically speaking then what are the goals that I would like to implement in trading. Well the goal is to actually be thinking, not feeling, about what is price going to be doing and by what actions can I benefit from that movement. That is basically it.
+*This is the goal. It is to think with a clear mind about what price will do next and why and how I am able to benefit from that and why.*
+** HTF Move
+What is the current HTF move going to be? where will it stop at? That is the next thing along the process that needs to get done. Is this move going to be a R a RB or a F move? why? Where do you think it's going to stop?
+Remember you only really want to go in the direction of the HTF move direction and only go against it when it is wither likely to reverse, the TTF move is likely to reverse with a possibility of at least a 4.2 pip movement.
+** 4.2 pips
+You need your target to be a profitable trade of 4.2 pips. Know this and have this in mind whenever you are thinking of entering.
+** Current TTF move and next trading opportunity
+So now you have an idea of what the HTF move is probably going to be and where it is going to stop. What is the current TTF move saying? What type of move is that and where about is it going to stop do you think. You basically have two criteria up to this point that you need to trade by and those are:
+1. Your trade should be going in the direction of the HTF move
+2. you should be entering only when it is likely to have a 4.2 pip movement from your point of entry.
+
+Knowing those are your criteria you basically wait till those criteria can be met and when it is likely to you take the trade.
+This is the most fundamental version of a trading plan without getting into the technicalities of price movement.
+
+*The question on your head when thinking of entering a trade is "If I enter this trade then what would it mean event wise for price to move 4.2 pips in my favour and how likely is that to happen" and "Is this trade going to be in line with the HTF move direction?"*
+** Sensible Defaults
+Here are a few sensible defaults that I think price generally just does "normally":
+- A reversal of a move, on the TF below it, looks like a double top/bottom mostly.
+- After a RB move has happened and a pull back is occurring, the default move for that is going to be a a F move followed by at a least a reversal if not a RB.
+*** Move Combo Default Next Move
+**** Previous move was a F
+- This move was a F also and next move is a RB
+- This move was a R and next move is a R or RB
+- This move was a RB and the next move is R or RB or F but the F move is opposite to the current HTF move direction
+- This move was a HTF move before a R and the next move is a RB
+**** previous move was a R
+- This move was a F and the next move could be any type of move
+- This move was a R and the next move is mainly R or RB with a small chance of a F move
+- This move was a RB and the next move is RB or R or HTF move before R
+- This move was a HTF move before a R and the next move is F
+**** Previous move was a RB
+- This move was a F and the next move is a R or RB
+- This move was a R and the next move is a F or HTF F
+- This move was a RB and the next move is a F
+- This move was a HTF move before a R and the next move is a F or a HTF move before a R
+** Nitty Gritty Technicalities for when defaults do not happen
+So I have my defaults that are just normal and what I expect however that does not mean they are always the case. Therefore I need to know when they are not going to be the case and what is going to to be the case instead on that instance. This is where the nitty gritty technicalities come in. They deal with knowing when the defaults will not happen and what will happen instead. It is all about knowing cause and effects.
