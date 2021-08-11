@@ -117,11 +117,10 @@ So I have the most amount of flexibility in this state with out any other constr
 so when in a winning trade you are risking your current winning for potential wins by holding onto the trade. So that in effect is the trade off. Do I hold it and wait possibly for more wins or do I let it go now as this is as good as it gets for this move.
 so this is pure risk vs reward. calculated statistically it is AMOUNT x LIKELIHOOD of risk vs reward. also what your goal is in this trade is also a part of it as well because you can wait and hold onto a move but that move can then reverse and turn into another move. then this trade is not longer trying to get a TTF move but probably a HTF move instead.
 *** what loses in this state
-- you lose your current winnings if price reverses from where it was at a previous point :: this doesn't neccessrily mean you have a losing trade just a trade that was not as much as it could have been if it was exited at an earlier point
-so in this state what is required is to calculate the risk vs the reward. That means in both the amount and likelihood in each of these things happening whilst in the context of a certain goal. Most the time this certain goal is 1 move on the TTF. The goal could also be to not have a loss or to just exit at the first signs of resistance
+- you lose your current winnings if price reverses from where it was at a previous point :: this doesn't necessarily mean you have a losing trade just a trade that was not as much as it could have been if it was exited at an earlier point
+so in this state what is required is to calculate the risk vs the reward. That means in both the amount and likelihood in each of these things happening whilst in the context of a certain result. Most the time this certain result is 1 move on the TTF. The goal could also be to not have a loss or to just exit at the first signs of resistance
 ** in a trade whilst move hasn't moved a lot and is not winning
-so when you first enter a trade and you are expecting it to be able to get into profit you are in a place where you have invested into a position and you are automatically on the losing side until you pretty much get into about 1.5pip nominal movement. The reason why this is a state is because the leverage is so high with the way that i trade and a 3 pip loss
-can equal over a 10% percent loss in total account size. I think the thing to do at this stage is to make sure that you are clear on why you are entering at this place. what move are you hoping to capture and if the LTF structure can help on anything here.
+so when you first enter a trade and you are expecting it to be able to get into profit you are in a place where you have invested into a position and you are automatically on the losing side until you pretty much get into about 1.5pip nominal movement. The reason why this is a state is because the leverage is so high with the way that i trade and a 3 pip loss can equal over a 10% percent loss in total account size. I think the thing to do at this stage is to make sure that you are clear on why you are entering at this place. what move are you hoping to capture and if the LTF structure can help on anything here.
 This is all tied in with the above of trying to calculate risk and reward but also it is seeing if the two points of failure of entering into a trade, wrong move and an overshot move, will play a factor in this current trade.
 If you think they do then i think cutting your losses short is a great thing to do. yes you might have cut your losses short on a winner but that winner is only in hindsight when you know what already happened. Having less losses is better and a lot easier to recover from.
 * reversal points
@@ -146,14 +145,17 @@ event driven risks are the events that may occur in order for the nominal risk t
 * Starting a fresh
 This bit is going to be me putting my goal of working into practise in the context of trading. What I want is to work, that is the goal. Having targeted results is basically a way of allowing me to work out on stuff in a targeted manner.
 
+The gist to all of these rules and plans is basically trying to turn the infinite possibilities of the charts into a limited set of actions for me to do.
+
 ** Correct Goals
 So first thing to think about is not anything technical it is actually starting with a proper goal. For the longest time I have made my goal for currency trading a result. This needs to stop because conflating the result as a goal does very bad stuff to my feelings. The first thing to do is start with changing the goal. The goal is to be working. I want to be targeting a certain result but I do not care if I get the result or not in relation to how good or bad I feel because the result does not take the place of the goal. The result is literally just a byproduct of work that I do and the work is the goal. This is the first thing that needs to happen, an actual shift in goals.
 
 So practically speaking then what are the goals that I would like to implement in trading. Well the goal is to actually be thinking, not feeling, about what is price going to be doing and by what actions can I benefit from that movement. That is basically it.
 *This is the goal. It is to think with a clear mind about what price will do next and why and how I am able to benefit from that and why.*
-** HTF Move
-What is the current HTF move going to be? where will it stop at? That is the next thing along the process that needs to get done. Is this move going to be a R a RB or a F move? why? Where do you think it's going to stop?
-Remember you only really want to go in the direction of the HTF move direction and only go against it when it is wither likely to reverse, the TTF move is likely to reverse with a possibility of at least a 4.2 pip movement.
+** HTF Move and HHTF Influence
+- What is the HHTF move direction? What move do you think that will be? :: This will be used in anticipating if the default reversal structure two TF below can be the default or not.
+
+- What is the current HTF move going to be? where will it stop at? That is the next thing along the process that needs to get done. Is this move going to be a R a RB or a F move? why? Where do you think it's going to stop? :: Remember you only really want to go in the direction of the HTF move direction and only go against it when it is likely to reverse or the TTF move is likely to reverse with a possibility of at least a 4.2 pip movement.
 ** 4.2 pips
 You need your target to be a profitable trade of 4.2 pips. Know this and have this in mind whenever you are thinking of entering.
 ** Current TTF move and next trading opportunity
@@ -164,7 +166,7 @@ So now you have an idea of what the HTF move is probably going to be and where i
 Knowing those are your criteria you basically wait till those criteria can be met and when it is likely to you take the trade.
 This is the most fundamental version of a trading plan without getting into the technicalities of price movement.
 
-*The question on your head when thinking of entering a trade is "If I enter this trade then what would it mean event wise for price to move 4.2 pips in my favour and how likely is that to happen" and "Is this trade going to be in line with the HTF move direction?"*
+- *The question on your head when thinking of entering a trade is "If I enter this trade at this point then what would it mean, event wise, for price to move 4.2 pips in my favour and how likely is that to happen" and "Is this trade going to be in line with the HTF move direction?"* :: If it is not in the direction of the current HTF move then is it possibly the start of a new TTF move? Basically being with the HTF move means that you are more likely to get a move in that direction and the only way you can profit from a RB move.
 ** Sensible Defaults
 Here are a few sensible defaults that I think price generally just does "normally":
 - A reversal of a move, on the TF below it, looks like a double top/bottom mostly. This means that waiting for a LTF double top/bottom is something that can be used to assess wether the TTF move may be changing and use that as a opportunity to enter.
@@ -188,3 +190,8 @@ Here are a few sensible defaults that I think price generally just does "normall
 - This move was a HTF move before a R and the next move is a F or a HTF move before a R
 ** Nitty Gritty Technicalities for when defaults do not happen
 So I have my defaults that are just normal and what I expect however that does not mean they are always the case. Therefore I need to know when they are not going to be the case and what is going to to be the case instead on that instance. This is where the nitty gritty technicalities come in. They deal with knowing when the defaults will not happen and what will happen instead. It is all about knowing cause and effects.
+*** Reversals
+- R after RB moves can happen when the R is starting at a SS/RR point that is 2 or 3 TF higher than it. For example, the 1m can reverse after a RB if that RB move ends at a 30m or 4h SS/RR area.
+- R after RB moves can happen when the HTF move that the TTF move is on is at a HHTF SS/RR for the second attempt, at least of breaking through it. Basically it's on the second leg of the trend. This I think can at least cause a few reversals to happen, even after reversals.
+- R after RB moves happen can happen when the TTF move is going in the opposite direction to the current HTF move and the TTF move has hit a point it can reverse from. The LTF move that is a RB can then lead to having a R or RB in the other direction, in line with the HTF move direction, from that point. Basically it needs less of a reason, double tops/bottoms, to reverse as it is already going against the grain of the HTF move.
+- Not technically having to be a RB after a R but when there is a stall, on a TTF move for instance, and that looks like it may cause a change of move on that TF. What can end up happening is that there is a slight poke through that point, basically a false breakout, and then the move changes. What this looks like on the LTF however is most probably a RB followed by a R or RB. Just good to know.
