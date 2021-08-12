@@ -168,8 +168,9 @@ This is the most fundamental version of a trading plan without getting into the 
 
 - *The question on your head when thinking of entering a trade is "If I enter this trade at this point then what would it mean, event wise, for price to move 4.2 pips in my favour and how likely is that to happen" and "Is this trade going to be in line with the HTF move direction?"* :: If it is not in the direction of the current HTF move then is it possibly the start of a new TTF move? Basically being with the HTF move means that you are more likely to get a move in that direction and the only way you can profit from a RB move.
 ** Sensible Defaults
+A way to think about defaults are that each thing is the default if it is in a isolated environment however the mixing of different factors mean the defaults either have a bigger reaction than normal, a expected F move becomes a R move because of another thing that is also happening. Or can also be a lesser of a reaction, expecting a RB but get a R instead due to the addition of another factor also. This is how you should use these defaults. You can also see it as certain scenario's are exceptions to the rules.
 Here are a few sensible defaults that I think price generally just does "normally":
-- A reversal of a move, on the TF below it, looks like a double top/bottom mostly. This means that waiting for a LTF double top/bottom is something that can be used to assess wether the TTF move may be changing and use that as a opportunity to enter.
+- A reversal of a move, on the TF below it, looks like a double top/bottom mostly. This means that waiting for a LTF double top/bottom is something that can be used to assess whether the TTF move may be changing and use that as a opportunity to enter.
 - After a RB move has happened and a pull back is occurring, the default move for that is going to be a a F move followed by at a least a reversal if not a RB.
 - a new TTF move can occur in the opposite direction of the HTF move at a HTF S/R even though that HTF move will not itself end there. The opposite direction TTF move will not be a RB move unless there is a new move on the HTF also
 *** Move Combo Default Next Move
@@ -195,3 +196,10 @@ So I have my defaults that are just normal and what I expect however that does n
 - R after RB moves can happen when the HTF move that the TTF move is on is at a HHTF SS/RR for the second attempt, at least of breaking through it. Basically it's on the second leg of the trend. This I think can at least cause a few reversals to happen, even after reversals.
 - R after RB moves happen can happen when the TTF move is going in the opposite direction to the current HTF move and the TTF move has hit a point it can reverse from. The LTF move that is a RB can then lead to having a R or RB in the other direction, in line with the HTF move direction, from that point. Basically it needs less of a reason, double tops/bottoms, to reverse as it is already going against the grain of the HTF move.
 - Not technically having to be a RB after a R but when there is a stall, on a TTF move for instance, and that looks like it may cause a change of move on that TF. What can end up happening is that there is a slight poke through that point, basically a false breakout, and then the move changes. What this looks like on the LTF however is most probably a RB followed by a R or RB. Just good to know.
+** Things to remember
+*** When getting into a trade
+- Remember the order in which you are looking to filter out whether stuff is a good trade to take or not
+- are you going against the current HTF move direction or against it? that is an important question that dictates a lot of stuff
+- if you was to buy sell at market, or closest S/R, what event would need to happen for you to profit 4.2 pips? How likely is that?
+- you can wait for a reversal structure on the LTF before entering for a move change. However remember its relation to the HHTF move, might mean that a RB on the LTF may be followed by a R or a RB instead of a F that would form a reversal structure.
+- Remember missing a trade you do not lose anything. You can be slow to enter and quick to leave if you want and that is not a bad strategy.
