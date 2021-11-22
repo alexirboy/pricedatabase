@@ -158,6 +158,7 @@ So practically speaking then what are the goals that I would like to implement i
 - What is the current HTF move going to be? where will it stop at? That is the next thing along the process that needs to get done. Is this move going to be a R a RB or a F move? why? Where do you think it's going to stop? :: Remember you only really want to go in the direction of the HTF move direction and only go against it when it is likely to reverse or the TTF move is likely to reverse with a possibility of at least a 4.2 pip movement.
 ** 4.2 pips
 You need your target to be a profitable trade of 4.2 pips. Know this and have this in mind whenever you are thinking of entering.
+if you was to buy sell at market, or closest S/R, what event would need to happen for you to profit 4.2 pips? How likely is that event?
 ** Current TTF move and next trading opportunity
 So now you have an idea of what the HTF move is probably going to be and where it is going to stop. What is the current TTF move saying? What type of move is that and where about is it going to stop do you think. You basically have two criteria up to this point that you need to trade by and those are:
 1. Your trade should be going in the direction of the HTF move
@@ -165,12 +166,11 @@ So now you have an idea of what the HTF move is probably going to be and where i
 
 Knowing those are your criteria you basically wait till those criteria can be met and when it is likely to you take the trade.
 This is the most fundamental version of a trading plan without getting into the technicalities of price movement.
-
-- *The question on your head when thinking of entering a trade is "If I enter this trade at this point then what would it mean, event wise, for price to move 4.2 pips in my favour and how likely is that to happen" and "Is this trade going to be in line with the HTF move direction?"* :: If it is not in the direction of the current HTF move then is it possibly the start of a new TTF move? Basically being with the HTF move means that you are more likely to get a move in that direction and the only way you can profit from a RB move.
+- *The question on your head when thinking of entering a trade is "If I enter this trade at this point then what would it mean, event wise, for price to move 4.2 pips in my favour and how likely is that to happen" and "Is this trade going to be in line with the HTF move direction?"* :: If it is not in the direction of the current HTF move then is it possibly the start of a new HTF move? Basically being with the HTF move means that you are more likely to get a move in that direction and the only way you can profit from a RB move.
 ** Sensible Defaults
 A way to think about defaults are that each thing is the default if it is in a isolated environment however the mixing of different factors mean the defaults either have a bigger reaction than normal, a expected F move becomes a R move because of another thing that is also happening. Or can also be a lesser of a reaction, expecting a RB but get a R instead due to the addition of another factor also. This is how you should use these defaults. You can also see it as certain scenario's are exceptions to the rules.
 Here are a few sensible defaults that I think price generally just does "normally":
-- A reversal of a move, on the TF below it, looks like a double top/bottom mostly. This means that waiting for a LTF double top/bottom is something that can be used to assess whether the TTF move may be changing and use that as a opportunity to enter.
+- A reversal of a move, on the TF below it, looks like a double top/bottom mostly. This means that waiting for a LTF double top/bottom is something that can be used to assess whether the TTF move may be changing and use that as a opportunity to enter. Entering on the the second leg once it is about to be rejected.
 - After a RB move has happened and a pull back is occurring, the default move for that is going to be a a F move followed by at a least a reversal if not a RB.
 - a new TTF move can occur in the opposite direction of the HTF move at a HTF S/R even though that HTF move will not itself end there. The opposite direction TTF move will not be a RB move unless there is a new move on the HTF also
 *** Move Combo Default Next Move
@@ -186,7 +186,7 @@ Here are a few sensible defaults that I think price generally just does "normall
 - This move was a HTF move before a R and the next move is F
 **** Previous move was a RB
 - This move was a F and the next move is a R or RB
-- This move was a R and the next move is a F or HTF F. Small chance of a RB
+- This move was a R and the next move is a F or HTF F. Small chance of a RB when the HTF is looking like it will make a new move
 - This move was a RB and the next move is a F
 - This move was a HTF move before a R and the next move is a F or a HTF move before a R
 ** Nitty Gritty Technicalities for when defaults do not happen
@@ -196,10 +196,50 @@ So I have my defaults that are just normal and what I expect however that does n
 - R after RB moves can happen when the HTF move that the TTF move is on is at a HHTF SS/RR for the second attempt, at least of breaking through it. Basically it's on the second leg of the trend. This I think can at least cause a few reversals to happen, even after reversals.
 - R after RB moves happen can happen when the TTF move is going in the opposite direction to the current HTF move and the TTF move has hit a point it can reverse from. The LTF move that is a RB can then lead to having a R or RB in the other direction, in line with the HTF move direction, from that point. Basically it needs less of a reason, double tops/bottoms, to reverse as it is already going against the grain of the HTF move.
 - Not technically having to be a RB after a R but when there is a stall, on a TTF move for instance, and that looks like it may cause a change of move on that TF. What can end up happening is that there is a slight poke through that point, basically a false breakout, and then the move changes. What this looks like on the LTF however is most probably a RB followed by a R or RB. Just good to know.
+*** Risk/Reward when in a trade
+So when you are in a trade you are weighing up the risk/reward ratio however the R/R ratio is tied to the current TTF move being stopped or carrying on. You however are also having the bigger picture HTF move in your head for the most part as a way for you to be able to know whether you are ok doing a certain move or not, because the HTF move is the the one that dictates to you the direction and the "field" that you are playing in.
+However even though the HTF move may be going at a point further past where the price currently is. This TTF move may not be and may reverse from this price point before reverfsing again and continuing in the direction of the HTF move.
+As you know, a TF move can be stopped by a S/R of its own TF or a TF above it in general. Therefore you need to weigh up the risk of this move stopping where it is also. And for that to be part of the R/R ratio means thatt you amust probably have less time to think as well as have the LTF to give you clues as well.
+
+All this would need very good knowledge of how price move even unto thinking about it very quickliy so that even teh 10s charts would be a helpful way to have clues on stuff. I think that you need to figure out as much as you can what the things you need in order to get really good at the nitty gritty technical details of stuff is.
+A lot of this stuff also hinges on when you think reversals happen at.
+*** Role of a stop loss
 ** Things to remember
+The risk reward ratio can be summarised as. I am willing to bet this much, in pips, that price will move at least 4.2 pips in the other direction thanks to this move wich is more likely than another move in the other direction.
 *** When getting into a trade
-- Remember the order in which you are looking to filter out whether stuff is a good trade to take or not
-- are you going against the current HTF move direction or against it? that is an important question that dictates a lot of stuff
-- if you was to buy sell at market, or closest S/R, what event would need to happen for you to profit 4.2 pips? How likely is that?
+Assessing to see wether you should get in
+I have time pressure as can miss opportunity or best price if taken to quickly or to late
+Can enter and just be totally wroing in what I am thinking which would mean a loss
+
+- The whole question that you are trying to answer and profit from is "If I enter this trade at this point then what would it mean, event wise, for price to move 4.2 pips in my favour and how likely is that to happen". If the answer above is that the event is very likely then you take the trade. That is all you are trying to ascertain. How likely is the event in which price would move at least 4.2 pips in your favour going to be.
+- You only really want to be trading in the direction of the HTF. If you take the trade you are thinking are you going in the direction of or against the direction of the HTF move?
 - you can wait for a reversal structure on the LTF before entering for a move change. However remember its relation to the HHTF move, might mean that a RB on the LTF may be followed by a R or a RB instead of a F that would form a reversal structure.
-- Remember missing a trade you do not lose anything. You can be slow to enter and quick to leave if you want and that is not a bad strategy.
+- Remember missing a trade you do not lose money. You can be slow to enter and quick to leave if you want and that is not a bad strategy.
+*** When in a trade
+- When in a trade, there are only two options. Exit or stay. The reason for exiting is because you think you cannot get any more profit and are hence trying to not incur any more loss or loss of profit or the risk/reward ratio is not worth it to stay in.
+- The fact that you are in a trade does not change how price moves. So do not change the way that you feel or think when in a trade. Price moves the same regardless
+- A trade is tied to a move on teh TTF. You are trying to get a new move on the TTF that gives you atleast 4.2 pips and milk it for anything more it gives you on top of that. That move on the TTF is a trend on the LTF therefore it will have extensions and pullbacks and reversal structures when reversing. Play of that.
+**** Quick thoughts on when in a trade
+When in a trade the main things that you are trying to do is to minimise losses and maximise profits. A trade is tied specifically to one TTF move therefore I think that because of these two things you would need to be thinking slightly differently when in a trade vs when out of a trade.
+When getting into a trade you are basically trying to think when a certain criteria is going to be the case and then when you think that is so, you enter and then the next phase begins. This is when you are in the trade and the only two actions that you can do is hold it or let the trade go. Why would you do either?
+
+Hold the trade solely because you think there is a good potential of further profit to be had. In other words you think that the currrent TTF move you are in will still be able to move in its current direction further. It also insinuates that you have looked at not only the price movement potential but also the likelyhood for this potential to take place. You have looked at the risk/reward ratio basically and have thought that it is worthwhile taking the risk of holding and suffering a loss in profit or loss overall for the chance of profiting from this potential movement that you think may be the case.
+
+Letting go of the trade is done because you think that this move has reached its end or the risk/reward ratio has been weighed up and is not so favourable then you would rather take out the trade rather than risk what is already on the table for a lower potential of movement to be had
+
+So from what I can see. When in a trade I am thinking about the risk/reward ratio of stuff and when that is not good for you any more, you exit. When that is good for you you stay and risk more.
+
+So from this being the case I need to basically have the risk reward ratio weighed up in my head. So the risk side is how much of my position am Iwilling to risk losing, by holding the trade, in order to potentially gain the reward. The reward is calculated as the amount that can potentially be gained and the likelihood of that happening. So when in a positin that is the things that you are trying to calculate and play off of.
+*** When wanting to exit a trade
+Assessing to see wether you should get out.
+has time pressure as can miss best price of exit and can even make a loss happen if not careful
+If indecisive can loss capital
+has stop loss that has to be thought about. Helpful tool to automatically take you out at places where you thought price shouldnt get to if what you thinking is right
+
+- The question that you should be asking yourself when thinking of exiting a trade is "Where do I think that this move will end up going to, how many pips away is that? And what am I risking in order to see if that would be the case. Does that sound like a good tradeoff?"
+*** For your head
+- The only thing that stops you thinking properly and not trading well is the fear of losing and having unrecoverable regression in account size and a string of lossees that would turn out into a "catastrophe". Remember that can only happen if the method that you are doing is wrong and what you think about price movement is just not true. That means no matter what you do you cannot prevent the inevitable from happening. However the reverse is also true. If what you think about how price moves and how to trade it is correct then there is nothing that can be done to stop the inevitable from happening, in this instance it is good.
+- Do not expect anything fantastic or a great feeling  when trading well or the ability to have a whole bunch of money in one trade very quickly. It does not work like that. It is consistency that wins the game not critical moves.
+- You are the type of person that is able to make a whole bunch of money with trading and be able to trade well. It is you. You have always had a vague picture of someone external to yourself that you would need to be like to trade currency well and do well in this game and even though you have done good so far, you still think you cannot. Remind yourself what you have accomplished so far. You have put in the work and have had results to boot. You are the person that knows how price moves to a ok extent to make money from it
+- See the importance of things righly. One trade will not make you. One trade will not break you. So do not make it a big thing in your head to the point where you get anxious over the result of a trade. Focus instead on price and where you think it is going. If you think it is going a certain direction that will see you lose then take the loss and go again. But one trade does not matter in the grand scheme of things. You need abouth a thousand trades to get to a substantial amount and that is about a months work so one is not substantial. Do not feel it as so.
+- You do not need to be perfect and have perfect results. There is no point of feeling a type of way for nott getting the exact top to bottom of the move, especially even when looking in hindsight at it. Your job is not to have it perfeectly. Your job is to assess when it is in your favour to have a good trade of at least 4.2 pips and then take it and exit when you do not think that the move will carry on much longer or the risk is greater than the reward of it doing so. That is all
